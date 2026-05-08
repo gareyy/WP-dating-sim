@@ -71,9 +71,6 @@ label restaurant:
 
         "Crackers":
             call .crackers
-
-        "Flavourfully seasoned tofu":
-            call .tofu
     
     dafny "I'm pretty thirsty, what should we drink?"
     basil "I think I would like something shared."
@@ -91,7 +88,7 @@ label restaurant:
     basil "Me?"
     dafny "You promised to choose for me!"
     basil "Alright, I choose..."
-
+    
     menu:
         "Curry":
             call .curry
@@ -99,7 +96,7 @@ label restaurant:
         "Chicken":
             call .chicken
 
-        "Tofu" if restaurant_info:
+        "Tofu" if restaurant_info == True:
             call .tofu
 
 label .breadsticks:
