@@ -31,4 +31,39 @@ label start:
     basil "Theres this girl where I work at... She is the prettiest thing in the world."
     show dafny
     basil "She's the main reason why i'm still doing this program verification stuff."
+    basil "I feel like I could reach new heights with her."
+    basil "I can show her the world and she can show me the stars."
+    basil "I feel like she is a piece of me that I am missing and need filled."
+    basil "Its a precondition for me to be with her if I want my life to feel full."
+    basil "But you know what? She is just a coworker."
+    hide dafny
+    basil "I don't know if she loves me. And I am too scared to find out."
+    basil "I fear that if I confess, it may jeopardise my professional relationship with her."
+    basil "And maybe my own happiness..."
+    basil "A million fish in the sea and I will release them back into the oceans if they are not her.."
+    basil "Oh heavens above! May you help me in my quest!"
+    basil "I would do anything! Even if it meant living the same day over and over again until I get it right!"
 
+    show bg lab with fade
+    
+    show basil
+    basil "Nice! all my work for today is done!"
+    basil "I finally implemented that big stupid compoment that was bogging me and Dafny."
+    show dafny
+    basil "Hey Dafny! I finally got that stupid thing implemented!"
+    dafny "Yeah, uh, which one?"
+    basil "You know, the one I made a PR for in the repository."
+    dafny "Gimme 2 seconds..."
+    dafny "The indirect call resolution stuff?"
+    basil "Yeah that one."
+    dafny "Well congratulations buddy!"
+    dafny "You want a reward for that?"
+    show basil blushing
+    basil "Y-yeah..."
+    dafny "You know, you've been getting better at this stuff."
+    basil "Oh I have?"
+    dafny "Better than an AI I guess."
+    show basil
+    basil "Im not sure if thats a compliment or not."
+    dafny "*cackling* "
+    
