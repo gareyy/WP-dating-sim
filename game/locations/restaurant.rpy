@@ -1,6 +1,5 @@
 # A tutorial section for the game.
 
-
 # ?
 # Meet Dafny
 # Choose meals
@@ -20,27 +19,27 @@ label loophead:
     elif loop_no == 1:
         
         basil "Huh?"
-        "Wait... I thought I had already been here before..."
+        basil "(Wait... I thought I had already been here before...)"
         basil "Uh umm... no, I don't think so. I just got here."
-        dafny "Alright, well it's nice to see you!"
-        dafny "I'm going to sit down, do you want to join me?"
+        dafny "Alright, well, I hope you got us a seat!"
+        basil "Um actually..."
         hide dafny
         jump tutorial
 
     elif loop_no == 2:
-        "This is getting weird..."
+        basil "(This is getting weird...)"
 
     elif loop_no == 3:
-        "Looks like I'm stuck in some kind of loop."
+        basil "(Looks like I'm stuck in some kind of loop.)"
 
     elif loop_no <= 6:
-        "I'll keep trying until I get it right!"
+        basil "(I'll keep trying until I get it right!)"
 
     elif loop_no % 2 == 1:
-        "I don't know how many times I've been here, but I won't give up!"
+        basil "(I don't know how many times I've been here, but I won't give up!)"
 
     else:
-        "I need to try something different this time!"
+        basil "(I need to try something different this time!)"
 
 
     if 2 <= loop_no <= 3:
@@ -49,24 +48,37 @@ label loophead:
     elif loop_no >= 4:
         basil "No, I just got here. I was waiting for you."
 
-    dafny "Alright, well it's nice to see you!"
+    dafny "Ah! Here we go, a nice place to sit."
 
 # The tutorial meets the restaurant scene here
 label restaurant:
 
     show dafny
 
-    dafny "Would you like to order something to eat?"
+    dafny "Hey uh, you said you were ordering us stuff right?"
+    basil "Oh yeah!"
+    dafny "Ummm lets see here."
+    "You two open the menu together"
+
+    if loop_no >= 3:
+        basil "(Do these things ever change?)"
+
+    basil "Okay ummm entries... Lets see."
 
     menu:
-
         "Breadsticks":
             call .breadsticks
 
         "Crackers":
             call .crackers
+
+        "Flavourfully seasoned tofu":
+            call .tofu
     
-    dafny "I'm pretty thirsty, what would you like to drink?"
+    dafny "I'm pretty thirsty, what should we drink?"
+    basil "I think I would like something shared."
+    dafny "Oh yeah! Great idea!"
+    dafny "One jug of...."
 
     menu:
         "Lemonade":
@@ -74,7 +86,11 @@ label restaurant:
         "Water":
             call .water
 
-    dafny "And for the main course, what would you like to eat?"
+    dafny "And for the main course, hmmm what to eat..."
+    dafny "Oh you choose!"
+    basil "Me?"
+    dafny "You promised to choose for me!"
+    basil "Alright, I choose..."
 
     menu:
         "Curry":
@@ -83,12 +99,18 @@ label restaurant:
         "Chicken":
             call .chicken
 
+        "Tofu" if restaurant_info:
+            call .tofu
+
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
+    basil "Oh you do?"
+    
     return
 
 label .crackers:
     dafny "Crackers? I don't really like those..."
+    dafny ""
     return
 
 label .lemonade:
@@ -100,12 +122,21 @@ label .water:
     return
 
 label .curry:
-    dafny "GWAHHH! That's way too spicy for me!"
+    dafny "YUCK! That's way too spicy for me!"
     dafny "Sorry, I don't think I can eat that..."
-    jump badend
+    basil "Um, yeah, sorry..."
+    jump restaurant_badend
 
 label .chicken:
     dafny "Umm..."
     dafny "I don't eat meat. I'm vegan."
     dafny "I thought you knew that..."
-    jump badend
+    basil "Sorry..."
+    jump restaurant_badend
+
+label .restaurant_badend:
+    python:
+        restaurant_info = True
+    jump badend_a
+
+label .tofu:

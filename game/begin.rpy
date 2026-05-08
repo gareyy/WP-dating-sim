@@ -16,12 +16,20 @@ transform left:
 transform right:
     xalign 0.75
     yalign 1.0
+
 # The game starts here.
 
 label start:
 
     python:
         loop_no = 0
+        restaurant_info = False
+        karaoke_info = False
+        spa_info = False
+        pool_info = False
+        arcade_info = False
+        museum_info = False
+        lake_info = False
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
