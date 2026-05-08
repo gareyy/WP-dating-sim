@@ -3,13 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define basil = Character("Basil")
-define dafny = Character("Dafny")
+define basil = Character("Basil", color="#c8ffc8")
+define dafny = Character("Dafny", color="#ffffc8")
+define isabelle = Character("Isabelle", color="#715bff")
 
 
 # The game starts here.
 
 label start:
+
+    python:
+        loop_no = 0
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -67,3 +71,4 @@ label start:
     basil "Im not sure if thats a compliment or not."
     dafny "*cackling* "
     
+    jump loophead
