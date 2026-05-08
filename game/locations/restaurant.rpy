@@ -102,7 +102,6 @@ label restaurant:
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
     basil "Oh you do?"
-    
     return
 
 label .crackers:
@@ -143,4 +142,5 @@ label .tofu:
 label .success:
     dafny "LETS GO SOMEWHERE ELSE TONITE"
     # GO TO LOCATION CHOICE
+    jump museum
     return
