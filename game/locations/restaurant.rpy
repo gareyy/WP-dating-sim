@@ -91,13 +91,13 @@ label restaurant:
     
     menu:
         "Curry":
-            call .curry
+            jump .curry
 
         "Chicken":
-            call .chicken
+            jump .chicken
 
         "Tofu" if restaurant_info == True:
-            call .tofu
+            jump .tofu
 
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
@@ -107,7 +107,7 @@ label .breadsticks:
 
 label .crackers:
     dafny "Crackers? I don't really like those..."
-    dafny ""
+    dafny "ass"
     return
 
 label .lemonade:
@@ -122,14 +122,14 @@ label .curry:
     dafny "YUCK! That's way too spicy for me!"
     dafny "Sorry, I don't think I can eat that..."
     basil "Um, yeah, sorry..."
-    jump restaurant_badend
+    jump .restaurant_badend
 
 label .chicken:
     dafny "Umm..."
     dafny "I don't eat meat. I'm vegan."
     dafny "I thought you knew that..."
     basil "Sorry..."
-    jump restaurant_badend
+    jump .restaurant_badend
 
 label .restaurant_badend:
     python:
@@ -137,3 +137,10 @@ label .restaurant_badend:
     jump badend_a
 
 label .tofu:
+    dafny "TOFU!!"
+    jump .success
+
+label .success:
+    dafny "LETS GO SOMEWHERE ELSE TONITE"
+    # GO TO LOCATION CHOICE
+    return
