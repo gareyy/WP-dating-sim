@@ -32,6 +32,7 @@ label loophead:
 
     elif loop_no == 2:
         basil "(This is getting weird...)"
+        basil "(Shit, did that weirdo put me in a time loop?)"
 
     elif loop_no == 3:
         basil "(Looks like I'm stuck in some kind of loop.)"
@@ -42,9 +43,22 @@ label loophead:
     elif loop_no % 2 == 1:
         basil "(I don't know how many times I've been here, but I won't give up!)"
 
+    elif renpy.random.randint(1, 100) == 69:
+        basil "(IM BACK IN THE FUCKING BUILDING AGAIN!)"
+
     else:
         basil "(I need to try something different this time!)"
 
+    if loop_no >= 5:
+        menu:
+            "Would you like to skip ahead to the location choice?"
+
+            "Yes":
+                jump .choice1
+
+            "No":
+                jump .sitting
+label .sitting:
 
     if 2 <= loop_no <= 3:
         basil "Uh umm... no, I don't think so. I just got here."
@@ -187,7 +201,51 @@ label .tofu:
     jump .success
 
 label .success:
-    dafny "LETS GO SOMEWHERE ELSE TONITE"
-    # GO TO LOCATION CHOICE
-    jump museum
+    scene bg restaurant with fade
+    show dafny happy at left
+    show basil at right
+    dafny "Mmm!"
+    dafny "I never knew this tofu was so good!"
+    basil "It is?"
+    basil "It's something i've never tried but yeah, it's pretty good."
+    "..."
+    dafny "Hey, you got any plans for tonight?"
+    basil "Usually I go home and play solitaire..."
+    dafny "Ooh! Lets do something fun tonight!"
+    basil "Like what?"
+    dafny "You know, I've always wanted to walk by that lake nearby."
+    dafny "Ooh! Maybe that pool nearby too!" 
+    basil "Pool?"
+    dafny "How about the art museum!"
+    dafny "Or maybe that weird ass abandoned building. Hartley teakle, right?"
+    dafny "How about you?"
+    basil "Me?"
+    show basil thinking
+    basil "How about the arcade?"
+    dafny "Ooh I love the arcade!"
+    basil "Or maybe karaoke?"
+    basil "The casino?"
+    basil "How about a spa?"
+    dafny "Hm, nice ideas..."
+
+    basil "(Shit, this may be a date after all...)"
+    basil "(It could end in something more...)"
+    jump .choice1
+    return
+
+label .choice1:
+    basil "(Where should we go for tonight?...)"
+    $ stage1locations = ["museum", "lakes", "pool", "hartley"]
+    $ choices = random.sample(stage1locations, 2)
+    menu:
+        "Where should we go?"
+
+        "Art Museum" if "museum" in choices:
+            ""
+        "The Lakes" if "lakes" in choices:
+            ""
+        "The Pool" if "pool" in choices:
+            jump pool
+        "Hartley Teakle Building" if "hartley" in choices:
+            ""
     return
