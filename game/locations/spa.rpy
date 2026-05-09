@@ -62,7 +62,7 @@ label .spa_menu:
     rocq "Um anyway..."
     rocq "Which one would you like to try out today?"
 
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         
         "Massage":
@@ -105,8 +105,8 @@ label .cold_plunge:
     scene bg black with fade
     scene bg spa
     with fade
-    show dafny swimsuit at left
-    show basil swimsuit at right
+    show dafny swimwear at left
+    show basil swimwear at right
     dafny "You know, I have never done a cold plunge before!"
     "Dafny and Basil walk into the cold plunge pool."
     dafny "Oooh! Brrr!"
@@ -114,12 +114,12 @@ label .cold_plunge:
     "They both settle down in the tub."
     dafny "Wo- wow, c-c-c-cold..."
     dafny "Can I hug you for some w-warmth?"
-    show basil swimsuit blushing
+    show basil swimwear blushing
     basil "Sure..."
     dafny "Th-th thanks..."
     # TODO: add some transition thing that moves them closer?
-    show dafny swimsuit at closeleft with move
-    show basil swimsuit at closeright with move
+    show dafny swimwear at closeleft with move
+    show basil swimwear at closeright with move
 
     dafny "You kn-kn-know, we are pretty close now..."
     dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
@@ -155,13 +155,13 @@ label .massage_badend:
     rocq "Basil, I feel like a couple's massage would be perfect for you two!"
     basil "This is the kind of thing you normally do only in towels, right?"
     basil "Um, can we get swimsuits only?"
-    rocq "If thats fine by you..."
+    rocq "If that's fine by you..."
 
     scene bg black with fade
     scene bg spa
     with fade
-    show dafny swimsuit at threeleft
-    show basil swimsuit at threemid
+    show dafny swimwear at threeleft
+    show basil swimwear at threemid
 
     basil "..."
     basil "...."
@@ -185,8 +185,8 @@ label .massage_badend:
     scene bg black with fade
     scene bg spa
     with fade
-    show dafny swimsuit angry at left
-    show basil swimsuit at right
+    show dafny swimwear angry at left
+    show basil swimwear at right
 
     dafny "Ouch my neck! What the hell did you do to me?!"
     basil "!!!"
@@ -210,20 +210,20 @@ label .hot_tub:
     # Until Rocq interrupts them and tells them that they have to leave because the spa is closing.
     basil "Um, hot tub please..."
     dafny "Oh yes! I've always wanted to do one of these!"
-    dafny "Especially with you basil."
+    dafny "Especially with you Basil."
     show basil blushing
     basil "!!!"
     "..."
     scene bg black with fade
     scene bg spa
     with fade
-    show dafny swimsuit at left
-    show basil swimsuit at right    
+    show dafny swimwear at left
+    show basil swimwear at right    
 
     dafny "..."
     dafny "What's with the look Basil?"
     basil "..."
-    show basil swimsuit blushing
+    show basil swimwear blushing
     dafny "You stunlocked by my beautiful looks?"
     basil "!!!"
     dafny "Come on in the tub Basil."
@@ -231,13 +231,13 @@ label .hot_tub:
     dafny "Look at us, two program verification researchers, in a hot tub together."
     dafny "Five feet apart, but are we gay?"
     basil "Um..."
-    show dafny swimsuit at closeleft with move
+    show dafny swimwear at closeleft with move
     dafny "Come closer Basil."
     dafny "I want to tell you something..."
     basil "(Holy cow I am going insane!)"
     basil "(Is my crush really gonna do this to me?)"
     basil "Um, okay.."
-    show basil swimsuit at closeright with move
+    show basil swimwear at closeright with move
     dafny "You seem a little shy, love~."
     basil "(She called me love???)"
     dafny "Two program verification researchers, in a hot tub, together."
@@ -245,7 +245,7 @@ label .hot_tub:
     basil "Uh uhm, yes please."
     dafny "Alright then."
     "Dafny takes Basil's head and begins to pat it"
-    show dafny swimsuit blushing
+    show dafny swimwear blushing
     "Dafny begins to whisper something in Basil's ear."
     dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
     $ pool_info = True
@@ -257,8 +257,8 @@ label .hot_tub:
     basil "Like this for a few moments?"
     dafny "Yea-"
     
-    show basil swimsuit at threeright with move
-    show dafny swimsuit at threemid with move
+    show basil swimwear at threeright with move
+    show dafny swimwear at threemid with move
 
     show rocq at threeleft with fade
 

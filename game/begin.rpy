@@ -47,12 +47,13 @@ image dafny lovestruck = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Ex
 image dafny sad = Crop((0, 0, 925, 925), Image("images/dafny/Disappointed.png", oversample=3))
 image dafny laughing = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
 
-image dafny surprised = Image("images/dafny/Flustered.png", oversample=6)
-image dafny angry = Image("images/dafny/Neutral.png", oversample=6)
-image dafny scared = Image("images/dafny/Neutral.png", oversample=6)
-image dafny swimwear = Image("images/dafny/Neutral.png", oversample=6)
-image dafny swimwear happy = Image("images/dafny/Neutral.png", oversample=6)
-image dafny swimwear blushing = Image("images/dafny/Neutral.png", oversample=6)
+image dafny surprised = Crop((0, 0, 925, 925), Image("images/dafny/Flustered.png", oversample=6))
+image dafny angry = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny scared = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny swimwear = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny swimwear angry = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny swimwear happy = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny swimwear blushing = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
 
 
 define whitefade = Fade(1.0, 1.0, 0.5, color='#fff')
