@@ -65,6 +65,11 @@ transform right:
     xalign 0.75
     yalign 1.0
 
+image red = Image("images/backgrounds/red.png")
+
+transform barspot:
+    xalign 0.0
+
 # The game starts here.
 
 label start:

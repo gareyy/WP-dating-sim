@@ -4,6 +4,8 @@ label generalbadend:
     stop music fadeout 3.0
     show alternating_frames
     basil "It can't end like this."
+    show red at barspot
+    with moveintop
     basil "It shouldn't."
 
     play sound "audio/sfx/loopreset.ogg"
