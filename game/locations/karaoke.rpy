@@ -109,6 +109,7 @@ label .duet_choice:
     "The karaoke score reads \"100\""
     basil "Yeah!"
     dafny "Yeah!"
+    $ good_karaoke = True
 
     return
 

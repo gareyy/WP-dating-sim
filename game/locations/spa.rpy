@@ -267,4 +267,6 @@ label .hot_tub:
     rocq "You know, cleaning and such."
     basil "..."
 
+    $ good_spa = True
+
     jump ending

@@ -142,6 +142,7 @@ label .good_choice:
     dafny "Two computer scientists going to a body of water? What a rarity these days!"
     basil "Ha."
     dafny "You know what? I don't want this night to end, where should we go to?"
+    $ good_pool = True
     jump choice2
 
 label .pool_badend_B:

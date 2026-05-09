@@ -83,6 +83,7 @@ label .good_choice:
     dafny "Yellow, bold, unafraid of speaking truth to power!"
     dafny "You have good taste."
     basil "Thank you!"
+    $ good_museum = True
     return
 
 label .museum_badend:

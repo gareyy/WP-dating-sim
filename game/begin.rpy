@@ -8,6 +8,7 @@ define dafny = Character("Dafny", color="#ffffc8")
 define isabelle = Character("Isabelle", color="#715bff")
 
 image bg black = "#000"
+image bg white = "#FFF"
 image bg lab = Image("images/backgrounds/lab_resized.png")
 image bg restaurant = Image("images/backgrounds/restaurant.png")
 image bg museum = Image("images/backgrounds/museum.png")
@@ -92,6 +93,12 @@ label start:
         seen_choice2 = False
 
     default preferences.volume.music = 0.5
+        good_museum = False
+        good_lake = False
+        good_spa = False
+        good_pool = False
+        good_arcade = False
+        good_karaoke = False
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -110,7 +117,7 @@ label start:
     basil "Do you ever think about what would have happened if you knew one thing beforehand, or knew how to react in the right way?"
     basil "Sometimes I think about what would have been the right thing to say, or the right thing to do."
     basil "..."
-    basil "Theres this girl where I work at... She is the prettiest thing in the world."
+    basil "Theres this girl where I work at... She is the prettiest person in the world."
     show dafny
     basil "She's the main reason why i'm still doing this program verification stuff."
     basil "I feel like I could reach new heights with her."

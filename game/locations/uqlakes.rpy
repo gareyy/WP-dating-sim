@@ -423,4 +423,6 @@ label .raven_choice:
 
     basil "(This could get more intense now.)"
 
+    $ good_lake = True
+
     jump choice2
