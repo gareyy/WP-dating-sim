@@ -17,7 +17,8 @@ image bg karaoke = Image("images/backgrounds/karaoke_bg.png")
 image bg spa = Image("images/backgrounds/spa.png")
 image bg arcade = Image("images/backgrounds/arcade.png")
 image bg uqlakes = Image("images/backgrounds/lake.png")
-image alternating_frames:
+
+image verifying:
     "images/backgrounds/verify.png"
     0.35 # Wait for 0.5 seconds
     "images/backgrounds/verify2.png"
@@ -66,11 +67,6 @@ transform left:
 transform right:
     xalign 0.75
     yalign 1.0
-
-image red = Image("images/backgrounds/red.png")
-
-transform barspot:
-    xalign 0.0
 
 # The game starts here.
 

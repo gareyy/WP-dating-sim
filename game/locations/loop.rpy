@@ -1,11 +1,22 @@
+image red = Image("images/backgrounds/barfadeRed.png")
+image green = Image("images/backgrounds/barfadeGreen.png")
+
+transform barspotoffscreen:
+    xalign 0.033
+    yalign 5.0
+
+transform barspot:
+    xalign 0.033
+
+define moveintopslow = MoveTransition(1.0, enter=barspotoffscreen)
+
 # set of badendings and stage choices
 label generalbadend:
-    # scene bg black with fade
+    show verifying
     stop music fadeout 3.0
-    show alternating_frames
-    basil "It can't end like this."
     show red at barspot
-    with moveintop
+    with moveintopslow
+    basil "It can't end like this."
     basil "It shouldn't."
 
     play sound "sfx/loopreset.ogg"
@@ -17,7 +28,7 @@ label generalbadend:
 
 label badend_a:
 
-    scene bg black with fade
+    show verifying with fade
     stop music fadeout 5.0
     play sound "sfx/fail.ogg"
 
@@ -33,6 +44,14 @@ label badend_a:
     "..."
     jump generalbadend
 
+
+label goodend:
+    show verifying
+    # wait 0.5
+    show green at barspot
+    with moveintopslow
+    # wait 2.0
+    return
 
 label choice1:
     basil "(Where should we go next?)"
