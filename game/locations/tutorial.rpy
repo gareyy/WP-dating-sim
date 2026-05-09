@@ -1,3 +1,4 @@
+# tutorial
 label tutorial:
 
     # Start by playing some music.
@@ -12,7 +13,7 @@ label tutorial:
     isabelle "Hey, you look familiar..."
 
     menu:
-
+        # ADD SLEDGEHAMMER JOKE
         isabelle "Do I remember seeing you before?"
 
         "I don't think so":
@@ -28,6 +29,11 @@ label tutorial:
     isabelle "You have another chance to do it right this time!"
 
     isabelle "Remember to make a good impression on your date! You only get one chance!"
+    
+    show isabelle at left
+    show basil at right
+
+    basil "Wait wh- who are you?"
 
     hide isabelle
 

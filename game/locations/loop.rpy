@@ -1,3 +1,4 @@
+# set of badendings and stage choices
 label badend_a:
 
     hide dafny

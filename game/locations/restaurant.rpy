@@ -8,8 +8,12 @@
 # Loss
 
 label loophead:
-    scene bg restaurant
+    hide dafny
+    hide basil
+    scene bg restaurant with fade
     with fade
+
+    show dafny
 
     dafny "Hey, have you been waiting long?"
 
@@ -53,7 +57,8 @@ label loophead:
 # The tutorial meets the restaurant scene here
 label restaurant:
 
-    show dafny
+    show dafny at left
+    show basil at right
 
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"
@@ -71,7 +76,10 @@ label restaurant:
 
         "Crackers":
             call .crackers
-    
+
+    show dafny at left
+    show basil at right
+
     dafny "I'm pretty thirsty, what should we drink?"
     basil "I think I would like something shared."
     dafny "Oh yeah! Great idea!"
@@ -82,6 +90,9 @@ label restaurant:
             call .lemonade
         "Water":
             call .water
+
+    show dafny at left
+    show basil at right
 
     dafny "And for the main course, hmmm what to eat..."
     dafny "Oh you choose!"
@@ -102,41 +113,77 @@ label restaurant:
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
     basil "Oh you do?"
+    dafny "Great choice basil!"
+    $ entry = "breadsticks"
     return
 
 label .crackers:
     dafny "Crackers? I don't really like those..."
-    dafny "ass"
+    show dafny sad 
+    dafny "Too salty..."
+    $ entry = "crackers"
     return
 
 label .lemonade:
+    show dafny happy
     dafny "Lemonade is my favorite! Great choice!"
+    dafny "I can't wait!"
+    $ drink = "lemonade"
     return
 
 label .water:
+    show dafny sad
     dafny "Water is good, but I was hoping for something a little sweeter..."
+    basil "Like um?"
+    show basil sad
+    dafny "I think everything that isn't water is sweeter."
+    $ drink = "water"
     return
 
 label .curry:
+    show dafny angry
     dafny "YUCK! That's way too spicy for me!"
     dafny "Sorry, I don't think I can eat that..."
+    show basil sad
     basil "Um, yeah, sorry..."
     jump .restaurant_badend
 
 label .chicken:
     dafny "Umm..."
+    show dafny angry
     dafny "I don't eat meat. I'm vegan."
     dafny "I thought you knew that..."
+    show basil sad
     basil "Sorry..."
+    basil "(Shit!)"
     jump .restaurant_badend
 
 label .restaurant_badend:
+    scene bg restaurant with fade
+    show dafny at left
+    show basil at right
+    dafny "I don't think im gonna eat tonight"
+    basil "Ok, um fine, um, sorry."
+    dafny "It's okay, I can buy my own food later."
+    dafny "You know, that {b}tofu{\b} on the menu looked nice..."
     python:
         restaurant_info = True
+    basil "You fine with just me eating tonight?"
+    dafny "Yeah, I'm fine with just [entry] and [drink] for tonight..."
+    basil "Alright, y-yeah..."
+    show basil sad
+    show dafny sad
+    dafny "..."
+    basil "..."
+    scene bg restaurant with fade
+    "Shortly after, Dafny left the seat to go home..."
     jump badend_a
 
 label .tofu:
-    dafny "TOFU!!"
+    show dafny happy
+    dafny "Oh hell yeah! Tofu! My favourite!"
+    dafny "Thank you so much Basil! You read my mind!"
+    basil "Y-yeah..."
     jump .success
 
 label .success:
