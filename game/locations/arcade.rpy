@@ -80,6 +80,34 @@ label arcade:
 label .floydger:
     #dafny "Fun game where Robert W. Floyd is trying to cross an acyclic graph."
     basil "Ok! Floydger!"
+    dafny "The old one?"
+    basil "Yeah.."
+    dafny "Wow, this cabinet is old!"
+    basil "How come you know this game?"
+    dafny "Oh, my dad had this game on his old computer."
+    dafny "Like old old."
+    show basil surprised
+    basil "..."
+    show basil at right
+    basil "Alright, uh, lets get this game started!"
+    dafny "I hope I can remember how to play this..."
+    scene bg black with fade
+    scene bg arcade
+    with fade
+    show dafny sad at left
+    show basil sad at right
+
+    dafny "..."
+    basil "..."
+    "The cabinet's screen is flashing weird colours."
+    dafny "Did we break the game?"
+    basil "Yeah."
+    dafny "It was because we were able to go back on the acyclic graph, right?"
+    basil "Yep."
+    show dafny at left
+    show basil at right
+    dafny "Lets leave before someone suspects us of breaking this thing."
+    basil "Oh yep, definitely."
     call .arcadelearn
     jump .arcade_badend
 
@@ -100,8 +128,17 @@ label .hoareracing:
     scene bg black with fade
     scene bg arcade
     with fade
-    show dafny at left
-    show basil at right
+    show dafny sad at left
+    show basil sad at right
+
+    dafny "..."
+    basil "..."
+    "The arcade screen shows a video of Tony Hoare dancing"
+    dafny "We lost."
+    basil "Yeah."
+    dafny "What a bummer to end the night."
+    basil "You want to split ways now?"
+    dafny "Sure..."
 
     call .arcadelearn
     jump .arcade_badend
