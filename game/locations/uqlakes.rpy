@@ -60,6 +60,8 @@ label uqlakes:
     basil "Oh, which one?"
     dafny "Which one look the most interesting to you Basil?"
 
+    $ import random
+    $ coinflip = random.choice([0, 1, 2])
     if not lake_info:
         menu:
             "Ibis":
@@ -67,20 +69,25 @@ label uqlakes:
 
             "Water Dragon":
                 call .water_dragon_choice
-            
             "Possum":
                 call .possum_choice
-    
     else:
         menu:
-            "Raven":
-                call .raven_choice
+        "Ibis" if coinflip == 0:
+            call .ibis_choice
 
-            "Possum":
-                call .possum_choice
-            
-            "Pukeko":
-                call .pukeko_choice
+        "Water Dragon" if coinflip == 1:
+            call .water_dragon_choice
+
+        "Possum" if coinflip == 2:
+            call .possum_choice
+        
+        "Raven":
+            call .raven_choice
+
+        
+        "Pukeko":
+            call .pukeko_choice
 
     
     jump choice2
@@ -88,11 +95,52 @@ label uqlakes:
 label .ibis_choice:
     basil "Oh look! an ibis!"
     dafny "Those are quite ordinary birds, but they are pretty cute..."
+    basil "They're also called bin chickens."
+    "An ibis swoops in and lands in front of them, blocking their path."
+    hide basil
+    show ibis at right
+    ibis "What did you just call me?"
     jump .uqlakes_badend
 
 label .water_dragon_choice:
     basil "Oh look! A water dragon!"
     dafny "They are pretty cool, but they are a bit scary..."
+    basil "Why are they called water dragons anyway?"
+    dafny "Maybe because they look,"
+    dafny "Like a dragon."
+    show basil angry
+    basil "..."
+    basil "...."
+    basil "....."
+    dafny "You know, like the game?"
+    show basil at right
+    basil "Ok, alright, um."
+    "They both stare intensly at the water dragon"
+    hide basil
+    show dragon at right
+    dragon "..." # add dragon noise where elipsis is, just make something up hayden
+    basil "Um, hello?"
+    dragon "..."
+    dafny "Hello little guy! My name is Dafny, and this is Basil."
+    dragon "..."
+    basil "Um? Do you talk little guy?"
+    dragon "..."
+    dafny "I've heard mystical things about the animals of this lake."
+    dafny "Like they talk and give you wise advice."
+    basil "Is that so?"
+    dafny "Supposedly."
+    dafny "Like if an animal from here started talking to me I wouldn't be surprised."
+    dragon "..."
+    basil "..."
+    basil "I thought that thing was gonna talk."
+    dafny "Anyway, I heard some of these animals could give you advice or fortune."
+    dafny "Or possibly have impeccable charisma."
+    basil "Really?"
+    dafny "I haven't given much thought to it."
+    dragon "..."
+    hide dragon
+    show basil at right
+
     jump .uqlakes_badend
 
 label .possum_choice:
@@ -207,7 +255,13 @@ label .pukeko_choice:
     jump generalbadend
 
 label .uqlakes_badend:
-    "Dafny and Basil walk away from what they were looking at."
+    dafny "So, um, nice lake day I suppose?"
+    dafny "Did you like that song I shared to you?"
+    basil "Yeah."
+    basil "So you like romantic songs I guess?"
+    dafny "Oh yeah, absolutely."
+    dafny "But I think I should leave now."
+    basil "Oh, um yeah, me too.."
     jump badend_a
 
 label .raven_choice:
