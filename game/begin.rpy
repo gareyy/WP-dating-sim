@@ -32,6 +32,7 @@ image basil laughing = Crop((0, 0, 925, 925), Image("images/basil/Laughing.png",
 image basil normal = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
 image basil surprised    = Crop((0, 0, 925, 925), Image("images/basil/Surprise.png", oversample=3))
 image basil thinking = Crop((0, 0, 925, 925), Image("images/basil/Thinking.png", oversample=3))
+image basil hesitant = Crop((0, 0, 925, 925), Image("images/basil/Hesitant.png", oversample=3))
 
 image basil blushing = Crop((0, 0, 925, 925), Image("images/basil/Blushing.png", oversample=3))
 image basil angry = Crop((0, 0, 925, 925), Image("images/basil/Angry.png", oversample=3))
