@@ -19,6 +19,8 @@ label uqlakes:
     show dafny at left
     show basil at right
     with fade
+    stop music fadeout 3.0
+    queue music "audio/main/vara.ogg" volume 0.5 fadein 10.0
 
     # Walking to the lakes
     dafny "This is such a nice place to go for a walk together!"

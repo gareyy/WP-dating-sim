@@ -58,6 +58,7 @@ label loophead:
 
             "No":
                 jump .sitting
+
 label .sitting:
 
     if 2 <= loop_no <= 3:
@@ -74,6 +75,8 @@ label restaurant:
     show dafny at left
     show basil at right
 
+    if loop_no != 0:
+        queue music "audio/main/vara.ogg" fadein 3.0
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"
     dafny "Ummm lets see here."
@@ -127,7 +130,7 @@ label restaurant:
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
     basil "Oh you do?"
-    dafny "Great choice basil!"
+    dafny "Great choice Basil!"
     $ entry = "breadsticks"
     return
 
@@ -174,6 +177,7 @@ label .chicken:
 
 label .restaurant_badend:
     scene bg restaurant with fade
+    stop music fadeout 10.0
     show dafny at left
     show basil at right
     dafny "I don't think im gonna eat tonight"
@@ -194,6 +198,7 @@ label .restaurant_badend:
     jump badend_a
 
 label .tofu:
+    queue music "audio/main/varb.ogg"
     show dafny happy
     dafny "Oh hell yeah! Tofu! My favourite!"
     dafny "Thank you so much Basil! You read my mind!"

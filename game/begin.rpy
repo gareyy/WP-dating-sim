@@ -25,7 +25,7 @@ image basil angry = Image("images/basil/Normal.png", oversample=6)
 image basil sad = Image("images/basil/Surprise.png", oversample=6)
 image basil swimwear = Image("images/basil/Normal.png", oversample=6)
 
-define whitefade = Fade(0.5, 0.5, 0.5, color='#fff')
+define whitefade = Fade(1.0, 1.0, 0.5, color='#fff')
 
 transform left:
     xalign 0.25
@@ -87,6 +87,7 @@ label start:
     basil "I would do anything! Even if it meant living the same day over and over again until I get it right!"
 
     show bg lab with fade
+    queue music "audio/main/vara.ogg" volume 0.5 fadein 5.0
     
     show basil at left
     basil "Nice! all my work for today is done!"

@@ -7,6 +7,7 @@ label museum:
 
     scene bg museum
     with fade
+    queue music "audio/main/vara.ogg"
 
     show dafny
 

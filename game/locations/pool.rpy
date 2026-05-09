@@ -12,6 +12,7 @@ label pool:
 
     scene bg pool
     with fade
+    queue music "audio/main/vara.ogg"
 
     show dafny at left
     show basil at right

@@ -3,6 +3,8 @@ label generalbadend:
     basil "It can't end like this."
     basil "It shouldn't."
 
+    play sound "audio/sfx/loopreset.ogg"
+
     python:
         loop_no = loop_no + 1
 
@@ -11,6 +13,7 @@ label generalbadend:
 label badend_a:
 
     scene bg black with fade
+    stop music fadeout 5.0
 
     basil "It all fizzled out in the end..."
     basil "Shortly after, she left me alone."
