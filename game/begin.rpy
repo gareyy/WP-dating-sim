@@ -9,6 +9,8 @@ define isabelle = Character("Isabelle", color="#715bff")
 
 image bg black = "#000"
 
+define whitefade = Fade(0.5, 0.5, 0.5, color='#fff')
+
 transform left:
     xalign 0.25
     yalign 1.0
