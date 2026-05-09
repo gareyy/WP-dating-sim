@@ -1,4 +1,13 @@
 # set of badendings and stage choices
+label generalbadend:
+    basil "It can't end like this."
+    basil "It shouldn't."
+
+    python:
+        loop_no = loop_no + 1
+
+    jump loophead
+
 label badend_a:
 
     scene bg black with fade
@@ -13,14 +22,8 @@ label badend_a:
     basil "My heart started to beat less for love..."
 
     ""
+    jump generalbadend
 
-    basil "It can't end like this."
-    basil "It shouldn't."
-
-    python:
-        loop_no = loop_no + 1
-
-    jump loophead
 
 label .choice2:
     basil "(Where should we go next?)"
