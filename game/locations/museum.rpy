@@ -18,7 +18,7 @@ label museum:
     basil "Oh yeah, that one is Odin."
     dafny "Haha I just liked it because it had ravens on it :3"
     basil "Oh, do you like black birds?"
-    dafny "Only ravens really. They are epic and wise."
+    dafny "Only {b}ravens{\b} really. They are epic and wise."
 
     python:
         lake_info = True

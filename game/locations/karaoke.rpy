@@ -18,7 +18,7 @@ label karaoke:
     # See graffiti on the way to karaoke
     dafny "Wow, look at all this graffiti! It's so cool and artistic!"
     basil "Yeah, it's really impressive."
-    dafny "I wish I could be an artist's muse one day and inspire them to create amazing art like this!"
+    dafny "I wish {b}I could be an artist's muse{\b} one day and inspire them to create amazing art like this!"
     basil "That would be really cool. You would make a great muse!"
     python:
         museum_info = True

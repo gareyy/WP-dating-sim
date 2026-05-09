@@ -27,7 +27,7 @@ image basil thinking = Crop((0, 0, 925, 925), Image("images/basil/Thinking.png",
 image basil blushing = Image("images/basil/Normal.png", oversample=6)
 image basil angry = Image("images/basil/Normal.png", oversample=6)
 image basil sad = Image("images/basil/Surprise.png", oversample=6)
-image basil swimwear = Image("images/basil/Normal.png", oversample=6)
+image basil swimsuit = Image("images/basil/Normal.png", oversample=6)
 
 image dafny = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=3))
 image dafny happy = Crop((0, 0, 925, 925), Image("images/dafny/Happy 2.png", oversample=3))

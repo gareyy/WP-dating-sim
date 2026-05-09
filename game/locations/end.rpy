@@ -7,4 +7,5 @@ label ending:
     basil "Uhm..."
     dafny "I would love to have you over."
     dafny "Like please, "
+    # show da house
     $ MainMenu(confirm=False)()
