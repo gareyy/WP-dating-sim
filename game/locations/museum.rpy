@@ -23,50 +23,66 @@ label museum:
     python:
         lake_info = True
 
+    "As you enter the art gallery, your eyes are drawn to a large yellow canvas emblaisoned with the words:"
+    "\"This program was verified by real weakest precondition patriots\""
+
     dafny "Look at these ones over here!"
+    "Before you are three glorious works of art."
+    # Alt-Ergo
+    "On the left is a ligature of a and e between two double-struck horizontal lines."
+    # C++
+    "In the middle is an abstract representation of a crab claw on a blue hexagon pinching the concat operation."
+    "On the right is an oil painting of fox girl, looking gorgeous and regal."
+
 
     dafny "Which one do you like the most?"
-
     play sound "audio/sfx/choice.ogg"
-    if not museum_info:
-        menu:
-            "The one on the left":
-                call .first_choice
-
-            "The one in the middle":
-                call .second_choice
-
-            "The one on the right":
-                call .third_choice
-
+    
     menu:
         "The one on the left":
-            call .second_choice
+            call .first_choice
 
         "The one in the middle":
+            call .second_choice
+
+        "The one on the right":
             call .third_choice
-
-        "Tofu":
+        
+        "The one by the entrance" if museum_info:
             call .good_choice
-
-
     
     jump choice2
 
 label .first_choice:
     dafny "Oh, I don't really like that one..."
-    jump museum_badend
+    dafny "It's just kind of bland."
+    basil "What about the ligature?"
+    basil "That looks cool!"
+    dafny "..."
+
+    jump .museum_badend
 
 label .second_choice:
-    dafny "Umm, I don't really like that one..."
-    jump museum_badend
+    dafny "Umm, I'm not sure how I feel about that one..."
+    basil "How so?"
+    dafny "Something about just feels very undefined."
+    dafny "It makes me feel unsafe"
+
+    jump .museum_badend
 
 label .third_choice:
     dafny "Hmm, that's a bit much..."
+    basil "What do you mean!?"
+    basil "You can see every brush stroke the artist made!"
+    basil "And oil painting is the objectively best medium!"
+    dafny "Sure..."
     jump .museum_badend
 
 label .good_choice:
-    dafny "Oh, this looks great! Thank you!"
+    dafny "I know it's so cool!"
+    dafny "Yellow, bold, unafraid of speaking truth to power!"
+    dafny "You have good taste."
+    basil "Thank you!"
     return
 
 label .museum_badend:
