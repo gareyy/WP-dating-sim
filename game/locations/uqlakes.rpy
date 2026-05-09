@@ -98,7 +98,53 @@ label .water_dragon_choice:
 label .possum_choice:
     basil "Oh look! A possum!"
     dafny "Oh, I sort of like those ones, but they are a bit scary..."
-    jump .uqlakes_badend
+
+    hide basil 
+    show possum at right
+    possum "Oh hey you two!"
+    basil "Oh, us?"
+    possum "Yes you two!"
+    show possum fork
+    possum "Give me both of your wallets."
+    possum "NOW!"
+    show dafny scared
+    basil "AAAH!"
+    dafny "AAAH!"
+    possum "NOW!"
+    dafny "Please please please! We are both broke program verification researchers!"
+    basil "I promise you, all my money is gone and I spent it on food!"
+    possum "Is that so?"
+    basil "Spare my life please!"
+    "Basil drops every card and thingiemabob from their wallet on the ground."
+    "The mischievous possum takes what Basil dropped."
+    basil "*GASP!*"
+    dafny "What did you do that for?"
+    possum "I can sell these cards on the internet for a few pretty pennies."
+    possum "I can sell this loyalty card for 20 dollars."
+    basil "NO PLEASE! NOT THE LOYALTY CARD!"
+    basil "Please spare the loyalty card, please please please.."
+    dafny "You give them back the loyalty card right now!"
+    basil "I can give you my drivers licence, please!"
+    basil "I don't even drive anymore!"
+    "The possum takes a closer look at the drivers licence."
+    possum "Expired."
+    possum "I can sell this to some kids to make fake ones from."
+    basil "Please do, just not the loyalty card."
+    possum "You have a deal."
+    "The possum quickly disappears."
+    hide possum
+    show basil sad at right
+    basil "..."
+    dafny "..."
+
+    basil "Lets leave."
+    dafny "Yeah."
+    basil "Wait, it took my go card."
+    dafny "What?"
+    scene bg black with fade
+    basil "After a stupid long walk, I was able to reach home."
+    basil "From that point on, Dafny knew me only as the person who got their drivers licence stolen by a possum."
+    jump generalbadend
 
 label .pukeko_choice:
     basil "Oh look! A pukeko!"
@@ -161,7 +207,7 @@ label .pukeko_choice:
     jump generalbadend
 
 label .uqlakes_badend:
-    "Dafny and Basil walk away from what they were looking at"
+    "Dafny and Basil walk away from what they were looking at."
     jump badend_a
 
 label .raven_choice:
