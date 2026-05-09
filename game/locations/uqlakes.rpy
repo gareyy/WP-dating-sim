@@ -73,21 +73,21 @@ label uqlakes:
                 call .possum_choice
     else:
         menu:
-        "Ibis" if coinflip == 0:
-            call .ibis_choice
+            "Ibis" if coinflip == 0:
+                call .ibis_choice
 
-        "Water Dragon" if coinflip == 1:
-            call .water_dragon_choice
+            "Water Dragon" if coinflip == 1:
+                call .water_dragon_choice
 
-        "Possum" if coinflip == 2:
-            call .possum_choice
-        
-        "Raven":
-            call .raven_choice
+            "Possum" if coinflip == 2:
+                call .possum_choice
+            
+            "Raven":
+                call .raven_choice
 
-        
-        "Pukeko":
-            call .pukeko_choice
+            
+            "Pukeko":
+                call .pukeko_choice
 
     
     jump choice2
@@ -100,7 +100,46 @@ label .ibis_choice:
     hide basil
     show ibis at right
     ibis "What did you just call me?"
-    jump .uqlakes_badend
+    basil "Oh I am so sorry!"
+    ibis "What did you call me???"
+    show dafny scared
+    basil "Please calm down."
+    basil "My name is Basil and I am so truly sorry."
+    ibis "Grr."
+    dafny "You are not gonna do anything to my friend!"
+    ibis "How would you feel if your friend called you a bin chicken?"
+    show dafny happy
+    dafny "I'd laugh at it."
+    ibis "Go on Basil, call your friend a \"bin chicken\""
+    basil "Um..."
+    basil "Hey Dafny, you are a uh, um, bin chicken."
+    dafny "Wow."
+    dafny "I am so honoured..."
+    ibis "..."
+    ibis "You have a point Basil."
+    ibis "But I am still offended by you."
+    basil "What?"
+    "The ibis flies away"
+    hide ibis
+    show basil at right
+    basil "Wow. what a spoil sport of a bird."
+    basil "I always see those things picking in bins anyway, thats why they are called bin chickens."
+    ibis "Bombs away!"
+    "Bird poop falls from the sky and lands on Basil."
+    show basil pooped
+    basil "..."
+    dafny "..."
+    show dafny laughing
+    dafny "BAWHAHHAHAHAHAHAHHAHA!!!-"
+    basil "Hey!"
+    dafny "Oh my, everyone is gonna lose it when I tell them about this tomorrow."
+    scene bg black with fade
+    basil "After that, me and Dafny split ways."
+    basil "The next day, Dafny told everyone about what happened."
+    basil "All the in jokes at the lab are now about me being pooped on."
+    basil "Still, I didn't end up with Dafny, probably for unrelated reasons I hope."
+    basil "..."
+    jump generalbadend
 
 label .water_dragon_choice:
     basil "Oh look! A water dragon!"
@@ -192,6 +231,7 @@ label .possum_choice:
     scene bg black with fade
     basil "After a stupid long walk, I was able to reach home."
     basil "From that point on, Dafny knew me only as the person who got their drivers licence stolen by a possum."
+    basil "..."
     jump generalbadend
 
 label .pukeko_choice:
