@@ -80,7 +80,8 @@ label choice1:
             jump museum
         "Hartley Teakle" if "hartley" in choices:
             dafny "Ew, that place looks really creepy and scary. I don't think I want to go there..."
-            jump badend_a
+            basil "You sure? Could be fun though!"
+            jump hartley
     return
 
 label choice2:
@@ -110,8 +111,8 @@ label choice2:
             dafny "Let's go to the arcade! I love playing games!"
             jump arcade
         "The Casino" if "casino" in choices:
-            dafny "Hmm, neither of us like gambling, or have any money to gamble with."
-            dafny "I think I might just stay home instead..."
-            
-            jump badend_a
+            dafny "Hmm, neither of us like gambling, or have much money to gamble with."
+            basil "This could be life-changing money."
+            basil "Let's go."
+            jump casino
     return
