@@ -25,9 +25,10 @@ label badend_a:
     jump generalbadend
 
 
-label .choice2:
+label choice2:
     basil "(Where should we go next?)"
     $ stage1locations = ["spa", "casino", "arcade", "karaoke"]
+    $ import random
     $ choices = random.sample(stage1locations, 2)
     menu:
         "Where should we go?"

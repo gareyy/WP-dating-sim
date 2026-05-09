@@ -60,7 +60,7 @@ label uqlakes:
     basil "Oh, which one?"
     dafny "Which one look the most interesting to you Basil?"
 
-    if not uqlakes_info:
+    if not lake_info:
         menu:
             "Ibis":
                 call .ibis_choice
@@ -71,7 +71,7 @@ label uqlakes:
             "Possum":
                 call .possum_choice
     
-    if uqlakes_info:
+    else:
         menu:
             "Raven":
                 call .raven_choice
@@ -164,4 +164,60 @@ label .uqlakes_badend:
 label .raven_choice:
     basil "Oh look! A sick ass raven!"
     dafny "Wow that is a sick ass raven! I love ravens, they are so epic and wise!"
+    hide basil
+    show raven at right
+    raven "Hello."
+    raven "What are your names you two?"
+    dafny "Dafny"
+    basil "Basil"
+    raven "I see..."
+    raven "You say I am wise?"
+    dafny "Oh yes! I do."
+    raven "The wisest do not say they are wise, but they have others prove it."
+    dafny "So you're saying you're wise?"
+    raven "..."
+    basil "You got any wise sayings or whatever it is?"
+    basil "That stuff Sun Tzu says?"
+    raven "That guy is a warlord, I am a bird of peace."
+    raven "I am also hungry."
+    dafny "Ooh I got something!"
+    dafny "I got the entree from the restaurant!"
+    basil "Oh yeah!"
+    "Dafny and Basil split the food, and give it to the raven."
+    "The raven chews it up and spits it out in a wise way."
+    raven "Yummers."
+    raven "For your offering of the physical world, I shall return to you some knowledge of the spiritual world."
+    "The raven looks introspective."
+    raven "Oh, I am starting to see."
+    raven "..."
+    raven "You two are two halves that need to come together at some part in the world."
+    raven "Thats when you will achieve true happiness."
+    show dafny blushing
+    dafny "Woah."
+    basil "W-"
+    raven "I see a long life of love and happiness."
+    dafny "..."
+    basil "..."
+    raven "Oh I just realised what I said was a prediction, not knowledge of the spiritual world."
+    raven "I'm sorry about that."
+    "Dafny and Basil are blushing purple."
+    dafny "..."
+    basil "..."
+    basil "(Woah.)"
+    raven "But uh yeah, thats it."
+    raven "Thank you for your time, Dafny and Basil."
+    "The raven flies away."
+
+    hide raven
+    show basil blushing at right
+
+    dafny "..."
+    basil "..."
+    basil "(This really is a date, huh?)"
+    dafny "..."
+    dafny "Y-you, um, want to go anywhere else?"
+    basil "Oh- yeah, of course."
+
+    basil "(This could get more intense now.)"
+
     jump choice2
