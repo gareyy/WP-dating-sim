@@ -45,9 +45,7 @@ label karaoke:
     dafny "That was so much fun! I love singing with you!"
     dafny "We should do this more often!"
 
-    # TODO: add label to go to ending
-    $ MainMenu(confirm=False)()
-    return
+    jump ending
 
 label .club_choice:
     basil "Oh, a club song! That sounds like fun!"
@@ -99,7 +97,7 @@ label .duet_choice:
     basil "Instead of what's been done,"
     basil "Think about whats to come."
     dafny "You proved our lemma to me and now it's crystal clear."
-    dafny "Forall the fish in the sea, you're the only one for me."
+    dafny "You fit my specification perfectly, you're the correct one for me."
     
     "The song ends."
 

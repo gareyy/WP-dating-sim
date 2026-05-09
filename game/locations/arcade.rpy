@@ -50,10 +50,12 @@ label arcade:
 
 label .floydger:
     dafny "Fun game where Robert W. Floyd is trying to cross an acyclic graph."
+    call .arcadelearn
     return
 
 label .hoareracing:
     dafny "Fun game where Tony Hoare is racing against you to sort a list."
+    call .arcadelearn
     return
 
 label .taiko:
@@ -64,6 +66,7 @@ label .taiko:
 
 label .trimonis:
     dafny "Fun game where you stack blocks composed of three equilateral triangles."
+    # good ending
     return
 
 label .arcade_badend:
@@ -71,4 +74,13 @@ label .arcade_badend:
 
 label .taiko_badend:
     # Dafny's wrist is broken and they have to be rushed to the emergency room.
+    call .arcadelearn
     jump generalbadend
+
+label .arcadelearn:
+    scene bg black with fade
+    basil "(I just remembered now, she was looking at that {b}trimonis{\b} game)"
+    python:
+        arcade_info = True
+    basil "(She didn't tell me, I felt like I should have chosen that one too.)"
+    return
