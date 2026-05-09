@@ -17,6 +17,8 @@ image bg karaoke = Image("images/backgrounds/karaoke_bg.png")
 image bg spa = Image("images/backgrounds/spa.png")
 image bg arcade = Image("images/backgrounds/arcade.png")
 image bg uqlakes = Image("images/backgrounds/lake.png")
+image bg hartley = Image("images/backgrounds/hartley.png")
+image bg casino = Image("images/backgrounds/casino.png")
 
 image verifying:
     "images/backgrounds/verify.png"
