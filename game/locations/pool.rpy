@@ -5,32 +5,44 @@
 # Dafny says they want to get closer in a hot tub some time soon (Spa)
 # Bad Ending: Dafny has clearly shown some skin for Basil but the lack of compliment indicates that Basil isn’t into them.
 
+# basil has rashie and shorts
+# dafny has one piece
 
 label pool:
 
     scene bg pool
     with fade
 
-    show dafny
-
-    dafny "A chance to get wet together! I love swimming and relaxing in the pool."
-
-    dafny "I hope we can go swimming together sometime soon, maybe even in a hot tub!"
+    show dafny at left
+    show basil at right
+    dafny "I did not even know they sold togs around here, isn't that awesome?"
+    show basil blushing
+    basil "Y-yeah."
+    dafny "Perfect! I would love to see you in your swimmers soon..."
+    basil "..."
+    basil "(My mind just shortcircuited.)"
+    dafny "Ooh! Maybe in the future, we can go swimming together again sometime soon, maybe even in a {b}hot tub!{\b}"
+    python:
+        spa_info = True
 
     dafny "That would be so nice and intimate, don't you think?"
 
-    basil "Yeah, that sounds really nice."
+    basil "Y-yeah.."
+    basil "Alright, uhh, yeah."
+    dafny "Yep! See you after changing."
 
-    python:
-        spa_info = True
-    
-    basil "Now, let's go change into our swimwear and have some fun in the pool!"
+    "The two go to different change stalls to change..."
+
+    scene bg pool with fade
 
     show dafny swimwear at left
     show basil swimwear at right
     with whitefade
 
-    dafny "Your outfit looks great on you!"
+    dafny "Hey hey!"
+    basil "Y-yeah.."
+    dafny "Your swimmies looks great on you!"
+    basil "(Holy fuck she is so hot)"
 
     menu:
         "Thanks!":
@@ -48,8 +60,9 @@ label pool:
 
         "Your hair looks really nice!":
             call .second_choice
-
-        "Tofu" if pool_info:
+        
+        # THAT BODY OF YOURS IS ABSURD
+        "" if pool_info:
             call .good_choice
 
 label .first_choice:

@@ -21,3 +21,20 @@ label badend_a:
         loop_no = loop_no + 1
 
     jump loophead
+
+label .choice2:
+    basil "(Where should we go next?)"
+    $ stage1locations = ["spa", "casino", "arcade", "karaoke"]
+    $ choices = random.sample(stage1locations, 2)
+    menu:
+        "Where should we go?"
+
+        "Karaoke" if "karaoke" in choices:
+            ""
+        "The Casino" if "casino" in choices:
+            ""
+        "The Spa" if "spa" in choices:
+            ""
+        "The Arcade" if "arcade" in choices:
+            ""
+    return
