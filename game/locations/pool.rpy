@@ -42,7 +42,7 @@ label pool:
     dafny "Hey hey!"
     basil "Y-yeah.."
     dafny "Your swimmies looks great on you!"
-    basil "(Holy fuck she is so hot)"
+    basil "(Wow she is so hot)"
 
     menu:
         "Thanks!":
@@ -64,6 +64,10 @@ label pool:
         # THAT BODY OF YOURS IS ABSURD
         "" if pool_info:
             call .good_choice
+
+
+
+    jump choice2
 
 label .first_choice:
     dafny "Oh, thanks..."

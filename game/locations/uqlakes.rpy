@@ -82,6 +82,9 @@ label uqlakes:
             "Pukeko":
                 call .pukeko_choice
 
+    
+    jump choice2
+
 label .ibis_choice:
     basil "Oh look! an ibis!"
     dafny "Those are quite ordinary birds, but they are pretty cute..."

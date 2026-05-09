@@ -43,8 +43,8 @@ label loophead:
     elif loop_no % 2 == 1:
         basil "(I don't know how many times I've been here, but I won't give up!)"
 
-    elif renpy.random.randint(1, 100) == 69:
-        basil "(IM BACK IN THE FUCKING BUILDING AGAIN!)"
+    elif loop_no >= 10 and renpy.random.randint(1, 100) == 69:
+        basil "(IM BACK IN THIS FUCKING BUILDING AGAIN!)"
 
     else:
         basil "(I need to try something different this time!)"
@@ -228,24 +228,7 @@ label .success:
     basil "How about a spa?"
     dafny "Hm, nice ideas..."
 
-    basil "(Shit, this may be a date after all...)"
+    basil "(Maybe this is a date after all...)"
     basil "(It could end in something more...)"
-    jump .choice1
-    return
-
-label .choice1:
-    basil "(Where should we go for tonight?...)"
-    $ stage1locations = ["museum", "lakes", "pool", "hartley"]
-    $ choices = random.sample(stage1locations, 2)
-    menu:
-        "Where should we go?"
-
-        "Art Museum" if "museum" in choices:
-            ""
-        "The Lakes" if "lakes" in choices:
-            ""
-        "The Pool" if "pool" in choices:
-            jump pool
-        "Hartley Teakle Building" if "hartley" in choices:
-            ""
+    jump choice1
     return

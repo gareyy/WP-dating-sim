@@ -24,6 +24,8 @@ transform right:
 label start:
 
     python:
+        import random
+
         loop_no = 0
         restaurant_info = False
         karaoke_info = False
@@ -32,6 +34,8 @@ label start:
         arcade_info = False
         museum_info = False
         lake_info = False
+        seen_choice1 = False
+        seen_choice2 = False
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -101,7 +105,7 @@ label start:
 
     show basil
     show dafny
-    basil "Oh shit, did we both get lunch?"
+    basil "Oh shit, did we remember to have some lunch?"
     "Dafny looks around with an unsure face"
     dafny "Yeah uh, fuck."
     dafny "I think we forgot."

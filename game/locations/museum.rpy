@@ -47,6 +47,10 @@ label museum:
         "Tofu":
             call .good_choice
 
+
+    
+    jump choice2
+
 label .first_choice:
     dafny "Oh, I don't really like that one..."
     jump museum_badend
