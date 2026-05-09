@@ -8,7 +8,7 @@ label generalbadend:
     with moveintop
     basil "It shouldn't."
 
-    play sound "audio/sfx/loopreset.ogg"
+    play sound "sfx/loopreset.ogg"
 
     python:
         loop_no = loop_no + 1
@@ -19,7 +19,7 @@ label badend_a:
 
     scene bg black with fade
     stop music fadeout 5.0
-    play sound "audio/sfx/fail.ogg"
+    play sound "sfx/fail.ogg"
 
     basil "It all fizzled out in the end..."
     basil "Shortly after, she left me alone."
@@ -77,7 +77,7 @@ label choice2:
         
         seen_choice2 = True
     
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Where should we go?"
 

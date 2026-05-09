@@ -26,7 +26,7 @@ label uqlakes:
     show basil at right
     with fade
     stop music fadeout 3.0
-    queue music "audio/main/vara.ogg" volume 0.5 fadein 10.0
+    queue music "main/vara.ogg" volume 0.5 fadein 10.0
 
     # Walking to the lakes
     dafny "This is such a nice place to go for a walk together!"
@@ -40,8 +40,6 @@ label uqlakes:
     basil "Oh! Yes sure!"
     "Dafny offers an earbud to Basil, and they put it in."
     "Dafny then pushes play on her phone..."
-    # play music "audio/duet.ogg"
-
     "..."
     show dafny happy
     show basil happy
@@ -71,7 +69,7 @@ label uqlakes:
     $ import random
     $ coinflip = random.choice([0, 1, 2])
 
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     if not lake_info:
         menu:
             "Ibis":

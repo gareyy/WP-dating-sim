@@ -7,7 +7,7 @@ label museum:
 
     scene bg museum
     with fade
-    queue music "audio/main/vara.ogg"
+    queue music "main/vara.ogg"
 
     show dafny
 
@@ -36,7 +36,7 @@ label museum:
 
 
     dafny "Which one do you like the most?"
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     
     menu:
         "The one on the left":

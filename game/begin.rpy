@@ -24,6 +24,7 @@ image alternating_frames:
     0.35 # Wait for 0.5 seconds
     repeat # Loop forever
 
+# oversample = 6 if TODO sprite
 image basil = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
 image basil happy = Crop((0, 0, 925, 925), Image("images/basil/Happy.png", oversample=3))
 image basil laughing = Crop((0, 0, 925, 925), Image("images/basil/Laughing.png", oversample=3))
@@ -89,6 +90,8 @@ label start:
         seen_choice1 = False
         seen_choice2 = False
 
+    default preferences.volume.music = 0.5
+
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -123,7 +126,7 @@ label start:
     basil "I would do anything! Even if it meant living the same day over and over again until I get it right!"
 
     show bg lab with fade
-    queue music "audio/main/vara.ogg" volume 0.5 fadein 5.0
+    queue music "main/vara.ogg" volume 0.5 fadein 5.0
     
     show basil at right
     basil "Nice! all my work for today is done!"

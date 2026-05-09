@@ -11,7 +11,6 @@ label loophead:
     hide dafny
     hide basil
     scene bg restaurant with fade
-    with fade
 
     show dafny
 
@@ -76,7 +75,7 @@ label restaurant:
     show basil at right
 
     if loop_no != 0:
-        queue music "audio/main/vara.ogg" fadein 3.0
+        queue music "main/vara.ogg" fadein 3.0
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"
     dafny "Ummm let's see here."
@@ -117,7 +116,7 @@ label restaurant:
     dafny "You promised to choose for me!"
     basil "Alright, I choose..."
     
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Curry":
             jump .curry
@@ -197,7 +196,7 @@ label .restaurant_badend:
     jump badend_a
 
 label .tofu:
-    queue music "audio/main/varb.ogg"
+    queue music "main/varb.ogg"
     show dafny happy
     dafny "Oh hell yeah! Tofu! My favourite!"
     dafny "Thank you so much Basil! You read my mind!"

@@ -56,7 +56,7 @@ label arcade:
         else:
             choices = random.sample(games, 2)
 
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
 
     menu:
         "Which game should the two play?"

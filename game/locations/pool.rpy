@@ -12,7 +12,7 @@ label pool:
 
     scene bg pool
     with fade
-    queue music "audio/main/vara.ogg"
+    queue music "main/vara.ogg"
 
     show dafny at left
     show basil at right
@@ -49,7 +49,7 @@ label pool:
     basil "..."
     basil "(I gotta say something!)"
 
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Thanks!":
             basil "Thanks!"
@@ -82,7 +82,7 @@ label pool:
     dafny "..."
     basil "(I should say something.)"
     
-    play sound "audio/sfx/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Your one piece also looks great!":
             call .first_choice
