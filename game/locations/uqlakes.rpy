@@ -13,6 +13,12 @@ define ibis = Character("Ibis")
 define dragon = Character("Water Dragon") # kinda looks like a dragon???
 define raven = Character("Raven")
 
+image ibis = Image("images/animals/ibis.png", oversample=1)
+image pukeko = Image("images/animals/pukeko.png", oversample=2)
+image dragon = Image("images/animals/water_dragon.png", oversample=2)
+image possum = Image("images/animals/possum.png", oversample=0.5)
+image raven = Crop((0, 0, 768, 700), Image("images/animals/raven.png", oversample=1))
+
 label uqlakes:
 
     scene bg uqlakes

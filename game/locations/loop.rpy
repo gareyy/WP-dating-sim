@@ -50,7 +50,7 @@ label choice1:
             jump pool
         "The Lake" if "lake" in choices:
             dafny "The lake sounds like a nice place to spend time!"
-            jump lake
+            jump uqlakes
         "The Museum" if "museum" in choices:
             dafny "I love visiting museums! That sounds like a great idea!"
             jump museum
