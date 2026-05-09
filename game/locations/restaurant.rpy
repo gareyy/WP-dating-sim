@@ -117,6 +117,7 @@ label restaurant:
     dafny "You promised to choose for me!"
     basil "Alright, I choose..."
     
+    play sound "audio/sfx/choice.ogg"
     menu:
         "Curry":
             jump .curry
@@ -176,7 +177,6 @@ label .chicken:
     jump .restaurant_badend
 
 label .restaurant_badend:
-    scene bg restaurant with fade
     stop music fadeout 10.0
     show dafny at left
     show basil at right
@@ -193,7 +193,6 @@ label .restaurant_badend:
     show dafny sad
     dafny "..."
     basil "..."
-    scene bg restaurant with fade
     "Shortly after, Dafny left the seat to go home..."
     jump badend_a
 

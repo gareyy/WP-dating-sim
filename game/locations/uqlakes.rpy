@@ -36,7 +36,7 @@ label uqlakes:
     "Dafny then pushes play on her phone..."
     # play music "audio/duet.ogg"
 
-    ""
+    "..."
     show dafny happy
     show basil happy
     dafny "I hope you like it! It's a really {b}romantic song{\b} that I think is perfect for a walk by the lake."
@@ -64,6 +64,8 @@ label uqlakes:
 
     $ import random
     $ coinflip = random.choice([0, 1, 2])
+
+    play sound "audio/sfx/choice.ogg"
     if not lake_info:
         menu:
             "Ibis":

@@ -28,6 +28,7 @@ label .spa_menu:
 
     rocq "Which one would you like to try out today?"
 
+    play sound "audio/sfx/choice.ogg"
     menu:
         
         "Massage":

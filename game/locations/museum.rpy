@@ -27,6 +27,7 @@ label museum:
 
     dafny "Which one do you like the most?"
 
+    play sound "audio/sfx/choice.ogg"
     if not museum_info:
         menu:
             "The one on the left":

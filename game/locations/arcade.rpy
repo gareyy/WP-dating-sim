@@ -27,6 +27,8 @@ label arcade:
         else:
             choices = random.sample(games, 2)
 
+    play sound "audio/sfx/choice.ogg"
+
     menu:
         
         "Floydger" if "floydger" in choices:

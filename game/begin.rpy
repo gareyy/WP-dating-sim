@@ -12,6 +12,7 @@ image bg lab = Image("images/backgrounds/lab_resized.png", oversample=1)
 image bg restaurant = Image("images/backgrounds/restaurant.png", oversample=1)
 image bg museum = Image("images/backgrounds/museum.png", oversample=1)
 image bg pool = Image("images/backgrounds/pool_resized.png", oversample=1)
+image bg karaoke = Image("images/backgrounds/karaoke_bg.png", oversample=1)
 
 image basil = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
 image basil happy = Crop((0, 0, 925, 925), Image("images/basil/Happy.png", oversample=3))

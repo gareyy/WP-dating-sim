@@ -14,6 +14,7 @@ label badend_a:
 
     scene bg black with fade
     stop music fadeout 5.0
+    play sound "audio/sfx/fail.ogg"
 
     basil "It all fizzled out in the end..."
     basil "Shortly after, she left me alone."
@@ -24,7 +25,7 @@ label badend_a:
     basil "Over time, we drifted apart, and eventually lost contact with each other."
     basil "My heart started to beat less for love..."
 
-    ""
+    "..."
     jump generalbadend
 
 
@@ -40,6 +41,7 @@ label choice1:
 
         seen_choice1 = True
 
+    play sound "audio/choice.ogg"
     menu:
         "Where should we go?"
 
@@ -70,6 +72,7 @@ label choice2:
         
         seen_choice2 = True
     
+    play sound "audio/sfx/choice.ogg"
     menu:
         "Where should we go?"
 
@@ -85,5 +88,6 @@ label choice2:
         "The Casino" if "casino" in choices:
             dafny "Hmm, neither of us like gambling, or have any money to gamble with."
             dafny "I think I might just stay home instead..."
+            
             jump badend_a
     return

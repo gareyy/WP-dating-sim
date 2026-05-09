@@ -32,6 +32,7 @@ label karaoke:
     
     dafny "What song should we sing first? I have a few in mind, but I'm open to suggestions too!"
 
+    play sound "audio/choice.ogg"
     menu:
         "Club Song":
             call .club_choice
