@@ -67,7 +67,7 @@ label pool:
     dafny "Do you want to hop in the water now?"
     show basil swimwear at right
     basil "Oh right!"
-    basil "Lets hop in!"
+    basil "Let's hop in!"
     "SPLASH!"
     "The two hopped in the pool."
     basil "Wahooo!"
@@ -96,36 +96,36 @@ label pool:
 
 label .first_choice:
     dafny "Oh, thanks..."
-    jump pool_badend_B
+    jump .pool_badend_B
 
 label .second_choice:
     dafny "Oh, thanks..."
-    jump pool_badend_B
+    jump .pool_badend_B
 
 label .good_choice:
     basil "(Yeah my eyes are completely frozen on her.)"
-    show basil swimsuit lovestruck
+    show basil swimwear lovestruck
     basil "..."
     basil "...."
     basil "....."
     dafny "You staring at me?"
     basil "..."
     "Basil dips their head into the water out of embarassment."
-    hide basil swimsuit
+    hide basil swimwear
     basil "(AHHH!)"
     basil "(Wow I am really in the thick of it now.)"
     dafny "You okay?"
     # TODO possibly change the positioning of basil?
-    show basil swimsuit blushing
+    show basil swimwear blushing
     basil "Yeah yeah I am."
     dafny "Were you staring at me?"
     dafny "You know what, forget about that, you look cute when you're flustered."
     basil "!!!!"
-    dafny "Its all fine, I hope something isn't bothering you."
+    dafny "It's all fine, I hope something isn't bothering you."
     basil "Okay, alright alright."
-    dafny "You know what? Lets go swim for a few laps."
-    show basil swimsuit
-    hide dafny swimuit
+    dafny "You know what? Let's go swim for a few laps."
+    show basil swimwear
+    hide dafny swimwear
     "Dafny drops into the water and starts swimming."
     basil "(I gotta admit, I don't swim that much.)"
     basil "(I'll just wade around.)"
@@ -138,13 +138,13 @@ label .good_choice:
     dafny "Oh that was so fun!"
     basil "Yeah."
     basil "I don't think I've been to the pool since childhood."
-    dafny "Ah, thats fine."
+    dafny "Ah, that's fine."
     dafny "Two computer scientists going to a body of water? What a rarity these days!"
     basil "Ha."
     dafny "You know what? I don't want this night to end, where should we go to?"
     jump choice2
 
-label .pool_banend_B:
+label .pool_badend_B:
     dafny "Do you really mean that?"
     jump badend_a
 

@@ -41,7 +41,7 @@ label choice1:
 
         seen_choice1 = True
 
-    play sound "audio/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Where should we go?"
 

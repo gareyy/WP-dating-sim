@@ -22,17 +22,17 @@ label arcade:
     dafny "Ooh! Floydger! Thats an oldie, how do they have a machine for a 40 year old game?"
     show dafny at left
     basil "Apparently this arcade loves to have their oldie games."
-    dafny "It's about Robert W. Floyd trying to cross a whole an acyclic graph."
+    dafny "It's about Robert W. Floyd trying to cross a whole acyclic graph."
     basil "You do know your games, huh?"
     show dafny surprised
     dafny "Wow! Is that Hoare Racing?"
     "You two look at the giant hard to miss cabinet."
     show dafny at left
     dafny "So this one is all about sorting a bunch of numbered blocks before the guy on screen sorts them first!"
-    basil "Whose the guy?"
+    basil "Who's the guy?"
     dafny "Tony Hoare."
     basil "Huh."
-    dafny "Oh, look, theres taiko too."
+    dafny "Oh, look, there's taiko too."
     basil "Oh hell yeah! That's my favourite!"
     basil "So that's the one where you bang a drum and stuff."
     basil "I'm nearly a pro at it."
@@ -44,7 +44,7 @@ label arcade:
     #"Basil notices how Dafny is staring at the Trimonis game, and then looks back at her."
 
     dafny "So which game do you wanna play? My treat."
-    basil "Your treat? Is it because its only 3$ a game?"
+    basil "Your treat? Is it because its only $3 a game?"
     dafny "..."
     dafny "Possibly."
 
@@ -106,7 +106,7 @@ label .floydger:
     basil "Yep."
     show dafny at left
     show basil at right
-    dafny "Lets leave before someone suspects us of breaking this thing."
+    dafny "Let's leave before someone suspects us of breaking this thing."
     basil "Oh yep, definitely."
     call .arcadelearn
     jump .arcade_badend
@@ -148,9 +148,9 @@ label .arcade_badend:
 
 label .taiko:
     #dafny "Fun game where you play drums!"
-    basil "Lets play taiko!"
+    basil "Let's play taiko!"
     "The two rush over to the taiko machine."
-    basil "Alright lets see here, I want to warm up with a good and easy song."
+    basil "Alright let's see here, I want to warm up with a good and easy song."
     basil "Ah here! Idol by YOASOBI."
     "The taiko machine plays Idol, but it is the English version nobody likes."
     basil "..."
@@ -172,7 +172,7 @@ label .taiko:
     show basil at right
     dafny "Owwww owww."
     basil "Oh shit! Are you okay?"
-    dafny "Oh yeah, it's just."
+    dafny "Oh yeah, it's just..."
     "Dafny sits on the floor."
     dafny "AHHHH!"
     basil "Okay, breathe in, breathe out,"
@@ -194,9 +194,9 @@ label .trimonis:
     dafny "Because I'd destroy you in it of course!"
     dafny "Do you even know how this game works?"
     basil "Um, no."
-    dafny "Ok so you gotta basically stack these triangle things on top of each other, and yeah thats it!"
+    dafny "Ok so you gotta basically stack these triangle things on top of each other, and yeah that's it!"
     basil "Ok you know what, sounds fun."
-    basil "Lets go!"
+    basil "Let's go!"
     scene bg black with fade
     scene bg arcade with fade
     show dafny at left

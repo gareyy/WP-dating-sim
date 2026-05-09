@@ -1,9 +1,5 @@
 # tutorial
 label tutorial:
-
-    # Start by playing some music.
-    play music "audio/tutorial.ogg"
-
     scene bg restaurant
 
     show isabelle
@@ -32,7 +28,7 @@ label tutorial:
 
     basil "Wait wh- who are you?"
 
-    isabelle "Lets just say..."
+    isabelle "Let's just say..."
     isabelle "An observant bystander."
 
     basil "Ok and why are you so interested?"
@@ -55,7 +51,7 @@ label tutorial:
     isabelle "Look around..."
     "Basil takes a look around, then looks at the date and time."
     basil "Oh shit!"
-    isabelle "Lets just say, you should take a sledgehammer approach to these next few first dates.."
+    isabelle "Let's just say, you should take a sledgehammer approach to these next few first dates.."
     basil "I don't get what you're saying."
     isabelle "You'll understand in time."
 

@@ -54,7 +54,7 @@ label loophead:
             "Would you like to skip ahead to the location choice?"
 
             "Yes":
-                jump .choice1
+                jump choice1
 
             "No":
                 jump .sitting
@@ -79,13 +79,13 @@ label restaurant:
         queue music "audio/main/vara.ogg" fadein 3.0
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"
-    dafny "Ummm lets see here."
+    dafny "Ummm let's see here."
     "You two open the menu together"
 
     if loop_no >= 3:
         basil "(Do these things ever change?)"
 
-    basil "Okay ummm entries... Lets see."
+    basil "Okay ummm entreés... let's see."
 
     menu:
         "Breadsticks":
@@ -215,13 +215,13 @@ label .success:
     "..."
     dafny "Hey, you got any plans for tonight?"
     basil "Usually I go home and play solitaire..."
-    dafny "Ooh! Lets do something fun tonight!"
+    dafny "Ooh! Let's do something fun tonight!"
     basil "Like what?"
     dafny "You know, I've always wanted to walk by that lake nearby."
     dafny "Ooh! Maybe that pool nearby too!" 
     basil "Pool?"
     dafny "How about the art museum!"
-    dafny "Or maybe that weird ass abandoned building. Hartley teakle, right?"
+    dafny "Or maybe that weird ass abandoned building. Hartley Teakle, right?"
     dafny "How about you?"
     basil "Me?"
     show basil thinking

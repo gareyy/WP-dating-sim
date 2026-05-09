@@ -34,7 +34,7 @@ label uqlakes:
     basil "Yeah, I love coming here. It's so peaceful and beautiful."
     basil "I like the sounds of the birds and the fountain."
     dafny "Yeah.."
-    dafny "But when im walking through nature, I do prefer to listen to my own music."
+    dafny "But when I'm walking through nature, I do prefer to listen to my own music."
     basil "Ooh! What kind of songs?"
     dafny "I have this favourite one, wanna listen?"
     basil "Oh! Yes sure!"
@@ -58,7 +58,7 @@ label uqlakes:
     dafny "Not as serene as you beautiful"
     show basil blushing
     basil "Wh-"
-    dafny "Ppffft I'm just joking buddy."
+    dafny "Pffft, I'm just joking buddy."
     show basil at right
     basil ".... ok ok"
     basil "..."
@@ -66,7 +66,7 @@ label uqlakes:
     basil "Look at those animals over there! They look so cute and peaceful."
     dafny "I want to get close to one of them!"
     basil "Oh, which one?"
-    dafny "Which one look the most interesting to you Basil?"
+    dafny "Which one looks the most interesting to you Basil?"
 
     $ import random
     $ coinflip = random.choice([0, 1, 2])
@@ -95,7 +95,6 @@ label uqlakes:
             "Raven":
                 call .raven_choice
 
-            
             "Pukeko":
                 call .pukeko_choice
 
@@ -103,7 +102,7 @@ label uqlakes:
     jump choice2
 
 label .ibis_choice:
-    basil "Oh look! an ibis!"
+    basil "Oh look! An ibis!"
     dafny "Those are quite ordinary birds, but they are pretty cute..."
     basil "They're also called bin chickens."
     "An ibis swoops in and lands in front of them, blocking their path."
@@ -136,15 +135,15 @@ label .ibis_choice:
     voice "voice/ibis/line06.ogg"
     ibis "But I am still offended by you."
     basil "What?"
-    "The ibis flies away"
+    "The ibis flies away..."
     hide ibis
     show basil at right
-    basil "Wow. what a spoil sport of a bird."
-    basil "I always see those things picking in bins anyway, thats why they are called bin chickens."
+    basil "Wow. What a spoil sport of a bird."
+    basil "I always see those things picking in bins anyway, that's why they are called bin chickens."
     voice "voice/ibis/line07.ogg"
     ibis "Bombs away!"
     "Bird poop falls from the sky and lands on Basil."
-    show basil pooped
+    # TODO: show basil pooped
     basil "..."
     dafny "..."
     show dafny laughing
@@ -217,7 +216,7 @@ label .possum_choice:
     basil "Oh, us?"
     voice "voice/possum/line01.ogg"
     possum "Yes you two!"
-    show possum fork
+    # TODO: show possum fork
     voice "voice/possum/line02.ogg"
     possum "Give me both of your wallets."
     voice "voice/possum/line03.ogg"
@@ -243,7 +242,7 @@ label .possum_choice:
     basil "NO PLEASE! NOT THE LOYALTY CARD!"
     basil "Please spare the loyalty card, please please please.."
     dafny "You give them back the loyalty card right now!"
-    basil "I can give you my drivers licence, please!"
+    basil "I can give you my driver's licence, please!"
     basil "I don't even drive anymore!"
     "The possum takes a closer look at the drivers licence."
     voice "voice/possum/line08.ogg"
@@ -311,10 +310,10 @@ label .pukeko_choice:
     voice "voice/pukeko/line07.ogg"
     pukeko "But especially you more,"
     voice "voice/pukeko/line08.ogg"
-    pukeko "Dafny"
+    pukeko "Dafny~"
     "The pukeko says her name in a way that sounds like the most beautiful music to Dafny's ears"
     show dafny lovestruck
-    dafny "W- wow..."
+    dafny "W-wow..."
     dafny "Basil, I think I love this pukeko..."
     basil "Are you kidding me???"
     voice "voice/pukeko/line09.ogg"
@@ -377,7 +376,7 @@ label .raven_choice:
     voice "voice/raven/line06.ogg"
     raven "I am also hungry."
     dafny "Ooh I got something!"
-    dafny "I got the entree from the restaurant!"
+    dafny "I got the entreé from the restaurant!"
     basil "Oh yeah!"
     "Dafny and Basil split the food, and give it to the raven."
     "The raven chews it up and spits it out in a wise way."
@@ -392,7 +391,7 @@ label .raven_choice:
     voice "voice/raven/line10.ogg"
     raven "You two are two halves that need to come together at some part in the world."
     voice "voice/raven/line11.ogg"
-    raven "Thats when you will achieve true happiness."
+    raven "That's when you will achieve true happiness."
     show dafny blushing
     dafny "Woah."
     basil "W-"

@@ -32,7 +32,7 @@ label karaoke:
     
     dafny "What song should we sing first? I have a few in mind, but I'm open to suggestions too!"
 
-    play sound "audio/choice.ogg"
+    play sound "sfx/choice.ogg"
     menu:
         "Club Song":
             call .club_choice
@@ -113,9 +113,11 @@ label .duet_choice:
     return
 
 label .steal_your_girl:
-        # Start playing the sick bop
+    queue music "boogie/intro.ogg"
+    queue music "boogie/maina.ogg"
     "As the song begins playing, the door is thrown open"
 
+    hide dafny
     show basil at left
     basil "What in the..."
     
@@ -126,6 +128,7 @@ label .steal_your_girl:
     basil "Who are you!?"
     boogie "Name is Boogie and I'm here to take you on the fast track to funky town!"
 
+    queue music "boogie/mainb.ogg"
     "Boogie proceeds to spin around in a groovy fashion"
 
     hide basil
@@ -136,6 +139,7 @@ label .steal_your_girl:
     dafny "Are you sure?"
     boogie "You're the vibiest girl I've seen all night!"
 
+    queue music "boogie/mainc.ogg"
     hide dafny
     show basil angry at left
     basil "What about my vibe?"
@@ -157,6 +161,7 @@ label .steal_your_girl:
     hide dafny
     "Dafny was whisked away by Boogie's charisma and charm"
 
+    queue music "boogie/outro.ogg" noloop
     "The karaoke score was \"99\""
 
     scene bg black with fade
