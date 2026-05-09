@@ -16,10 +16,10 @@ label museum:
     dafny "I love art and history, and this place has so many cool exhibits to check out!"
     dafny "Oooh look at those ones over there! They look so interesting!"
     basil "Oh yeah, that one is Odin."
-    dafny "Haha I just liked it because it had ravens on it :3"
+    dafny "Haha I just liked it because it had ravens on it."
     basil "Oh, do you like black birds?"
     dafny "Only {b}ravens{\b} really. They are epic and wise."
-
+    $ lemmas_list.add("Dafny's favourite animal is a raven")
     python:
         lake_info = True
 

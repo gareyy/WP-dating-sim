@@ -91,6 +91,7 @@ label start:
         lake_info = False
         seen_choice1 = False
         seen_choice2 = False
+        lemmas_list = set()
 
     default preferences.volume.music = 0.5
         good_museum = False

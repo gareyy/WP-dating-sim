@@ -59,4 +59,5 @@ label tutorial:
     hide basil
 
     scene bg restaurant with fade
+    $ lemmas_list.add("Dafny's favourite food is tofu")
     jump restaurant

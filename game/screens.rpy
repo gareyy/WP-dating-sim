@@ -1619,3 +1619,53 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+
+
+
+# LEMMA SCREEN
+
+
+
+screen lemmas(lems):
+
+    tag lemmas
+    zorder 1
+    modal False
+
+    frame:
+        id "frame"
+        xpos 100 ypos 10
+        xpadding 50
+        ypadding 10
+        vbox:
+            spacing 10
+            for l in lems:
+                text l id "lem_[lems.index(l)]"
+        at topright
+
+        # button:
+        #     id "show_lemmas"
+        #     at topright
+        #     # child Text("Click me!")
+
+
+screen lemmabutton():
+    frame:
+        
+        imagebutton:
+            idle "gui/bubble.png"
+            hover "gui/bubble.png"
+            action ToggleScreen("lemmas", None, lemmas_list)
+
+# screen imageButton():
+
+#     imagebutton:
+#         idle "folder/image1.png"
+#         hover "folder/image2.png" #optional slightly different image for when the mouse is over the image
+#         action Jump ("choice1")
+
+# label choice1:
+#     e "Well you made the only choice"
+#     return

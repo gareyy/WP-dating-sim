@@ -217,6 +217,7 @@ label .trimonis:
 label .arcadelearn:
     scene bg black with fade
     basil "(I just remembered now, she was looking at that {b}Trimonis{\b} game)"
+    $ lemmas_list.add("Dafny's favourite game is Trimonis")
     python:
         arcade_info = True
     basil "(She didn't tell me, I felt like I should have chosen that one too.)"

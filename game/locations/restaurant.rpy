@@ -75,6 +75,7 @@ label restaurant:
     show basil at right
 
     if loop_no != 0:
+        show screen lemmabutton()
         queue music "main/vara.ogg" fadein 3.0
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"

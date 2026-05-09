@@ -26,11 +26,15 @@ label generalbadend:
 
     jump loophead
 
+
 label badend_a:
 
     show verifying with fade
     stop music fadeout 5.0
     play sound "sfx/fail.ogg"
+
+    hide screen lemmabutton
+    hide screen lemmas
 
     basil "It all fizzled out in the end..."
     basil "Shortly after, she left me alone."
