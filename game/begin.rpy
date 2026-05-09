@@ -8,6 +8,22 @@ define dafny = Character("Dafny", color="#ffffc8")
 define isabelle = Character("Isabelle", color="#715bff")
 
 image bg black = "#000"
+image bg lab = Image("images/backgrounds/lab_resized.png", oversample=1)
+image bg restaurant = Image("images/backgrounds/restaurant.png", oversample=1)
+image bg museum = Image("images/backgrounds/museum.png", oversample=1)
+image bg pool = Image("images/backgrounds/pool_resized.png", oversample=1)
+
+image basil = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
+image basil happy = Crop((0, 0, 925, 925), Image("images/basil/Happy.png", oversample=3))
+image basil laughing = Crop((0, 0, 925, 925), Image("images/basil/Laughing.png", oversample=3))
+image basil normal = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
+image basil surprised    = Crop((0, 0, 925, 925), Image("images/basil/Surprise.png", oversample=3))
+image basil thinking = Crop((0, 0, 925, 925), Image("images/basil/Thinking.png", oversample=3))
+
+image basil blushing = Image("images/basil/Normal.png", oversample=6)
+image basil angry = Image("images/basil/Normal.png", oversample=6)
+image basil sad = Image("images/basil/Surprise.png", oversample=6)
+image basil swimwear = Image("images/basil/Normal.png", oversample=6)
 
 define whitefade = Fade(0.5, 0.5, 0.5, color='#fff')
 

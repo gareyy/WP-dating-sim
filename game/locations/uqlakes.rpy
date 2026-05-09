@@ -60,6 +60,8 @@ label uqlakes:
     basil "Oh, which one?"
     dafny "Which one look the most interesting to you Basil?"
 
+    $ import random
+    $ coinflip = random.choice([0, 1, 2])
     if not lake_info:
         menu:
             "Ibis":
@@ -67,17 +69,22 @@ label uqlakes:
 
             "Water Dragon":
                 call .water_dragon_choice
-            
             "Possum":
                 call .possum_choice
-    
     else:
         menu:
+            "Ibis" if coinflip == 0:
+                call .ibis_choice
+
+            "Water Dragon" if coinflip == 1:
+                call .water_dragon_choice
+
+            "Possum" if coinflip == 2:
+                call .possum_choice
+            
             "Raven":
                 call .raven_choice
 
-            "Possum":
-                call .possum_choice
             
             "Pukeko":
                 call .pukeko_choice
@@ -88,11 +95,91 @@ label uqlakes:
 label .ibis_choice:
     basil "Oh look! an ibis!"
     dafny "Those are quite ordinary birds, but they are pretty cute..."
-    jump .uqlakes_badend
+    basil "They're also called bin chickens."
+    "An ibis swoops in and lands in front of them, blocking their path."
+    hide basil
+    show ibis at right
+    ibis "What did you just call me?"
+    basil "Oh I am so sorry!"
+    ibis "What did you call me???"
+    show dafny scared
+    basil "Please calm down."
+    basil "My name is Basil and I am so truly sorry."
+    ibis "Grr."
+    dafny "You are not gonna do anything to my friend!"
+    ibis "How would you feel if your friend called you a bin chicken?"
+    show dafny happy
+    dafny "I'd laugh at it."
+    ibis "Go on Basil, call your friend a \"bin chicken\""
+    basil "Um..."
+    basil "Hey Dafny, you are a uh, um, bin chicken."
+    dafny "Wow."
+    dafny "I am so honoured..."
+    ibis "..."
+    ibis "You have a point Basil."
+    ibis "But I am still offended by you."
+    basil "What?"
+    "The ibis flies away"
+    hide ibis
+    show basil at right
+    basil "Wow. what a spoil sport of a bird."
+    basil "I always see those things picking in bins anyway, thats why they are called bin chickens."
+    ibis "Bombs away!"
+    "Bird poop falls from the sky and lands on Basil."
+    show basil pooped
+    basil "..."
+    dafny "..."
+    show dafny laughing
+    dafny "BAWHAHHAHAHAHAHAHHAHA!!!-"
+    basil "Hey!"
+    dafny "Oh my, everyone is gonna lose it when I tell them about this tomorrow."
+    scene bg black with fade
+    basil "After that, me and Dafny split ways."
+    basil "The next day, Dafny told everyone about what happened."
+    basil "All the in jokes at the lab are now about me being pooped on."
+    basil "Still, I didn't end up with Dafny, probably for unrelated reasons I hope."
+    basil "..."
+    jump generalbadend
 
 label .water_dragon_choice:
     basil "Oh look! A water dragon!"
     dafny "They are pretty cool, but they are a bit scary..."
+    basil "Why are they called water dragons anyway?"
+    dafny "Maybe because they look,"
+    dafny "Like a dragon."
+    show basil angry
+    basil "..."
+    basil "...."
+    basil "....."
+    dafny "You know, like the game?"
+    show basil at right
+    basil "Ok, alright, um."
+    "They both stare intensly at the water dragon"
+    hide basil
+    show dragon at right
+    dragon "..." # add dragon noise where elipsis is, just make something up hayden
+    basil "Um, hello?"
+    dragon "..."
+    dafny "Hello little guy! My name is Dafny, and this is Basil."
+    dragon "..."
+    basil "Um? Do you talk little guy?"
+    dragon "..."
+    dafny "I've heard mystical things about the animals of this lake."
+    dafny "Like they talk and give you wise advice."
+    basil "Is that so?"
+    dafny "Supposedly."
+    dafny "Like if an animal from here started talking to me I wouldn't be surprised."
+    dragon "..."
+    basil "..."
+    basil "I thought that thing was gonna talk."
+    dafny "Anyway, I heard some of these animals could give you advice or fortune."
+    dafny "Or possibly have impeccable charisma."
+    basil "Really?"
+    dafny "I haven't given much thought to it."
+    dragon "..."
+    hide dragon
+    show basil at right
+
     jump .uqlakes_badend
 
 label .possum_choice:
@@ -144,6 +231,7 @@ label .possum_choice:
     scene bg black with fade
     basil "After a stupid long walk, I was able to reach home."
     basil "From that point on, Dafny knew me only as the person who got their drivers licence stolen by a possum."
+    basil "..."
     jump generalbadend
 
 label .pukeko_choice:
@@ -207,7 +295,13 @@ label .pukeko_choice:
     jump generalbadend
 
 label .uqlakes_badend:
-    "Dafny and Basil walk away from what they were looking at."
+    dafny "So, um, nice lake day I suppose?"
+    dafny "Did you like that song I shared to you?"
+    basil "Yeah."
+    basil "So you like romantic songs I guess?"
+    dafny "Oh yeah, absolutely."
+    dafny "But I think I should leave now."
+    basil "Oh, um yeah, me too.."
     jump badend_a
 
 label .raven_choice:
