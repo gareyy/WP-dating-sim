@@ -10,7 +10,7 @@ define boogie = Character("Boogie", color="#ffffff")
 
 label karaoke:
 
-    scene bg karaoke
+    scene bg alleyway
     show dafny at left
     show basil at right
     with fade
@@ -23,6 +23,10 @@ label karaoke:
     python:
         museum_info = True
 
+    scene bg karaoke
+    show dafny at left
+    show basil at right
+    with fade
 
     dafny "I can't wait to sing some songs together! This is going to be so much fun!"
     
@@ -41,6 +45,10 @@ label karaoke:
     dafny "That was so much fun! I love singing with you!"
     dafny "We should do this more often!"
 
+    # TODO: add label to go to ending
+    $ MainMenu(confirm=False)()
+    return
+
 label .club_choice:
     basil "Oh, a club song! That sounds like fun!"
     dafny "I'm not sure if that's really my style, but I'm down to give it a try!"
@@ -52,8 +60,17 @@ label .heartbreak_choice:
     basil "Oh, a heartbreak song! That sounds really emotional!"
     dafny "Kinda makes me sad just thinking about it..."
 
-    "You begin to sing the song about heartbreak."
-    "Dafny is unable to continue after the first verse."
+    "Basil begins to sing the song about heartbreak."
+    basil "Oh..."
+    basil "You make my heart bleed."
+    basil "You were key to my heart, the key to my soul."
+    basil "My love was too much, it went out of bounds."
+    basil "And now my heart bleeds..."
+    basil "It runs wild for you unchecked."
+    basil "And that's thats how I lost you..."
+    basil "And now my heart is left vulnerable."
+    basil "..."
+    "The music ends"
 
     show dafny sad
     basil "Are you alright?"
@@ -61,6 +78,8 @@ label .heartbreak_choice:
     dafny "I don't always deal well with songs like that..."
     basil "Sorry, I..."
     dafny "It's okay, I know you didn't mean to."
+    "The karaoke score says \"78\""
+    dafny "On the bright side, you got a score of 78."
 
     jump .karaoke_badend
 
@@ -70,15 +89,32 @@ label .duet_choice:
 
     "Basil and Dafny sing the duet together."
 
+    basil "You asserted yourself into my life."
+    basil "And now you're part of my scope."
+    dafny "And as I reasoned about you more."
+    dafny "You became invariant to myself."
+    dafny "As time, goes by."
+    dafny "I find more reason to make you an invariant in my life."
+    basil "It's true from the start, it's true in the end."
+    basil "Instead of what's been done,"
+    basil "Think about whats to come."
+    dafny "You proved our lemma to me and now it's crystal clear."
+    dafny "Forall the fish in the sea, you're the only one for me."
+    
+    "The song ends."
+
     show dafny laughing
     dafny "Thank you for doing that!"
     basil "You have a very nice singing voice."
     dafny "You aren't too bad yourself, even though you were a bit pitchy!"
+    "The karaoke score reads \"100\""
+    basil "Yeah!"
+    dafny "Yeah!"
 
     return
 
 label .steal_your_girl:
-    # Start playing the sick bop
+        # Start playing the sick bop
     "As the song begins playing, the door is thrown open"
 
     show basil at left
@@ -122,11 +158,14 @@ label .steal_your_girl:
     hide dafny
     "Dafny was whisked away by Boogie's charisma and charm"
 
+    "The karaoke score was \"99\""
+
     scene bg black with fade
     show basil sad
     basil "It's been four hours, I don't think she is coming back."
     basil "I can see why..."
     basil "He was simply too groovy for me to handle."
+
 
     jump generalbadend
 
