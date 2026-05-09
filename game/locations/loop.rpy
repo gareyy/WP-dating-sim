@@ -1,5 +1,8 @@
 # set of badendings and stage choices
 label generalbadend:
+    # scene bg black with fade
+    stop music fadeout 3.0
+    show alternating_frames
     basil "It can't end like this."
     basil "It shouldn't."
 

@@ -17,6 +17,12 @@ image bg karaoke = Image("images/backgrounds/karaoke_bg.png")
 image bg spa = Image("images/backgrounds/spa.png")
 image bg arcade = Image("images/backgrounds/arcade.png")
 image bg uqlakes = Image("images/backgrounds/lake.png")
+image alternating_frames:
+    "images/backgrounds/verify.png"
+    0.35 # Wait for 0.5 seconds
+    "images/backgrounds/verify2.png"
+    0.35 # Wait for 0.5 seconds
+    repeat # Loop forever
 
 image basil = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
 image basil happy = Crop((0, 0, 925, 925), Image("images/basil/Happy.png", oversample=3))
@@ -41,12 +47,12 @@ image dafny lovestruck = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Ex
 image dafny sad = Crop((0, 0, 925, 925), Image("images/dafny/Disappointed.png", oversample=3))
 image dafny laughing = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
 
-image dafny surprised = Crop((0, 0, 925, 925), Image("images/dafny/Flustered.png", oversample=6))
-image dafny angry = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
-image dafny scared = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
-image dafny swimwear = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
-image dafny swimwear happy = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
-image dafny swimwear blushing = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=6))
+image dafny surprised = Image("images/dafny/Flustered.png", oversample=6)
+image dafny angry = Image("images/dafny/Neutral.png", oversample=6)
+image dafny scared = Image("images/dafny/Neutral.png", oversample=6)
+image dafny swimwear = Image("images/dafny/Neutral.png", oversample=6)
+image dafny swimwear happy = Image("images/dafny/Neutral.png", oversample=6)
+image dafny swimwear blushing = Image("images/dafny/Neutral.png", oversample=6)
 
 
 define whitefade = Fade(1.0, 1.0, 0.5, color='#fff')
@@ -113,10 +119,10 @@ label start:
     show bg lab with fade
     queue music "audio/main/vara.ogg" volume 0.5 fadein 5.0
     
-    show basil at left
+    show basil at right
     basil "Nice! all my work for today is done!"
     basil "I finally implemented that big stupid compoment that was bogging me and Dafny."
-    show dafny at right
+    show dafny at left
     basil "Hey Dafny! I finally got that stupid thing implemented!"
     dafny "Yeah, uh, which one?"
     basil "You know, the one I made a PR for in the repository."
