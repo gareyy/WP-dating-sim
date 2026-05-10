@@ -3,6 +3,11 @@
 # Gives Lake info
 # Info comes from karaoke
 
+image artifact enter = Image("images/artifacts/wpp.png")
+image artifact left = Image("images/artifacts/ligature.png")
+image artifact middle = Image("images/artifacts/crab.png")
+image artifact right = Image("images/artifacts/foxgirl.png")
+
 label museum:
 
     scene bg museum
@@ -24,18 +29,29 @@ label museum:
     python:
         lake_info = True
 
+    hide dafny
+    show artifact enter at truecenter 
     "As you enter the art gallery, your eyes are drawn to a large yellow canvas emblaisoned with the words:"
     "\"This program was verified by real weakest precondition patriots\""
+    hide artifact enter
 
+    show dafny
     dafny "Look at these ones over here!"
+    hide dafny
     "Before you are three glorious works of art."
     # Alt-Ergo
+    show artifact left at truecenter
     "On the left is a ligature of an 'a' and an 'e' between two double-struck horizontal lines."
     # C++
+    hide artifact left
+    show artifact middle at truecenter
     "In the middle is an abstract representation of a crab claw on a blue hexagon pinching the concat operation."
+    hide artifact middle
+    show artifact right at truecenter
     "On the right is an oil painting of fox girl, looking gorgeous and regal."
+    hide artifact right
 
-
+    show dafny
     dafny "Which one do you like the most?"
     play sound "sfx/choice.ogg"
     
