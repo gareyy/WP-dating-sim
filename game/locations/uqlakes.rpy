@@ -143,6 +143,7 @@ label .ibis_choice:
     ibis "Bombs away!"
     "Bird poop falls from the sky and lands on Basil."
     # TODO: show basil pooped
+    show basil pooped
     basil "..."
     dafny "..."
     show dafny laughing

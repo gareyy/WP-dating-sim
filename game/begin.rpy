@@ -41,6 +41,7 @@ image basil hesitant = Crop((0, 0, 925, 925), Image("images/basil/Hesitant.png",
 image basil blushing = Crop((0, 0, 925, 925), Image("images/basil/Blushing.png", oversample=3))
 image basil angry = Crop((0, 0, 925, 925), Image("images/basil/Angry.png", oversample=3))
 image basil sad = Crop((0, 0, 925, 925), Image("images/basil/Sad.png", oversample=3))
+image basil pooped = Crop((0, 0, 925, 925), Image("images/basil/Pooped.png", oversample=3))
 image basil swimwear = Crop((0, 0, 925, 925), Image("images/basil/Swimwear.png", oversample=3))
 image basil swimwear blushing = Crop((0, 0, 925, 925), Image("images/basil/Swimwear_Blush.png", oversample=3))
 image basil swimwear happy = Crop((0, 0, 925, 925), Image("images/basil/Swimwear_Happy.png", oversample=3))
@@ -100,7 +101,7 @@ label start:
         good_arcade = False
         good_karaoke = False
 
-default preferences.volume.music = 0.5
+    default preferences.volume.music = 0.5
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
