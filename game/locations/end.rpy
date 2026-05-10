@@ -141,8 +141,8 @@ label ending:
 
     dafny "Yes please."
 
-    show basil blushing at closeright with move
-    show dafny blushing at closeleft with move
+    show basil blushing at closeleft with move
+    show dafny blushing at closeright with move
     "Their lips collide."
     "Magic is created."
     "The proof of love has been verified."
@@ -160,9 +160,11 @@ label ending:
     basil "Oh my god I'm so sorry."
     dafny "It's fine, it's fine Basil."
     dafny "You're with me now."
-    show basil blushing at closeright
+    show basil blushing at closeleft
     basil "I want to do more tonight."
     dafny "M-me too."
+    #show basil lovestruck at closeleft
+    show dafny lovestruck at closeright
     basil "I love you Dafny."
     dafny "I love you Basil."
 

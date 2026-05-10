@@ -56,7 +56,7 @@ image dafny lovestruck = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Ex
 image dafny sad = Crop((0, 0, 925, 925), Image("images/dafny/Disappointed.png", oversample=3))
 image dafny laughing = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
 
-image dafny surprised = Crop((0, 0, 925, 925), Image("images/dafny/Flustered.png", oversample=6))
+image dafny surprised = Crop((0, 0, 925, 925), Image("images/dafny/Flustered.png", oversample=3))
 image dafny angry = Crop((0, 0, 925, 925), Image("images/dafny/Angry.png", oversample=3))
 image dafny scared = Crop((0, 0, 925, 925), Image("images/dafny/Scared.png", oversample=3))
 image dafny swimwear = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear.png", oversample=3))

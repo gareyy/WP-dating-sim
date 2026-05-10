@@ -76,28 +76,28 @@ label uqlakes:
     if not lake_info:
         menu:
             "Ibis":
-                call .ibis_choice
+                call .ibis_choice from _call_uqlakes_ibis_choice
 
             "Water Dragon":
-                call .water_dragon_choice
+                call .water_dragon_choice from _call_uqlakes_water_dragon_choice
             "Possum":
-                call .possum_choice
+                call .possum_choice from _call_uqlakes_possum_choice
     else:
         menu:
             "Ibis" if coinflip == 0:
-                call .ibis_choice
+                call .ibis_choice from _call_uqlakes_ibis_choice_1
 
             "Water Dragon" if coinflip == 1:
-                call .water_dragon_choice
+                call .water_dragon_choice from _call_uqlakes_water_dragon_choice_1
 
             "Possum" if coinflip == 2:
-                call .possum_choice
+                call .possum_choice from _call_uqlakes_possum_choice_1
             
             "Raven":
-                call .raven_choice
+                call .raven_choice from _call_uqlakes_raven_choice
 
             "Pukeko":
-                call .pukeko_choice
+                call .pukeko_choice from _call_uqlakes_pukeko_choice
 
     
     jump choice2
@@ -261,7 +261,7 @@ label .possum_choice:
     possum "You have a deal."
     "The possum quickly disappears."
     hide possum
-    show basil sad at right
+    show basil sad at left
     basil "..."
     dafny "..."
 

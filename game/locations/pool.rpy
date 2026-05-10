@@ -61,7 +61,7 @@ label pool:
             dafny "Um, okay..."
             basil "..."
             dafny "..."
-            call .pool_badend_A
+            call .pool_badend_A from _call_pool_pool_badend_A
 
     # BUNCH OF BS OR WHATEVER
     dafny "Aww you love my compliments!"
@@ -87,13 +87,13 @@ label pool:
     play sound "sfx/choice.ogg"
     menu:
         "Your one piece also looks great!":
-            call .first_choice
+            call .first_choice from _call_pool_first_choice
 
         "Your hair looks really nice!":
-            call .second_choice
+            call .second_choice from _call_pool_second_choice
         
         "(Just keep staring.)" if pool_info:
-            call .good_choice
+            call .good_choice from _call_pool_good_choice
 
 
 label .first_choice:

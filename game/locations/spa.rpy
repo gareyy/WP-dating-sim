@@ -73,10 +73,10 @@ label .spa_menu:
     menu:
         
         "Massage":
-            call .massage
+            call .massage from _call_spa_massage
 
         "Cold Plunge":
-            call .cold_plunge
+            call .cold_plunge from _call_spa_cold_plunge
 
         "Hot Tub" if spa_info:
             jump .hot_tub
@@ -197,7 +197,7 @@ label .massage_badend:
     scene bg spa
     with fade
     show dafny swimwear angry at left
-    show basil swimwear at right
+    show basil swimwear sad at right
 
     dafny "Ouch my neck! What the hell did you do to me?!"
     basil "!!!"

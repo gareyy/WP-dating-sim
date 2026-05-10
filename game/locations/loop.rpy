@@ -1,3 +1,4 @@
+# pooo
 image red = Image("images/backgrounds/barfadeRed.png")
 image green = Image("images/backgrounds/barfadeGreen.png")
 

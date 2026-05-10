@@ -42,13 +42,13 @@ label karaoke:
     play sound "sfx/choice.ogg"
     menu:
         "Club Song":
-            call .club_choice
+            call .club_choice from _call_karaoke_club_choice
 
         "Heartbreak Song":
-            call .heartbreak_choice
+            call .heartbreak_choice from _call_karaoke_heartbreak_choice
         
         "Romantic Duet" if karaoke_info:
-            call .duet_choice
+            call .duet_choice from _call_karaoke_duet_choice
     
     dafny "That was so much fun! I love singing with you!"
     dafny "We should do this more often!"
@@ -67,14 +67,14 @@ label .heartbreak_choice:
     dafny "Kinda makes me sad just thinking about it..."
 
     "Basil begins to sing the song about heartbreak."
-    basil "Oh..."
-    basil "You make my heart bleed."
-    basil "You were key to my heart, the key to my soul."
-    basil "My love was too much, it went out of bounds."
-    basil "And now my heart bleeds..."
-    basil "It runs wild for you unchecked."
-    basil "And that's thats how I lost you..."
-    basil "And now my heart is left vulnerable."
+    basil "🎵 Oh... 🎵"
+    basil "🎵 You make my heart bleed. 🎵"
+    basil "🎵 You were key to my heart, the key to my soul. 🎵"
+    basil "🎵 My love was too much, it went out of bounds. 🎵"
+    basil "🎵 And now my heart bleeds... 🎵"
+    basil "🎵 It runs wild for you unchecked. 🎵"
+    basil "🎵 And that's thats how I lost you... 🎵"
+    basil "🎵 And now my heart is left vulnerable. 🎵"
     basil "..."
     "The music ends"
 
@@ -95,17 +95,17 @@ label .duet_choice:
 
     "Basil and Dafny sing the duet together."
 
-    basil "You asserted yourself into my life."
-    basil "And now you're part of my scope."
-    dafny "And as I reasoned about you more."
-    dafny "You became invariant to myself."
-    dafny "As time, goes by."
-    dafny "I find more reason to make you an invariant in my life."
-    basil "It's true from the start, it's true in the end."
-    basil "Instead of what's been done,"
-    basil "Think about whats to come."
-    dafny "You proved our lemma to me and now it's crystal clear."
-    dafny "You fit my specification perfectly, you're the correct one for me."
+    basil "🎵 You asserted yourself into my life. 🎵"
+    basil "🎵 And now you're part of my scope. 🎵"
+    dafny "🎵 And as I reasoned about you more. 🎵"
+    dafny "🎵 You became invariant to myself. 🎵"
+    dafny "🎵 As time, goes by. 🎵"
+    dafny "🎵 I find more reason to make you an invariant in my life. 🎵"
+    basil "🎵 It's true from the start, it's true in the end. 🎵"
+    basil "🎵 Instead of what's been done, 🎵"
+    basil "🎵 Think about whats to come. 🎵"
+    dafny "🎵 You proved our lemma to me and now it's crystal clear. 🎵"
+    dafny "🎵 You fit my specification perfectly, you're the correct one for me. 🎵"
     
     "The song ends."
 

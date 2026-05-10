@@ -41,16 +41,16 @@ label museum:
     
     menu:
         "The one on the left":
-            call .first_choice
+            call .first_choice from _call_museum_first_choice
 
         "The one in the middle":
-            call .second_choice
+            call .second_choice from _call_museum_second_choice
 
         "The one on the right":
-            call .third_choice
+            call .third_choice from _call_museum_third_choice
         
         "The one by the entrance" if museum_info:
-            call .good_choice
+            call .good_choice from _call_museum_good_choice
     
     jump choice2
 
@@ -67,7 +67,7 @@ label .second_choice:
     dafny "Umm, I'm not sure how I feel about that one..."
     basil "How so?"
     dafny "Something about just feels very undefined."
-    dafny "It makes me feel unsafe"
+    dafny "It makes me feel unsafe."
 
     jump .museum_badend
 

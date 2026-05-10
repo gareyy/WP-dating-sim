@@ -50,13 +50,18 @@ label tutorial:
     isabelle "Oh really?"
     isabelle "Look around..."
     "Basil takes a look around, then looks at the date and time."
-    basil "Oh shit!"
+    basil "Uh oh!"
     isabelle "Let's just say, you should take a sledgehammer approach to these next few first dates.."
     basil "I don't get what you're saying."
     isabelle "You'll understand in time."
 
     hide isabelle
     hide basil
+
+    show isabelle
+    isabelle "Oh by the way, if you click that button on the top right, it'll show you some useful information."
+    isabelle "I know its not there now, but it should show up after I disappear."
+    isabelle "Useful information is {b}marked in bold.{\b}"
 
     scene bg restaurant with fade
     $ lemmas_list.add("Dafny's favourite food is tofu")

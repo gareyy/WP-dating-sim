@@ -89,10 +89,10 @@ label restaurant:
 
     menu:
         "Breadsticks":
-            call .breadsticks
+            call .breadsticks from _call_restaurant_breadsticks
 
         "Crackers":
-            call .crackers
+            call .crackers from _call_restaurant_crackers
 
     show dafny at left
     show basil at right
@@ -104,9 +104,9 @@ label restaurant:
 
     menu:
         "Lemonade":
-            call .lemonade
+            call .lemonade from _call_restaurant_lemonade
         "Water":
-            call .water
+            call .water from _call_restaurant_water
 
     show dafny at left
     show basil at right

@@ -61,13 +61,13 @@ label arcade:
     menu:
         "Which game should the two play?"
         "Floydger" if "floydger" in choices:
-            call .floydger
+            call .floydger from _call_arcade_floydger
 
         "Hoare's Racing" if "hoareracing" in choices:
-            call .hoareracing
+            call .hoareracing from _call_arcade_hoareracing
 
         "Taiko" if "taiko" in choices:
-            call .taiko
+            call .taiko from _call_arcade_taiko
 
         "Trimonis" if arcade_info:
             jump .trimonis
@@ -108,7 +108,7 @@ label .floydger:
     show basil at right
     dafny "Let's leave before someone suspects us of breaking this thing."
     basil "Oh yep, definitely."
-    call .arcadelearn
+    call .arcadelearn from _call_arcade_arcadelearn
     jump .arcade_badend
 
 label .hoareracing:
@@ -140,7 +140,7 @@ label .hoareracing:
     basil "You want to split ways now?"
     dafny "Sure..."
 
-    call .arcadelearn
+    call .arcadelearn from _call_arcade_arcadelearn_1
     jump .arcade_badend
 
 label .arcade_badend:
@@ -171,7 +171,7 @@ label .taiko:
     show dafny sad at left
     show basil at right
     dafny "Owwww owww."
-    basil "Oh shit! Are you okay?"
+    basil "Are you okay?"
     dafny "Oh yeah, it's just..."
     "Dafny sits on the floor."
     dafny "AHHHH!"
@@ -184,7 +184,7 @@ label .taiko:
     basil "They were able to stabilise her."
     basil "Unfortunately, she wasn't able to work for the next few months."
     basil "Crap, I feel so bad for letting her down like this..."
-    call .arcadelearn
+    call .arcadelearn from _call_arcade_arcadelearn_2
     jump generalbadend
 
 label .trimonis:
