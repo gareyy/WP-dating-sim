@@ -93,13 +93,13 @@ label start:
         seen_choice2 = False
         lemmas_list = set()
 
-    default preferences.volume.music = 0.5
         good_museum = False
         good_lake = False
         good_spa = False
         good_pool = False
         good_arcade = False
         good_karaoke = False
+    default preferences.volume.music = 0.5
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
