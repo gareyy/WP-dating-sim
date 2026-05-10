@@ -91,7 +91,6 @@ label choice1:
 label choice2:
     basil "(Where should we go next?)"
     python:
-        import random
         stage2locations = ["spa", "casino", "arcade", "karaoke"]
 
         if not seen_choice2:

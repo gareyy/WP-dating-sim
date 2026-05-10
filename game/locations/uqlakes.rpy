@@ -17,6 +17,7 @@ image ibis = Image("images/animals/ibis.png", oversample=1)
 image pukeko = Image("images/animals/pukeko.png", oversample=2)
 image dragon = Image("images/animals/water_dragon.png", oversample=2)
 image possum = Image("images/animals/possum.png", oversample=0.5)
+image possum fork = Image("images/animals/possum_fork.png", oversample=0.5)
 image raven = Crop((0, 0, 768, 700), Image("images/animals/raven.png", oversample=1))
 
 label uqlakes:
@@ -67,7 +68,6 @@ label uqlakes:
     basil "Oh, which one?"
     dafny "Which one looks the most interesting to you Basil?"
 
-    $ import random
     $ coinflip = random.choice([0, 1, 2])
 
     play sound "sfx/choice.ogg"
@@ -204,18 +204,23 @@ label .water_dragon_choice:
 
     jump .uqlakes_badend
 
+transform posm:
+    xalign 0.25
+    yalign 0.7
+
 label .possum_choice:
     basil "Oh look! A possum!"
     dafny "Oh, I sort of like those ones, but they are a bit scary..."
 
     hide basil 
-    show possum at right
+    show dafny at right
+    show possum at posm
     voice "voice/possum/line00.ogg"
     possum "Oh hey you two!"
     basil "Oh, us?"
     voice "voice/possum/line01.ogg"
     possum "Yes you two!"
-    # TODO: show possum fork
+    show possum fork at posm
     voice "voice/possum/line02.ogg"
     possum "Give me both of your wallets."
     voice "voice/possum/line03.ogg"

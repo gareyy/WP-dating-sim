@@ -20,6 +20,7 @@ image bg arcade = Image("images/backgrounds/arcade.png")
 image bg uqlakes = Image("images/backgrounds/lake.png")
 image bg hartley = Image("images/backgrounds/hartley.png")
 image bg casino = Image("images/backgrounds/casino.png")
+image bg house = Image("images/backgrounds/bedroom.png")
 
 image verifying:
     "images/backgrounds/verify.png"
@@ -61,7 +62,7 @@ image dafny swimwear angry = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear
 image dafny swimwear happy = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear_Happy.png", oversample=3))
 image dafny swimwear blushing = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear_Blush.png", oversample=3))
 
-image isabelle = Crop((0, 0, 925, 925), Image("images/isabelle/Neutral.png", oversample=3))
+image isabelle = Crop((0, 0, 925, 925), Image("images/isabelle/Neutral.png", oversample=6))
 
 
 define whitefade = Fade(1.0, 1.0, 0.5, color='#fff')
@@ -92,14 +93,14 @@ label start:
         seen_choice1 = False
         seen_choice2 = False
         lemmas_list = set()
-
         good_museum = False
         good_lake = False
         good_spa = False
         good_pool = False
         good_arcade = False
         good_karaoke = False
-    default preferences.volume.music = 0.5
+
+default preferences.volume.music = 0.5
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -118,7 +119,7 @@ label start:
     basil "Do you ever think about what would have happened if you knew one thing beforehand, or knew how to react in the right way?"
     basil "Sometimes I think about what would have been the right thing to say, or the right thing to do."
     basil "..."
-    basil "Theres this girl where I work at... She is the prettiest person in the world."
+    basil "There's this girl where I work at... She is the prettiest person in the world."
     show dafny
     basil "She's the main reason why i'm still doing this program verification stuff."
     basil "I feel like I could reach new heights with her."

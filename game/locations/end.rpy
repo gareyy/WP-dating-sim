@@ -2,6 +2,8 @@
 
 label ending:
     scene bg black with fade
+    play music "sad/intro.ogg"
+    queue music "sad/maina.ogg"
     dafny "Oh! Actually, before we split, do you want to come over to my place?"
     basil "(!!!)"
     basil "Uhm..."
@@ -44,6 +46,8 @@ label ending:
 
     show basil at left
     show dafny at right
+
+    queue music "sad/mainb.ogg"
 
     dafny "Of course, we went to the restaurant, and you ordered the tofu for me, the same thing I was thinking..."
     dafny "You know, sometimes it feels like you were reading my mind."
@@ -101,7 +105,7 @@ label ending:
 
     basil "Im glad you trust me on that."
     basil "There was this strange being, with a sledgehammer, that forced me into this time loop."
-    basil "And im so happy they made me go through this over and over again."
+    basil "And I'm so happy they made me go through this over and over again."
     basil "Because I am such a failure of a human being, and sometimes I feel like you were unapproachable."
 
     dafny "..."
@@ -165,6 +169,7 @@ label ending:
     scene bg white with fade
     ""
     show isabelle with fade
+    queue music "sad/outro.ogg" noloop
     isabelle "And then they had hot steamy verification!"
     isabelle "The end!"
 

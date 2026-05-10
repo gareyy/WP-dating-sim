@@ -115,7 +115,7 @@ label .duet_choice:
     return
 
 label .steal_your_girl:
-    queue music "boogie/intro.ogg"
+    play music "boogie/intro.ogg"
     queue music "boogie/maina.ogg"
     "As the song begins playing, the door is thrown open"
 
