@@ -1,5 +1,7 @@
 define house = Character("The House")
 
+image cutscene housealwayswins = Image("images/cutscene/housealwayswins.png")
+
 label casino:
   
     scene bg casino
@@ -40,6 +42,7 @@ label casino:
     dafny "You can't just.."
 
     "Basil's kidneys are ripped from their body."
+    show cutscene housealwayswins with fade
     house "I always win."
 
     jump generalbadend

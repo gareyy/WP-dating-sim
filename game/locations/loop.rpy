@@ -13,8 +13,10 @@ define moveintopslow = MoveTransition(1.0, enter=barspotoffscreen)
 
 # set of badendings and stage choices
 label generalbadend:
+    hide screen lemmabutton
     show verifying
     stop music fadeout 3.0
+    ""
     show red at barspot
     with moveintopslow
     basil "It can't end like this."

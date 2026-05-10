@@ -1,5 +1,7 @@
 define child = Character("Child")
 
+image cutscene shot = Image("images/cutscene/shot.png")
+
 label hartley:
     scene bg hartley
 
@@ -25,5 +27,7 @@ label hartley:
 
     child "Six seven! I’m such a fat fucking chud."
     "The sound of gun fire fills the corridors as Dafny and Basil are shot in the head."
+    show cutscene shot with fade
+    ""
 
     jump generalbadend

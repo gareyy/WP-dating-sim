@@ -6,6 +6,7 @@
 #  but looks longingly at the game they are good at, Basil notices this (Arcade)
 # Bad Ending: Breaks wrist during Taiko and has to be rushed to the emergency room
 
+image cutscene taiko = Image("images/cutscene/taiko.png")
 
 label arcade:
 
@@ -179,7 +180,7 @@ label .taiko:
     basil "(I gotta call the ambulance.)"
     dafny "Ouch..."
     basil "I should have warned you not to pick that difficulty."
-    scene bg black with fade
+    show cutscene taiko with fade
     basil "I followed her on the ambulance to the hospital."
     basil "They were able to stabilise her."
     basil "Unfortunately, she wasn't able to work for the next few months."

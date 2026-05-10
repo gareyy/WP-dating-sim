@@ -143,8 +143,8 @@ label ending:
 
     dafny "Yes please."
 
-    show basil blushing at closeright with move
-    show dafny blushing at closeleft with move
+    show basil blushing at closeleft with move
+    show dafny blushing at closeright with move
     show cutscene kiss with whitefade
     "Their lips collide."
     "Magic is created."
