@@ -1627,12 +1627,30 @@ style slider_slider:
 # LEMMA SCREEN
 
 
+transform transparency():
+    alpha 0.0
+
+    linear .2 alpha 0.75
+
+    block:
+        pause .5
+
+        repeat
+
 
 screen lemmas(lems):
 
     tag lemmas
     zorder 1
-    modal False
+    modal True
+
+    imagemap:
+        idle "images/backgrounds/verify.png"
+        hover "images/backgrounds/verify.png"
+        id "lem_overlay"
+        xsize 1920
+        ysize 1080
+        at transparency()
 
     frame:
         id "frame"
@@ -1640,6 +1658,7 @@ screen lemmas(lems):
         xpadding 50
         ypadding 10
         vbox:
+            text "{size=+10}Lemmas:{/size}" id "lem_title"
             spacing 10
             for l in lems:
                 text l id "lem_[lems.index(l)]"
@@ -1652,11 +1671,13 @@ screen lemmas(lems):
 
 
 screen lemmabutton():
+
+    zorder 2
+
     frame:
-        
         imagebutton:
-            idle "gui/bubble.png"
-            hover "gui/bubble.png"
+            idle Text(" ⊢ ", size=70)
+            hover Text(" ⊢ ", size=70, color="#FFF")
             action ToggleScreen("lemmas", None, lemmas_list)
 
 # screen imageButton():
