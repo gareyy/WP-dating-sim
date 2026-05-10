@@ -141,7 +141,7 @@ label .steal_your_girl:
 
     hide basil
     boogie "Speakin' of funky, who's the groovy young lady over here?"
-    show dafny blushing at left
+    show dafny excited at left
     dafny "Groovy?..."
     boogie "Why do you doubt yourself? Your vibe is evident for all to see."
     dafny "Are you sure?"
@@ -156,12 +156,12 @@ label .steal_your_girl:
     basil "You don't even know her name!"
 
     hide basil
-    show dafny blushing at left
+    show dafny excited at left
     dafny "Dafny, my name is Dafny."
     boogie "Well that settles things, to the dance floor!"
     
     hide boogie
-    show dafny at right
+    show dafny at right 
     show basil at left
     basil "Wait what about our..."
     dafny "Don't worry I'll see you after the song is over."

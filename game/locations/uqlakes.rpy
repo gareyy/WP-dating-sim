@@ -287,7 +287,7 @@ label .pukeko_choice:
     show pukeko at right
     voice "voice/pukeko/line00.ogg"
     pukeko "Oh hey baby girl."
-    show dafny blushing
+    show dafny excited
     dafny "Who, me?"
     voice "voice/pukeko/line01.ogg"
     pukeko "Yes you, fine little thing."
@@ -306,7 +306,7 @@ label .pukeko_choice:
     basil "(Ruh roh...)"
     basil "I think we did just eat at a fancy restaurant tho."
     "The pukeko looks at Dafny"
-    show dafny blushing
+    show dafny excited
     voice "voice/pukeko/line05.ogg"
     pukeko "What's your name honeypumps?"
     dafny "Um, Dafny."

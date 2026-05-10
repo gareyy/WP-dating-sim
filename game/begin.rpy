@@ -57,9 +57,9 @@ image basil swimwear sad = Crop((0, 0, 925, 925), Image("images/basil/Swimwear_S
 
 image dafny = Crop((0, 0, 925, 925), Image("images/dafny/Neutral.png", oversample=3))
 image dafny happy = Crop((0, 0, 925, 925), Image("images/dafny/Happy.png", oversample=3))
-image dafny blushing = Crop((0, 0, 925, 925), Image("images/dafny/Flustered.png", oversample=3))
+image dafny blushing = Crop((0, 0, 925, 925), Image("images/dafny/Blushing.png", oversample=3))
 image dafny excited = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
-image dafny lovestruck = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
+image dafny lovestruck = Crop((0, 0, 925, 925), Image("images/dafny/Lovestruck.png", oversample=3))
 image dafny sad = Crop((0, 0, 925, 925), Image("images/dafny/Disappointed.png", oversample=3))
 image dafny laughing = Crop((0, 0, 925, 925), Image("images/dafny/Flustered_Excited.png", oversample=3))
 
