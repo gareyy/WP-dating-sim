@@ -14,7 +14,7 @@ a gamejam 2026 game by the "Wekissed Precondition" team.
 
 Play as Basil, a shy and reclusive researcher who accidentally ends up on a date with their crush, Dafny, through strange time loop shenanigans. Help Basil succeed using information from previous time loops!
 
-Available to download at **INSERT**
+Available to download at https://wumeno.itch.io/wekissed-precondition 
 
 ## Credits
 - Hayden Brown - Music, QA, Writing
