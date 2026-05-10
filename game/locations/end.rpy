@@ -1,5 +1,7 @@
 # ending
 
+image cutscene kiss = Image("images/cutscene/kiss.png")
+
 label ending:
     scene bg black with fade
     play music "sad/intro.ogg"
@@ -141,11 +143,13 @@ label ending:
 
     dafny "Yes please."
 
-    show basil blushing at closeleft with move
-    show dafny blushing at closeright with move
+    show basil blushing at closeright
+    show dafny blushing at closeleft
+    show cutscene kiss with fade
     "Their lips collide."
     "Magic is created."
     "The proof of love has been verified."
+    hide cutscene kiss with fade
     basil "(I think I have reached a new high.)"
     basil "*sniff*"
     show basil sad
