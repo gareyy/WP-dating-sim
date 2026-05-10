@@ -29,6 +29,13 @@ image verifying:
     0.35 # Wait for 0.5 seconds
     repeat # Loop forever
 
+image verifying_light:
+    "images/backgrounds/verify_light.png"
+    0.4 # Wait for 0.5 seconds
+    "images/backgrounds/verify_light2.png"
+    0.4 # Wait for 0.5 seconds
+    repeat # Loop forever
+
 # oversample = 6 if TODO sprite
 image basil = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", oversample=3))
 image basil happy = Crop((0, 0, 925, 925), Image("images/basil/Happy.png", oversample=3))

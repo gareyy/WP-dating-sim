@@ -143,13 +143,14 @@ label ending:
 
     dafny "Yes please."
 
-    show basil blushing at closeright
-    show dafny blushing at closeleft
-    show cutscene kiss with fade
+    show basil blushing at closeright with move
+    show dafny blushing at closeleft with move
+    show cutscene kiss with whitefade
     "Their lips collide."
     "Magic is created."
     "The proof of love has been verified."
-    hide cutscene kiss with fade
+    show verifying_light with whitefade
+    # hide cutscene kiss with fade
     basil "(I think I have reached a new high.)"
     basil "*sniff*"
     show basil sad
@@ -167,14 +168,15 @@ label ending:
     show basil blushing at closeleft
     basil "I want to do more tonight."
     dafny "M-me too."
-    #show basil lovestruck at closeleft
-    show dafny lovestruck at closeright
+    show green at barspot
+    with moveintopslow
     basil "I love you Dafny."
     dafny "I love you Basil."
 
-    scene bg white with fade
-    ""
-    show isabelle with fade
+    scene bg white with whitefade
+    "..."
+    "..."
+    show isabelle with whitefade
     queue music "sad/outro.ogg" noloop
     isabelle "And then they had hot steamy verification!"
     isabelle "The end!"
