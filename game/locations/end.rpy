@@ -182,10 +182,10 @@ label ending:
     scene bg black with fade
     "Wekissed Preconditon"
     "A GameJam 2026 game."
-    " - "
-    " - "
-    " - "
-    " - "
-    " - "
+    "Hayden Brown - Music, QA, Writing"
+    "Gareth Guce - Writing, Programming, QA"
+    "firefriedfries - Character Sprites, Cutscenes"
+    "Pointer Rain - Programming"
+    "Felix Zhu - Background Artwork"
 
     $ MainMenu(confirm=False)()
