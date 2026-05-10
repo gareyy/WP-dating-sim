@@ -118,7 +118,7 @@ label .good_choice:
     basil "(Wow I am really in the thick of it now.)"
     dafny "You okay?"
     # TODO possibly change the positioning of basil?
-    show basil swimwear blushing
+    show basil swimwear blushing at right
     basil "Yeah yeah I am."
     dafny "Were you staring at me?"
     dafny "You know what, forget about that, you look cute when you're flustered."
@@ -131,6 +131,7 @@ label .good_choice:
     "Dafny drops into the water and starts swimming."
     basil "(I gotta admit, I don't swim that much.)"
     basil "(I'll just wade around.)"
+    hide basil
     show bg black with fade
 
     scene bg pool

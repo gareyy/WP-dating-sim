@@ -31,7 +31,7 @@ label loophead:
 
     elif loop_no == 2:
         basil "(This is getting weird...)"
-        basil "(Shit, did that weirdo put me in a time loop?)"
+        basil "(Did that weirdo put me in a time loop?)"
 
     elif loop_no == 3:
         basil "(Looks like I'm stuck in some kind of loop.)"
@@ -173,14 +173,14 @@ label .chicken:
     dafny "I thought you knew that..."
     show basil sad
     basil "Sorry..."
-    basil "(Shit!)"
+    basil "(Crap!)"
     jump .restaurant_badend
 
 label .restaurant_badend:
     stop music fadeout 10.0
     show dafny at left
     show basil at right
-    dafny "I don't think im gonna eat tonight"
+    dafny "I don't think im gonna eat tonight."
     basil "Ok, um fine, um, sorry."
     dafny "It's okay, I can buy my own food later."
     dafny "You know, that {b}tofu{\b} on the menu looked nice..."

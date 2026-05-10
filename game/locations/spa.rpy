@@ -9,7 +9,7 @@
 # Monadic Mind
 
 define rocq = Character("Rocq", color="#ffb68c")
-image rocq = Image("images/side_characters/rocq.png")
+image rocq = Image("images/side_characters/rocq.png", oversample=1.2)
 
 transform threeleft:
     xalign 0.10
@@ -44,8 +44,8 @@ label spa:
     rocq "Welcome to the Monadic Mind Spa and Wellness Center!"
     rocq "We have a variety of services available, including massages, cold plunges, and hot tubs!"
 
-    hide dafny
-    show rocq at left
+    hide dafny with fade
+    show rocq at left with fade
 
     basil "Hey I know you!"
     rocq "Me?"
@@ -55,9 +55,15 @@ label spa:
     rocq "Yeah, um, how do I say this."
     rocq "Actually, I don't think I should be stating anything, its private."
 
+    hide rocq
+    show dafny at left
+    dafny "Hey um, is he supposed to be that tiny?"
+    basil "Yeah, Coq is too."
+
 label .spa_menu:
 
     hide basil
+    hide dafny
     hide rocq
     show rocq
     rocq "Um anyway..."
@@ -138,7 +144,7 @@ label .cold_plunge:
     "Basil rushes out of the cold water and tries to drag Dafny's body out."
     basil "Rocq! Please help!"
 
-    show bg black with fade
+    scene bg black with fade
     basil "Unfortunately, Dafny succumbed to hypothermia."
     basil "I felt completely alone and guilty after that, I believed I killed her..."
 
