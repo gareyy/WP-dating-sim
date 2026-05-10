@@ -6,7 +6,12 @@
 # Information: (Before Choice) you two are appreciating the graffiti on the walls walking to the karaoke place, Dafny mentions they would like to be an artist's muse one day (Museum)
 # Bad Ending: Boogie steals your girl if you select the disco song
 
-define boogie = Character("Boogie", color="#ffffff")
+define boogie = Character("Boogie")
+image boogie = Crop((0, 0, 1349, 1349), Image("images/boogie/Boogie.png", oversample=3))
+
+transform boo:
+    xalign 0.75
+    yalign 0.4
 
 label karaoke:
 
@@ -124,7 +129,7 @@ label .steal_your_girl:
     show basil at left
     basil "What in the..."
     
-    show boogie at right
+    show boogie at boo
     boogie "Now that's a funky music I hear in here!"
     basil "Who are y..."
     boogie "With fine vibes like thine it would be a crime not to swing by!"
