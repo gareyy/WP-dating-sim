@@ -54,7 +54,7 @@ label arcade:
         if not arcade_info:
             choices = ["floydger", "hoareracing", "taiko"]
         else:
-            choices = random.sample(games, 2)
+            choices = renpy.random.sample(games, 2)
 
     play sound "sfx/choice.ogg"
 

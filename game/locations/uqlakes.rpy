@@ -68,7 +68,7 @@ label uqlakes:
     basil "Oh, which one?"
     dafny "Which one looks the most interesting to you Basil?"
 
-    $ coinflip = random.choice([0, 1, 2])
+    $ coinflip = renpy.random.choice([0, 1, 2])
 
     play sound "sfx/choice.ogg"
     if not lake_info:

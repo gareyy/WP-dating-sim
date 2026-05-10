@@ -81,8 +81,6 @@ transform right:
 label start:
 
     python:
-        import random
-
         loop_no = 0
         restaurant_info = False
         karaoke_info = False

@@ -65,7 +65,7 @@ label choice1:
         if not seen_choice1:
             choices = ["pool", "lake", "museum"]
         else:
-            choices = random.sample(stage1locations, 3)
+            choices = renpy.random.sample(stage1locations, 3)
 
         seen_choice1 = True
 
@@ -96,7 +96,7 @@ label choice2:
         if not seen_choice2:
             choices = ["spa", "arcade", "karaoke"]
         else:
-            choices = random.sample(stage2locations, 3)
+            choices = renpy.random.sample(stage2locations, 3)
         
         seen_choice2 = True
     
