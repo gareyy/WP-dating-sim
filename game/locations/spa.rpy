@@ -9,6 +9,7 @@
 # Monadic Mind
 
 define rocq = Character("Rocq", color="#ffb68c")
+image rocq = Image("images/side_characters/rocq.png")
 
 transform threeleft:
     xalign 0.10
