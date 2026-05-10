@@ -185,6 +185,7 @@ label start:
     basil "You sure you want me to pay?"
     dafny "Y-yeah?"
     basil "Pfft."
+    show dafny
     dafny "Is a compliment to you not enough?"
     dafny "You like my compliments right?"
     basil "I somewhat live off them."
@@ -199,7 +200,7 @@ label start:
     dafny "The fancy place at the uni here!"
     basil "Oh you mean the pub? I hear they have great student discou-"
     dafny "Oh no I mean the really fancy one."
-    show basil angry
+    show basil hesitant
     basil "Ah."
     dafny "Oh, I still have a small bit to do, mind if you go ahead to the place without me?"
     basil "Yeah sure."
