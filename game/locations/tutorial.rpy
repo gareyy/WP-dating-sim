@@ -60,4 +60,5 @@ label tutorial:
 
     scene bg restaurant with fade
     $ lemmas_list.add("Dafny's favourite food is tofu")
+    play sound "sfx/discovery.ogg"
     jump restaurant

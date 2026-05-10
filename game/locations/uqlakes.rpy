@@ -52,6 +52,8 @@ label uqlakes:
     python:
         karaoke_info = True
         lemmas_list.add("Dafny likes romantic songs")
+        
+    play sound "sfx/discovery.ogg"
 
     dafny "It's really nice to have such a beautiful place to relax so close to our workplace!"
     basil "Yeah, its beautiful out here. I love the green out here."

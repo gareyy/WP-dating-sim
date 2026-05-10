@@ -20,6 +20,7 @@ label museum:
     basil "Oh, do you like black birds?"
     dafny "Only {b}ravens{\b} really. They are epic and wise."
     $ lemmas_list.add("Dafny's favourite animal is a raven")
+    play sound "sfx/discovery.ogg"
     python:
         lake_info = True
 
@@ -29,7 +30,7 @@ label museum:
     dafny "Look at these ones over here!"
     "Before you are three glorious works of art."
     # Alt-Ergo
-    "On the left is a ligature of a and e between two double-struck horizontal lines."
+    "On the left is a ligature of an 'a' and an 'e' between two double-struck horizontal lines."
     # C++
     "In the middle is an abstract representation of a crab claw on a blue hexagon pinching the concat operation."
     "On the right is an oil painting of fox girl, looking gorgeous and regal."

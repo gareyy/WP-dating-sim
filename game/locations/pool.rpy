@@ -24,6 +24,7 @@ label pool:
     basil "(My mind just shortcircuited.)"
     dafny "Ooh! Maybe in the future, we can go swimming together again sometime soon, maybe even in a {b}hot tub!{\b}"
     $ lemmas_list.add("Dafny would like to go in a hot tub with Basil sometime")
+    play sound "sfx/discovery.ogg"
     python:
         spa_info = True
 

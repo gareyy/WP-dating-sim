@@ -21,6 +21,7 @@ label karaoke:
     dafny "I wish {b}I could be an artist's muse{\b} one day and inspire them to create amazing art like this!"
     basil "That would be really cool. You would make a great muse!"
     $ lemmas_list.add("Dafny would like to see art of themself one day")
+    play sound "sfx/discovery.ogg"
     python:
         museum_info = True
 

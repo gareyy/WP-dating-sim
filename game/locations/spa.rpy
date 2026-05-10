@@ -126,6 +126,7 @@ label .cold_plunge:
     dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
     $ pool_info = True
     $ lemmas_list.add("Dafny is attracted to Basil's stare")
+    play sound "sfx/discovery.ogg"
     dafny "Especially in a swimsuit like this..."
     basil "..."
     basil "Y- ha, ha."
@@ -172,6 +173,7 @@ label .massage_badend:
     dafny "{b}I like it when you stare{\b}, you know?"
     $ pool_info = True
     $ lemmas_list.add("Dafny is attracted to Basil's stare")
+    play sound "sfx/discovery.ogg"
     basil "Oh, um, I wasn't staring."
     dafny "Hmph, yeah right."
 
@@ -253,6 +255,7 @@ label .hot_tub:
     dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
     $ pool_info = True
     $ lemmas_list.add("Dafny is attracted to Basil's stare")
+    play sound "sfx/discovery.ogg"
     basil "L-lovingly?"
     dafny "I always notice you staring at me~."
     basil "aksljdhgfjhawqjhfajsh-"
