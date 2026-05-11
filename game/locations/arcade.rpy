@@ -1,7 +1,7 @@
 # Story - Arcade: 
 # Choice: Choose an arcade game to play against Dafny.
 #  Dafny has a game they are really really good at, which is Trimonis (based on the 3400 assignment).
-#  Other games include Floyd-ger, Hoare-s Racing and Taiko.
+#  Other games include Floyd-ger, Hoare Racing and Taiko.
 # Information: (After choice) Dafny feels defeated by you at whatever game you picked,
 #  but looks longingly at the game they are good at, Basil notices this (Arcade)
 # Bad Ending: Breaks wrist during Taiko and has to be rushed to the emergency room
@@ -64,7 +64,7 @@ label arcade:
         "Floydger" if "floydger" in choices:
             call .floydger from _call_arcade_floydger
 
-        "Hoare's Racing" if "hoareracing" in choices:
+        "Hoare Racing" if "hoareracing" in choices:
             call .hoareracing from _call_arcade_hoareracing
 
         "Taiko" if "taiko" in choices:

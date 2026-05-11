@@ -1664,11 +1664,6 @@ screen lemmas(lems):
                 text l id "lem_[lems.index(l)]"
         at topright
 
-        # button:
-        #     id "show_lemmas"
-        #     at topright
-        #     # child Text("Click me!")
-
 
 screen lemmabutton():
 
@@ -1680,13 +1675,36 @@ screen lemmabutton():
             hover Text(" ⊢ ", size=70, color="#FFF")
             action ToggleScreen("lemmas", None, lemmas_list)
 
-# screen imageButton():
+screen credits():
 
-#     imagebutton:
-#         idle "folder/image1.png"
-#         hover "folder/image2.png" #optional slightly different image for when the mouse is over the image
-#         action Jump ("choice1")
+    tag credits
+    zorder 1
+    modal False
 
-# label choice1:
-#     e "Well you made the only choice"
-#     return
+    imagemap:
+        idle "images/backgrounds/verify.png"
+        hover "images/backgrounds/verify.png"
+        id "credits_overlay"
+        xsize 1920
+        ysize 1080
+        at transparency()
+
+    frame:
+        id "frame"
+        xpos 100 ypos 10
+        xpadding 50
+        ypadding 10
+        background None
+
+        vbox:
+            spacing 10
+            text gui.about
+            if good_lake:
+                text """
+Voice Acting:
+        Ibis - Felix Zhu
+Water Dragon - Hayden Brown
+      Possum - firefriedfries
+      Pukeko - Gareth Guce
+       Raven - Pointer Rain"""
+        at top

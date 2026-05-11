@@ -30,13 +30,13 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-Wekissed Preconditon\n
-A GameJam 2026 game.\n\n
-Hayden Brown - Music, QA, Writing\n
-Gareth Guce - Writing, Programming, QA\n
+{size=+10}{b}Wekissed Precondition{/b}{/size}\n
+{size=+8}{i}A GameJam 2026 game.{/i}{/size}\n\n
+  Hayden Brown - Music, QA, Writing\n
+   Gareth Guce - Writing, Programming, QA\n
 firefriedfries - Character Sprites, Cutscenes\n
-Pointer Rain - Programming\n
-Felix Zhu - Background Artwork\n
+  Pointer Rain - Programming\n
+     Felix Zhu - Background Artwork\n
 """)
 
 

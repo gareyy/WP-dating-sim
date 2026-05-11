@@ -184,20 +184,9 @@ label ending:
     isabelle "The end!"
 
     scene bg black with fade
-    "Wekissed Preconditon"
-    "A GameJam 2026 game."
-    "Hayden Brown - Music, QA, Writing"
-    "Gareth Guce - Writing, Programming, QA"
-    "firefriedfries - Character Sprites, Cutscenes"
-    "Pointer Rain - Programming"
-    "Felix Zhu - Background Artwork"
 
-    if good_lake:
-        "Voice Acting:"
-        "Ibis - Felix Zhu"
-        "Water Dragon - Hayden Brown"
-        "Possum - firefriedfries"
-        "Pukeko - Gareth Guce"
-        "Raven - Pointer Rain"
+    show screen credits with fade
+
+    ""
 
     $ MainMenu(confirm=False)()
