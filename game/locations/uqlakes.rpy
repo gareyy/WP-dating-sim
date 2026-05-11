@@ -55,16 +55,21 @@ label uqlakes:
         
     play sound "sfx/discovery.ogg"
 
+    show dafny
     dafny "It's really nice to have such a beautiful place to relax so close to our workplace!"
     basil "Yeah, its beautiful out here. I love the green out here."
+    show dafny happy
     dafny "Not as serene as you beautiful"
     show basil blushing
     basil "Wh-"
+    show dafny
     dafny "Pffft, I'm just joking buddy."
     show basil at right
     basil ".... ok ok"
+    show basil thinking
     basil "..."
     basil "Ummm.."
+    show basil
     basil "Look at those animals over there! They look so cute and peaceful."
     dafny "I want to get close to one of them!"
     basil "Oh, which one?"
@@ -115,9 +120,13 @@ label .ibis_choice:
     voice "voice/ibis/line01.ogg"
     ibis "What did you call me???"
     show dafny scared
+    show basil hesitant at right
+    hide ibis
     basil "Please calm down."
     basil "My name is Basil and I am so truly sorry."
     voice "voice/ibis/line02.ogg"
+    show ibis at right
+    hide basil
     ibis "Grr."
     dafny "You are not gonna do anything to my friend!"
     voice "voice/ibis/line03.ogg"
@@ -126,10 +135,14 @@ label .ibis_choice:
     dafny "I'd laugh at it."
     voice "voice/ibis/line04.ogg"
     ibis "Go on Basil, call your friend a \"bin chicken\""
+    show basil hesitant at right
+    hide ibis
     basil "Um..."
     basil "Hey Dafny, you are a uh, um, bin chicken."
     dafny "Wow."
     dafny "I am so honoured..."
+    show ibis at right
+    hide basil
     ibis "..."
     voice "voice/ibis/line05.ogg"
     ibis "You have a point Basil."
@@ -146,6 +159,7 @@ label .ibis_choice:
     "Bird poop falls from the sky and lands on Basil."
     # TODO: show basil pooped
     show basil pooped
+    show dafny surprised
     basil "..."
     dafny "..."
     show dafny laughing
@@ -166,7 +180,7 @@ label .water_dragon_choice:
     basil "Why are they called water dragons anyway?"
     dafny "Maybe because they look,"
     dafny "Like a dragon."
-    show basil angry
+    show basil hesitant
     basil "..."
     basil "...."
     basil "....."
@@ -267,6 +281,7 @@ label .possum_choice:
 
     basil "Lets leave."
     dafny "Yeah."
+    show basil hesitant
     basil "Wait, it took my go card."
     dafny "What?"
     scene bg black with fade
@@ -332,9 +347,10 @@ label .pukeko_choice:
     pukeko "Oh absolutely yes! That was what I was thinking!"
     dafny "Oh we think the same, its like fate!"
     hide pukeko
-    show basil sad at right
+    show basil surprised at right
     dafny "Well Basil, sorry for the abrupt end, but see you tomorrow?"
-    basil "Yeah I gues..."
+    show basil hesitant
+    basil "Yeah I guess..."
 
     scene bg black with fade
     basil "I got Dafny stolen by a bird???"

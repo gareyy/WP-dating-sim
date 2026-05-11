@@ -71,6 +71,7 @@ label museum:
     jump choice2
 
 label .first_choice:
+    show dafny sad
     dafny "Oh, I don't really like that one..."
     dafny "It's just kind of bland."
     basil "What about the ligature?"
@@ -80,6 +81,7 @@ label .first_choice:
     jump .museum_badend
 
 label .second_choice:
+    show dafny sad
     dafny "Umm, I'm not sure how I feel about that one..."
     basil "How so?"
     dafny "Something about just feels very undefined."

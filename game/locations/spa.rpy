@@ -222,6 +222,7 @@ label .hot_tub:
     basil "Um, hot tub please..."
     dafny "Oh yes! I've always wanted to do one of these!"
     dafny "Especially with you Basil."
+    hide rocq
     show basil blushing
     basil "!!!"
     "..."

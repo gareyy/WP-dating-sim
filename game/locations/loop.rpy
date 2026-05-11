@@ -86,6 +86,7 @@ label choice1:
             dafny "I love visiting museums! That sounds like a great idea!"
             jump museum
         "Hartley Teakle" if "hartley" in choices:
+            show dafny sad
             dafny "Ew, that place looks really creepy and scary. I don't think I want to go there..."
             basil "You sure? Could be fun though!"
             jump hartley

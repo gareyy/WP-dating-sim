@@ -176,9 +176,11 @@ label start:
     show dafny
 
     basil "Oh shit, did we remember to have some lunch?"
+    show dafny sad
     "Dafny looks around uncertainly."
     dafny "Yeah, uh... fuck."
     dafny "I think we forgot."
+    show dafny
     dafny "You know what? How about we go out for dinner together?"
     dafny "Just a little reward for how far you've come."
     "Basil gives it some thought."
@@ -205,6 +207,7 @@ label start:
     dafny "Oh no, I mean the really fancy one."
     show basil hesitant
     basil "Ah."
+    show basil
     dafny "Oh, I still have a small bit of work to do. Mind heading there without me?"
     basil "Yeah, sure."
 

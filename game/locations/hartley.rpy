@@ -23,6 +23,7 @@ label hartley:
     child "Six seven six seven!"
     dafny "Basil, this isn't funny any more."
     dafny "Please make it stop!"
+    show basil hesitant
     basil "Uh um uhh..."
 
     child "Six seven! I’m such a fat fucking chud."

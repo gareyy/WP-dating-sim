@@ -24,13 +24,14 @@ label tutorial:
     isabelle "Remember to make a good impression on your date! You only get one chance!"
     
     show isabelle at left
-    show basil at right
+    show basil surprised at right
 
     basil "Wait wh- who are you?"
 
     isabelle "Let's just say..."
     isabelle "An observant bystander."
 
+    show basil hesitant at right
     basil "Ok and why are you so interested?"
     isabelle "Oh I just don't like seeing people fumble on dates."
 

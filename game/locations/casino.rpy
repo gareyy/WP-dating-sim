@@ -39,8 +39,9 @@ label casino:
     basil "I didn't mean to.."
     house "You broke my machine!"
     house "That's it! I'm taking your kidneys as punishment."
+    show dafny angry
     dafny "You can't just.."
-
+    show dafny scared
     "Basil's kidneys are ripped from their body."
     show cutscene housealwayswins with fade
     house "I always win."

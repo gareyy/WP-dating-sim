@@ -166,6 +166,7 @@ label .pool_badend_A:
     dafny "I think we're done here..."
     hide dafny
     "Dafny leaves the water to go change."
+    show basil swimwear sad
     basil "..."
     basil "Damn."
     basil "(I sat in the water for another hour, just over thinking what happened there.)"

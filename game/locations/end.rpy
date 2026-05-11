@@ -97,6 +97,7 @@ label ending:
     dafny "Be honest with me Basil, what is truly going on?"
     dafny "How do I remember these things?"
 
+    show basil sad
     basil "..."
     basil "I think I was in a time loop."
 
@@ -105,6 +106,7 @@ label ending:
     dafny "And there were like, multiple endings to our day that didn't leave me happy in a way."
     dafny "Even if it lead to me going out with someone else..."
 
+    show basil
     basil "Im glad you trust me on that."
     basil "There was this strange being, with a sledgehammer, that forced me into this time loop."
     basil "And I'm so happy they made me go through this over and over again."

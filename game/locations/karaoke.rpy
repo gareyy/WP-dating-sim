@@ -82,6 +82,7 @@ label .heartbreak_choice:
     basil "Are you alright?"
     dafny "Yeah, I'm okay."
     dafny "I don't always deal well with songs like that..."
+    show basil sad
     basil "Sorry, I..."
     dafny "It's okay, I know you didn't mean to."
     "The karaoke score says \"78\""
@@ -97,8 +98,8 @@ label .duet_choice:
 
     basil "🎵 You asserted yourself into my life. 🎵"
     basil "🎵 And now you're part of my scope. 🎵"
-    dafny "🎵 And as I reasoned about you more. 🎵"
-    dafny "🎵 You became invariant to myself. 🎵"
+    # dafny "🎵 And as I reasoned about you more. 🎵"
+    # dafny "🎵 You became invariant to myself. 🎵"
     dafny "🎵 As time, goes by. 🎵"
     dafny "🎵 I find more reason to make you an invariant in my life. 🎵"
     basil "🎵 It's true from the start, it's true in the end. 🎵"
@@ -110,6 +111,7 @@ label .duet_choice:
     "The song ends."
 
     show dafny laughing
+    show basil laughing
     dafny "Thank you for doing that!"
     basil "You have a very nice singing voice."
     dafny "You aren't too bad yourself, even though you were a bit pitchy!"
@@ -126,7 +128,7 @@ label .steal_your_girl:
     "As the song begins playing, the door is thrown open"
 
     hide dafny
-    show basil at left
+    show basil surprised at left
     basil "What in the..."
     
     show boogie at boo
