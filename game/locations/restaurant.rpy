@@ -1,6 +1,4 @@
 # A tutorial section for the game.
-
-# ?
 # Meet Dafny
 # Choose meals
 # Dafny's reaction
@@ -43,7 +41,7 @@ label loophead:
         basil "(I don't know how many times I've been here, but I won't give up!)"
 
     elif loop_no >= 10 and renpy.random.randint(1, 100) == 69:
-        basil "(IM BACK IN THIS FUCKING BUILDING AGAIN!)"
+        basil "(I'M BACK IN THIS FUCKING BUILDING AGAIN!)"
 
     else:
         basil "(I need to try something different this time!)"
@@ -79,13 +77,13 @@ label restaurant:
         queue music "main/vara.ogg" fadein 3.0
     dafny "Hey uh, you said you were ordering us stuff right?"
     basil "Oh yeah!"
-    dafny "Ummm let's see here."
-    "You two open the menu together"
+    dafny "Ummm, let's see here."
+    "You two open the menu together."
 
     if loop_no >= 3:
         basil "(Do these things ever change?)"
 
-    basil "Okay ummm entreés... let's see."
+    basil "Okay, ummm... entrées... let's see."
 
     menu:
         "Breadsticks":
@@ -97,8 +95,8 @@ label restaurant:
     show dafny at left
     show basil at right
 
-    dafny "I'm pretty thirsty, what should we drink?"
-    basil "I think I would like something shared."
+    dafny "I'm pretty thirsty. What should we drink?"
+    basil "I think I'd like something shared."
     dafny "Oh yeah! Great idea!"
     dafny "One jug of...."
 
@@ -130,21 +128,21 @@ label restaurant:
 
 label .breadsticks:
     dafny "Oh, breadsticks! I love those!"
-    basil "Oh you do?"
-    dafny "Great choice Basil!"
-    $ entry = "breadsticks"
+    basil "Oh, you do?"
+    dafny "Great choice, Basil!"
+    $ entree = "breadsticks"
     return
 
 label .crackers:
     dafny "Crackers? I don't really like those..."
     show dafny sad 
     dafny "Too salty..."
-    $ entry = "crackers"
+    $ entree = "crackers"
     return
 
 label .lemonade:
     show dafny happy
-    dafny "Lemonade is my favorite! Great choice!"
+    dafny "Lemonade is my favourite! Great choice!"
     dafny "I can't wait!"
     $ drink = "lemonade"
     return
@@ -152,7 +150,7 @@ label .lemonade:
 label .water:
     show dafny sad
     dafny "Water is good, but I was hoping for something a little sweeter..."
-    basil "Like um?"
+    basil "Like, um?"
     show basil sad
     dafny "I think everything that isn't water is sweeter."
     $ drink = "water"
@@ -180,20 +178,25 @@ label .restaurant_badend:
     stop music fadeout 10.0
     show dafny at left
     show basil at right
-    dafny "I don't think im gonna eat tonight."
-    basil "Ok, um fine, um, sorry."
-    dafny "It's okay, I can buy my own food later."
-    dafny "You know, that {b}tofu{\b} on the menu looked nice..."
+
+    dafny "I don't think I'm gonna eat tonight."
+    basil "Okay, um... fine... sorry."
+    dafny "It's okay. I can buy my own food later."
+    dafny "You know, that {b}tofu{/b} on the menu looked nice..."
+
     python:
         restaurant_info = True
+
     basil "You fine with just me eating tonight?"
-    dafny "Yeah, I'm fine with just [entry] and [drink] for tonight..."
+    dafny "Yeah, I'm fine with just [entree] and [drink] tonight..."
     basil "Alright, y-yeah..."
     show basil sad
     show dafny sad
     dafny "..."
     basil "..."
-    "Shortly after, Dafny left the seat to go home..."
+
+    "Shortly after, Dafny left her seat and went home..."
+
     jump badend_a
 
 label .tofu:
@@ -211,7 +214,8 @@ label .success:
     dafny "Mmm!"
     dafny "I never knew this tofu was so good!"
     basil "It is?"
-    basil "It's something i've never tried but yeah, it's pretty good."
+    basil "It's something I've never tried before, but yeah, it's pretty good."
+
     "..."
     dafny "Hey, you got any plans for tonight?"
     basil "Usually I go home and play solitaire..."
@@ -221,7 +225,7 @@ label .success:
     dafny "Ooh! Maybe that pool nearby too!" 
     basil "Pool?"
     dafny "How about the art museum!"
-    dafny "Or maybe that weird ass abandoned building. Hartley Teakle, right?"
+    dafny "Or maybe that weird-ass abandoned building. Hartley Teakle, right?"
     dafny "How about you?"
     basil "Me?"
     show basil thinking

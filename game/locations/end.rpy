@@ -190,4 +190,12 @@ label ending:
     "Pointer Rain - Programming"
     "Felix Zhu - Background Artwork"
 
+    if good_lake:
+        "Voice Acting:"
+        "Ibis - Felix Zhu"
+        "Water Dragon - Hayden Brown"
+        "Possum - firefriedfries"
+        "Pukeko - Gareth Guce"
+        "Raven - Pointer Rain"
+
     $ MainMenu(confirm=False)()

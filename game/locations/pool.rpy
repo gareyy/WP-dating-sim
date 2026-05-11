@@ -150,6 +150,9 @@ label .good_choice:
 
 label .pool_badend_B:
     dafny "Do you really mean that?"
+    basil "..."
+    basil "Y-yeah..."
+    dafny "..."
     jump badend_a
 
 label .pool_badend_A:

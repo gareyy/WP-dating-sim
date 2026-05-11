@@ -347,7 +347,7 @@ label .pukeko_choice:
     jump generalbadend
 
 label .uqlakes_badend:
-    dafny "So, um, nice lake day I suppose?"
+    dafny "So, um, nice lake walk I suppose?"
     dafny "Did you like that song I shared to you?"
     basil "Yeah."
     basil "So you like romantic songs I guess?"
