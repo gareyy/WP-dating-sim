@@ -23,16 +23,16 @@ image bg casino = Image("images/backgrounds/casino.png")
 image bg house = Image("images/backgrounds/bedroom.png")
 
 image verifying:
-    "images/backgrounds/verify.png"
+    "images/verification/verify.png"
     0.35 # Wait for 0.5 seconds
-    "images/backgrounds/verify2.png"
+    "images/verification/verify2.png"
     0.35 # Wait for 0.5 seconds
     repeat # Loop forever
 
 image verifying_light:
-    "images/backgrounds/verify_light.png"
+    "images/verification/verify_light.png"
     0.4 # Wait for 0.5 seconds
-    "images/backgrounds/verify_light2.png"
+    "images/verification/verify_light2.png"
     0.4 # Wait for 0.5 seconds
     repeat # Loop forever
 
@@ -44,7 +44,6 @@ image basil normal = Crop((0, 0, 925, 925), Image("images/basil/Normal.png", ove
 image basil surprised    = Crop((0, 0, 925, 925), Image("images/basil/Surprise.png", oversample=3))
 image basil thinking = Crop((0, 0, 925, 925), Image("images/basil/Thinking.png", oversample=3))
 image basil hesitant = Crop((0, 0, 925, 925), Image("images/basil/Hesitant.png", oversample=3))
-
 image basil blushing = Crop((0, 0, 925, 925), Image("images/basil/Blushing.png", oversample=3))
 image basil angry = Crop((0, 0, 925, 925), Image("images/basil/Angry.png", oversample=3))
 image basil sad = Crop((0, 0, 925, 925), Image("images/basil/Sad.png", oversample=3))

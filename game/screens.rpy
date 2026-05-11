@@ -1645,8 +1645,8 @@ screen lemmas(lems):
     modal True
 
     imagemap:
-        idle "images/backgrounds/verify.png"
-        hover "images/backgrounds/verify.png"
+        idle "images/verification/verify.png"
+        hover "images/verification/verify.png"
         id "lem_overlay"
         xsize 1920
         ysize 1080
@@ -1682,8 +1682,8 @@ screen credits():
     modal False
 
     imagemap:
-        idle "images/backgrounds/verify.png"
-        hover "images/backgrounds/verify.png"
+        idle "images/verification/verify.png"
+        hover "images/verification/verify.png"
         id "credits_overlay"
         xsize 1920
         ysize 1080

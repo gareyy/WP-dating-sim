@@ -1,6 +1,6 @@
 # pooo
-image red = Image("images/backgrounds/barfadeRed.png")
-image green = Image("images/backgrounds/barfadeGreen.png")
+image red = Image("images/verification/barfadeRed.png")
+image green = Image("images/verification/barfadeGreen.png")
 
 transform barspotoffscreen:
     xalign 0.033
