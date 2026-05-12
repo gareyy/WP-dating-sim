@@ -56,6 +56,7 @@ label pool:
 
         "I know 🫦":
             basil "I know 🫦"
+            # TODO: dafny hesitant swimsuit
             dafny "Um, okay..."
             basil "..."
             dafny "..."
