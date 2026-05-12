@@ -13,6 +13,8 @@ define ibis = Character("Ibis")
 define dragon = Character("Water Dragon") # kinda looks like a dragon???
 define raven = Character("Raven")
 
+image cutscene pukeko = Image("images/cutscene/pukeko.png")
+
 image ibis = Image("images/animals/ibis.png", oversample=1)
 image pukeko = Image("images/animals/pukeko.png", oversample=2)
 image dragon = Image("images/animals/water_dragon.png", oversample=2)
@@ -352,7 +354,7 @@ label .pukeko_choice:
     show basil hesitant
     basil "Yeah I guess..."
 
-    scene bg black with fade
+    scene cutscene pukeko with fade
     basil "I got Dafny stolen by a bird???"
     basil "Grr- AHH!!!"
     basil "And now, fast forward a few years later, Dafny asked me to be the officiant at their wedding."
