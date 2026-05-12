@@ -44,6 +44,8 @@ label tutorial:
     basil "What?"
     isabelle "I think you'll figure it out..."
     isabelle "But first a hint."
+    play sound "sfx/discovery.ogg"
+    $ lemmas_list.add("Dafny's favourite food is tofu")
     isabelle "You know she would have wanted the tofu right?"
     basil "Yeah I guess?"
     basil "Maybe for next time we eat together."
@@ -60,11 +62,9 @@ label tutorial:
     hide basil
 
     show isabelle
-    isabelle "Oh by the way, if you click that button on the top right, it'll show you some useful information."
-    isabelle "I know its not there now, but it should show up after I disappear."
+    show screen lemmabutton with dissolve
+    isabelle "Oh by the way, if you click that button on the top left, it'll show you some useful information."
     isabelle "Useful information is {b}marked in bold.{\b}"
 
     scene bg restaurant with fade
-    $ lemmas_list.add("Dafny's favourite food is tofu")
-    play sound "sfx/discovery.ogg"
     jump restaurant

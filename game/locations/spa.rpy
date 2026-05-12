@@ -129,10 +129,9 @@ label .cold_plunge:
     show basil swimwear at closeright with move
 
     dafny "You kn-kn-know, we are pretty close now..."
-    dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
+    call add_lemma("Dafny is attracted to Basil's stare")
     $ pool_info = True
-    $ lemmas_list.add("Dafny is attracted to Basil's stare")
-    play sound "sfx/discovery.ogg"
+    dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
     dafny "Especially in a swimsuit like this..."
     basil "..."
     basil "Y- ha, ha."
@@ -176,10 +175,9 @@ label .massage_badend:
     basil "...."
     basil "....."
     dafny "..."
-    dafny "{b}I like it when you stare{\b}, you know?"
+    call add_lemma("Dafny is attracted to Basil's stare")
     $ pool_info = True
-    $ lemmas_list.add("Dafny is attracted to Basil's stare")
-    play sound "sfx/discovery.ogg"
+    dafny "{b}I like it when you stare{\b}, you know?"
     basil "Oh, um, I wasn't staring."
     dafny "Hmph, yeah right."
 
@@ -259,10 +257,9 @@ label .hot_tub:
     "Dafny takes Basil's head and begins to pat it"
     show dafny swimwear blushing
     "Dafny begins to whisper something in Basil's ear."
-    dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
+    call add_lemma("Dafny is attracted to Basil's stare")
     $ pool_info = True
-    $ lemmas_list.add("Dafny is attracted to Basil's stare")
-    play sound "sfx/discovery.ogg"
+    dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
     basil "L-lovingly?"
     dafny "I always notice you staring at me~."
     basil "aksljdhgfjhawqjhfajsh-"

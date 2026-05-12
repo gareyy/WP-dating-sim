@@ -23,11 +23,9 @@ label museum:
     basil "Oh yeah, that one is Odin."
     dafny "Haha I just liked it because it had ravens on it."
     basil "Oh, do you like black birds?"
+    call add_lemma("Dafny's favourite animal is a raven")
+    $ lake_info = True
     dafny "Only {b}ravens{\b} really. They are epic and wise."
-    $ lemmas_list.add("Dafny's favourite animal is a raven")
-    play sound "sfx/discovery.ogg"
-    python:
-        lake_info = True
 
     hide dafny
     show artifact enter at truecenter 

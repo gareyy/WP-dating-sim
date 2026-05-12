@@ -23,12 +23,10 @@ label karaoke:
     # See graffiti on the way to karaoke
     dafny "Wow, look at all this graffiti! It's so cool and artistic!"
     basil "Yeah, it's really impressive."
+    call add_lemma("Dafny would like to see art of themself one day")
+    $ museum_info = True
     dafny "I wish {b}I could be an artist's muse{\b} one day and inspire them to create amazing art like this!"
     basil "That would be really cool. You would make a great muse!"
-    $ lemmas_list.add("Dafny would like to see art of themself one day")
-    play sound "sfx/discovery.ogg"
-    python:
-        museum_info = True
 
     scene bg karaoke
     show dafny at left

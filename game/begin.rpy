@@ -24,16 +24,16 @@ image bg house = Image("images/backgrounds/bedroom.png")
 
 image verifying:
     "images/verification/verify.png"
-    0.35 # Wait for 0.5 seconds
+    0.35 # Wait for 0.35 seconds
     "images/verification/verify2.png"
-    0.35 # Wait for 0.5 seconds
+    0.35 # Wait for 0.35 seconds
     repeat # Loop forever
 
 image verifying_light:
     "images/verification/verify_light.png"
-    0.4 # Wait for 0.5 seconds
+    0.4 # Wait for 0.4 seconds
     "images/verification/verify_light2.png"
-    0.4 # Wait for 0.5 seconds
+    0.4 # Wait for 0.4 seconds
     repeat # Loop forever
 
 # oversample = 6 if TODO sprite
@@ -85,6 +85,15 @@ transform right:
 
 # The game starts here.
 
+label add_lemma(lemma, notify=True):
+
+    $ lemmas_list.add(lemma)
+
+    if notify:
+        play sound "sfx/discovery.ogg"
+    
+    return
+
 label start:
 
     python:
@@ -115,8 +124,8 @@ label start:
     basil "Do you ever think about what would have happened if you knew one thing beforehand, or knew how to react in the right way?"
     basil "Sometimes I think about what would have been the right thing to say, or the right thing to do."
     basil "..."
+    basil "There's this girl I work with... She's the prettiest person in the world."
     show dafny
-    basil "She's the main reason why i'm still doing this program verification stuff."
     basil "She's the main reason why I'm still doing this program verification stuff."
     basil "I feel like I could reach new heights with her."
     basil "I can show her the world and she can show me the stars."

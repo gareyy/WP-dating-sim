@@ -48,14 +48,10 @@ label uqlakes:
     show basil happy
     dafny "I hope you like it! It's a really {b}romantic song{\b} that I think is perfect for a walk by the lake."
     basil "I love it!"
+    call add_lemma("Dafny likes romantic songs")
+    $ karaoke_info = True
     basil "(Wait, romantic song?)"
     basil "(Is this really a date now?)"
-
-    python:
-        karaoke_info = True
-        lemmas_list.add("Dafny likes romantic songs")
-        
-    play sound "sfx/discovery.ogg"
 
     show dafny
     dafny "It's really nice to have such a beautiful place to relax so close to our workplace!"

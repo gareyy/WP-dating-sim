@@ -22,11 +22,9 @@ label pool:
     dafny "Perfect! I would love to see you in your swimmers soon..."
     basil "..."
     basil "(My mind just shortcircuited.)"
+    call add_lemma("Dafny would like to go in a hot tub with Basil sometime")
+    $ spa_info = True
     dafny "Ooh! Maybe in the future, we can go swimming together again sometime soon, maybe even in a {b}hot tub!{\b}"
-    $ lemmas_list.add("Dafny would like to go in a hot tub with Basil sometime")
-    play sound "sfx/discovery.ogg"
-    python:
-        spa_info = True
 
     dafny "That would be so nice and intimate, don't you think?"
 
