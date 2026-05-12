@@ -37,12 +37,14 @@ label loophead:
     elif loop_no <= 6:
         basil "(I'll keep trying until I get it right!)"
 
-    elif loop_no % 2 == 1:
-        basil "(I don't know how many times I've been here, but I won't give up!)"
-
     elif loop_no >= 10 and renpy.random.randint(1, 100) == 69:
         basil "(I'M BACK IN THIS FUCKING BUILDING AGAIN!)"
 
+    elif loop_no % 3 == 0:
+        basil "(I don't know how many times I've been here, but I won't give up!)"
+    elif loop_no % 3 == 1:
+        basil "(I need to remember what I know about Dafny!)"
+        show screen lemmabutton
     else:
         basil "(I need to try something different this time!)"
 
@@ -51,6 +53,7 @@ label loophead:
             "Would you like to skip ahead to the location choice?"
 
             "Yes":
+                show screen lemmabutton()
                 jump choice1
 
             "No":
