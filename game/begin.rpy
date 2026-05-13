@@ -292,13 +292,22 @@ label give_location_choice(choices):
         "Where should we go?"
 
         # Location choice 1
-        "The Pool" if "pool" in choices:
+        "The Pool" if "pool" in choices and not good_pool:
             dafny "Ooh, I love going to the pool! That sounds like so much fun!"
             jump pool
-        "The Lake" if "lake" in choices:
+        "The Pool ⭐" if "pool" in choices and good_pool:
+            dafny "Ooh, I love going to the pool! That sounds like so much fun!"
+            jump pool
+        "The Lake" if "lake" in choices and not good_lake:
             dafny "The lake sounds like a nice place to spend time!"
             jump uqlakes
-        "The Museum" if "museum" in choices:
+        "The Lake ⭐" if "lake" in choices and good_lake:
+            dafny "The lake sounds like a nice place to spend time!"
+            jump uqlakes
+        "The Museum" if "museum" in choices and not good_museum:
+            dafny "I love visiting museums! That sounds like a great idea!"
+            jump museum
+        "The Museum ⭐" if "museum" in choices and good_museum:
             dafny "I love visiting museums! That sounds like a great idea!"
             jump museum
         "Hartley Teakle" if "hartley" in choices:
@@ -308,13 +317,22 @@ label give_location_choice(choices):
             jump hartley
 
         # Location choice 2
-        "The Karaoke" if "karaoke" in choices:
+        "The Karaoke" if "karaoke" in choices and not good_karaoke:
             dafny "Ooh, I love karaoke! That sounds like so much fun!"
             jump karaoke
-        "The Spa" if "spa" in choices:
+        "The Karaoke ⭐" if "karaoke" in choices and good_karaoke:
+            dafny "Ooh, I love karaoke! That sounds like so much fun!"
+            jump karaoke
+        "The Spa" if "spa" in choices and not good_spa:
             dafny "A spa day sounds so relaxing and fun! I would love to go to the spa with you!"
             jump spa
-        "The Arcade" if "arcade" in choices:
+        "The Spa ⭐" if "spa" in choices and good_spa:
+            dafny "A spa day sounds so relaxing and fun! I would love to go to the spa with you!"
+            jump spa
+        "The Arcade" if "arcade" in choices and not good_arcade:
+            dafny "Let's go to the arcade! I love playing games!"
+            jump arcade
+        "The Arcade ⭐" if "arcade" in choices and good_arcade:
             dafny "Let's go to the arcade! I love playing games!"
             jump arcade
         "The Casino" if "casino" in choices:
