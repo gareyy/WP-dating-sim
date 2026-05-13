@@ -81,7 +81,7 @@ label .spa_menu:
         "Hot Tub" if spa_info:
             jump .hot_tub
 
-    jump ending
+    jump location_choice
 
 label .massage:
     # Rocq says the usual massage isn't available and gives the option of a "special massage" that is more intimate and physical.
@@ -280,4 +280,4 @@ label .hot_tub:
 
     $ good_spa = True
 
-    jump ending
+    jump location_choice

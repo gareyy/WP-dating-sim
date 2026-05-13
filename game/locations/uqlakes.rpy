@@ -103,7 +103,7 @@ label uqlakes:
                 call .pukeko_choice from _call_uqlakes_pukeko_choice
 
     
-    jump choice2
+    jump location_choice
 
 label .ibis_choice:
     basil "Oh look! An ibis!"
@@ -448,4 +448,4 @@ label .raven_choice:
 
     $ good_lake = True
 
-    jump choice2
+    jump location_choice

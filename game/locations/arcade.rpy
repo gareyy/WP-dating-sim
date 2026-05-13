@@ -76,7 +76,7 @@ label arcade:
     dafny "That was so much fun! I love playing games with you!"
     dafny "We should do this more often!"
 
-    jump ending
+    jump location_choice
 
 label .floydger:
     #dafny "Fun game where Robert W. Floyd is trying to cross an acyclic graph."
@@ -212,7 +212,7 @@ label .trimonis:
     basil "Y-yeah.."
     dafny "Enjoy your prize."
     basil "..."
-    jump ending
+    jump location_choice
 
 
 label .arcadelearn:

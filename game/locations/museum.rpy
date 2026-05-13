@@ -6,7 +6,7 @@
 image artifact enter = Image("images/artifacts/wpp.png")
 image artifact left = Image("images/artifacts/ligature.png")
 image artifact middle = Image("images/artifacts/crab.png")
-image artifact right = Image("images/artifacts/foxgirl.png")
+image artifact right = Image("images/artifacts/foxgirl_new.png")
 
 label museum:
 
@@ -66,7 +66,7 @@ label museum:
         "The one by the entrance" if museum_info:
             call .good_choice from _call_museum_good_choice
     
-    jump choice2
+    jump location_choice
 
 label .first_choice:
     show dafny sad

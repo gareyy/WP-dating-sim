@@ -145,7 +145,7 @@ label .good_choice:
     basil "Ha."
     dafny "You know what? I don't want this night to end, where should we go to?"
     $ good_pool = True
-    jump choice2
+    jump location_choice
 
 label .pool_badend_B:
     dafny "Do you really mean that?"

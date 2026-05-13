@@ -51,7 +51,7 @@ label karaoke:
     dafny "That was so much fun! I love singing with you!"
     dafny "We should do this more often!"
 
-    jump ending
+    jump location_choice
 
 label .club_choice:
     basil "Oh, a club song! That sounds like fun!"

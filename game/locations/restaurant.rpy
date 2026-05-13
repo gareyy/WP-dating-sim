@@ -5,70 +5,6 @@
 # Dafny is vegan
 # Loss
 
-label loophead:
-    hide dafny
-    hide basil
-    scene bg restaurant with fade
-
-    show dafny
-
-    dafny "Hey, have you been waiting long?"
-
-    if loop_no == 0:
-        basil "No, I just got here. I was waiting for you."
-
-    elif loop_no == 1:
-        
-        basil "Huh?"
-        basil "(Wait... I thought I had already been here before...)"
-        basil "Uh umm... no, I don't think so. I just got here."
-        dafny "Alright, well, I hope you got us a seat!"
-        basil "Um actually..."
-        hide dafny
-        jump tutorial
-
-    elif loop_no == 2:
-        basil "(This is getting weird...)"
-        basil "(Did that weirdo put me in a time loop?)"
-
-    elif loop_no == 3:
-        basil "(Looks like I'm stuck in some kind of loop.)"
-
-    elif loop_no <= 6:
-        basil "(I'll keep trying until I get it right!)"
-
-    elif loop_no >= 10 and renpy.random.randint(1, 100) == 69:
-        basil "(I'M BACK IN THIS FUCKING BUILDING AGAIN!)"
-
-    elif loop_no % 3 == 0:
-        basil "(I don't know how many times I've been here, but I won't give up!)"
-    elif loop_no % 3 == 1:
-        basil "(I need to remember what I know about Dafny!)"
-        show screen lemmabutton
-    else:
-        basil "(I need to try something different this time!)"
-
-    if loop_no >= 5:
-        menu:
-            "Would you like to skip ahead to the location choice?"
-
-            "Yes":
-                show screen lemmabutton()
-                jump choice1
-
-            "No":
-                jump .sitting
-
-label .sitting:
-
-    if 2 <= loop_no <= 3:
-        basil "Uh umm... no, I don't think so. I just got here."
-
-    elif loop_no >= 4:
-        basil "No, I just got here. I was waiting for you."
-
-    dafny "Ah! Here we go, a nice place to sit."
-
 # The tutorial meets the restaurant scene here
 label restaurant:
 
@@ -241,5 +177,6 @@ label .success:
 
     basil "(Maybe this is a date after all...)"
     basil "(It could end in something more...)"
-    jump choice1
-    return
+
+    jump location_choice
+

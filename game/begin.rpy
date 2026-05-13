@@ -115,7 +115,213 @@ label start:
         good_pool = False
         good_arcade = False
         good_karaoke = False
+        # Done choices track whether the player has made the location choice
+        #     *in this loop*
+        done_choice1 = False
+        done_choice2 = False
 
     default preferences.volume.music = 0.5
 
     jump prologue
+
+label loophead:
+
+    python:
+        loop_no = loop_no + 1
+        done_choice1 = False
+        done_choice2 = False
+
+    hide dafny
+    hide basil
+    scene bg restaurant with fade
+
+    show dafny
+
+    dafny "Hey, have you been waiting long?"
+
+    if loop_no == 0:
+        basil "No, I just got here. I was waiting for you."
+
+    elif loop_no == 1:
+        
+        basil "Huh?"
+        basil "(Wait... I thought I had already been here before...)"
+        basil "Uh umm... no, I don't think so. I just got here."
+        dafny "Alright, well, I hope you got us a seat!"
+        basil "Um actually..."
+        hide dafny
+        jump tutorial
+
+    elif loop_no == 2:
+        basil "(This is getting weird...)"
+        basil "(Did that weirdo put me in a time loop?)"
+
+    elif loop_no == 3:
+        basil "(Looks like I'm stuck in some kind of loop.)"
+
+    elif loop_no <= 6:
+        basil "(I'll keep trying until I get it right!)"
+
+    elif loop_no >= 10 and renpy.random.randint(1, 100) == 69:
+        basil "(I'M BACK IN THIS FUCKING BUILDING AGAIN!)"
+
+    elif loop_no % 3 == 0:
+        basil "(I don't know how many times I've been here, but I won't give up!)"
+    elif loop_no % 3 == 1:
+        basil "(I need to remember what I know about Dafny!)"
+        show screen lemmabutton
+    else:
+        basil "(I need to try something different this time!)"
+
+    if loop_no >= 5:
+        menu:
+            "Would you like to skip ahead to the location choice?"
+
+            "Yes":
+                show screen lemmabutton()
+                jump location_choice
+
+            "No":
+                pass
+
+    if 2 <= loop_no <= 3:
+        basil "Uh umm... no, I don't think so. I just got here."
+
+    elif loop_no >= 4:
+        basil "No, I just got here. I was waiting for you."
+
+    dafny "Ah! Here we go, a nice place to sit."
+
+    jump restaurant
+
+
+label location_choice:
+    if not done_choice1:
+        jump choice1
+    elif not done_choice2:
+        jump choice2
+    else:
+        jump choice3
+
+
+label choice1:
+    basil "(Where should we go next?)"
+    python:
+        stage1locations = ["pool", "lake", "museum", "hartley"]
+
+        if not seen_choice1:
+            choices = ["pool", "lake", "museum"]
+        else:
+            choices = renpy.random.sample(stage1locations, 3)
+
+        seen_choice1 = True
+        done_choice1 = True
+    
+    call give_location_choice(choices)
+
+
+
+label choice2:
+    basil "(Where should we go next?)"
+
+    python:
+        stage2locations = ["spa", "casino", "arcade", "karaoke"]
+
+        if not seen_choice2:
+            choices = ["spa", "arcade", "karaoke"]
+        else:
+            choices = renpy.random.sample(stage2locations, 3)
+        
+        seen_choice2 = True
+        done_choice2 = True
+
+    call give_location_choice(choices)
+
+
+label choice3:
+    dafny "Tonight has been so much fun! I don't want it to end yet!"
+    dafny "Where should we go next? Or do you want to come back to my place?"
+
+    menu:
+        "Let's go to your place":
+            jump ending
+
+        "Let's go somewhere else":
+            jump choice_all
+
+
+# Allows the player to choose from locations they haven't finished,
+# or locations they might want to revisit if they have already finished multiple
+label choice_all:
+
+    python:
+        good_choices = [
+            "pool" if not good_pool else None,
+            "lake" if not good_lake else None,
+            "museum" if not good_museum else None,
+            "karaoke" if not good_karaoke else None,
+            "spa" if not good_spa else None,
+            "arcade" if not good_arcade else None
+        ]
+        good_choices = [x for x in good_choices if x is not None]
+
+        bad_choices = [
+            "pool" if good_pool else None,
+            "lake" if good_lake else None,
+            "museum" if good_museum else None,
+            "karaoke" if good_karaoke else None,
+            "spa" if good_spa else None,
+            "arcade" if good_arcade else None,
+            "hartley",
+            "casino"
+        ]
+        bad_choices = [x for x in bad_choices if x is not None]
+
+        choices = renpy.random.sample(good_choices, min(5, len(good_choices)))
+        if len(choices) < 5:
+            choices += renpy.random.sample(bad_choices, 5-len(choices))
+    
+    call give_location_choice(choices)
+
+
+label give_location_choice(choices):
+
+    play sound "sfx/choice.ogg"
+
+    menu:
+        "Where should we go?"
+
+        # Location choice 1
+        "The Pool" if "pool" in choices:
+            dafny "Ooh, I love going to the pool! That sounds like so much fun!"
+            jump pool
+        "The Lake" if "lake" in choices:
+            dafny "The lake sounds like a nice place to spend time!"
+            jump uqlakes
+        "The Museum" if "museum" in choices:
+            dafny "I love visiting museums! That sounds like a great idea!"
+            jump museum
+        "Hartley Teakle" if "hartley" in choices:
+            show dafny sad
+            dafny "Ew, that place looks really creepy and scary. I don't think I want to go there..."
+            basil "You sure? Could be fun though!"
+            jump hartley
+
+        # Location choice 2
+        "The Karaoke" if "karaoke" in choices:
+            dafny "Ooh, I love karaoke! That sounds like so much fun!"
+            jump karaoke
+        "The Spa" if "spa" in choices:
+            dafny "A spa day sounds so relaxing and fun! I would love to go to the spa with you!"
+            jump spa
+        "The Arcade" if "arcade" in choices:
+            dafny "Let's go to the arcade! I love playing games!"
+            jump arcade
+        "The Casino" if "casino" in choices:
+            dafny "Hmm, neither of us like gambling, or have much money to gamble with."
+            basil "This could be life-changing money."
+            basil "Let's go."
+            jump casino
+
+    return
+
