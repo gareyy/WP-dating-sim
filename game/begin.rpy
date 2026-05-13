@@ -98,7 +98,7 @@ label add_lemma(lemma, notify=True):
 label start:
 
     python:
-        loop_no = 0
+        loop_no = -1
         restaurant_info = False
         karaoke_info = False
         spa_info = False
