@@ -3,6 +3,7 @@ define child = Character("Child")
 image cutscene shot = Image("images/cutscene/shot.png")
 
 label hartley:
+    stop music fadeout 3.0
     scene bg hartley
 
     show basil thinking at left
@@ -27,6 +28,7 @@ label hartley:
     basil "Uh um uhh..."
 
     child "Six seven! I’m such a fat fucking chud."
+    play sound "sfx/fail.ogg"
     "The sound of gun fire fills the corridors as Dafny and Basil are shot in the head."
     show cutscene shot with fade
     ""

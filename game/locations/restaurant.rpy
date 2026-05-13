@@ -8,6 +8,7 @@
 # The tutorial meets the restaurant scene here
 label restaurant:
 
+    queue music "main/vara.ogg"
     show dafny at left
     show basil at right
 
@@ -134,6 +135,7 @@ label .restaurant_badend:
     dafny "..."
     basil "..."
 
+    play sound "sfx/fail.ogg"
     "Shortly after, Dafny left her seat and went home..."
 
     jump badend_a

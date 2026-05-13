@@ -76,6 +76,7 @@ label uqlakes:
     $ coinflip = renpy.random.choice([0, 1, 2])
 
     play sound "sfx/choice.ogg"
+    queue music "main/varb.ogg"
     if not lake_info:
         menu:
             "Ibis":
@@ -165,6 +166,7 @@ label .ibis_choice:
     basil "Hey!"
     dafny "Oh my, everyone is gonna lose it when I tell them about this tomorrow."
     scene bg black with fade
+    play sound "sfx/fail.ogg"
     basil "After that, me and Dafny split ways."
     basil "The next day, Dafny told everyone about what happened."
     basil "All the in jokes at the lab are now about me being pooped on."
@@ -283,6 +285,7 @@ label .possum_choice:
     basil "Wait, it took my go card."
     dafny "What?"
     scene bg black with fade
+    play sound "sfx/fail.ogg"
     basil "After a stupid long walk, I was able to reach home."
     basil "From that point on, Dafny knew me only as the person who got their drivers licence stolen by a possum."
     basil "..."
@@ -351,6 +354,7 @@ label .pukeko_choice:
     basil "Yeah I guess..."
 
     scene cutscene pukeko with fade
+    play sound "sfx/fail.ogg"
     basil "I got Dafny stolen by a bird???"
     basil "Grr- AHH!!!"
     basil "And now, fast forward a few years later, Dafny asked me to be the officiant at their wedding."
@@ -409,6 +413,7 @@ label .raven_choice:
     voice "voice/raven/line09.ogg"
     raven "Oh, I am starting to see."
     raven "..."
+    queue music "main/varc.ogg"
     voice "voice/raven/line10.ogg"
     raven "You two are two halves that need to come together at some part in the world."
     voice "voice/raven/line11.ogg"

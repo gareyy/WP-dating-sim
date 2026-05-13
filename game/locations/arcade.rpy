@@ -14,6 +14,7 @@ label arcade:
     with fade
     show dafny at left
     show basil at right
+    queue music "main/vara.ogg"
     
     dafny "Wow! This place is so bright!"
     basil "It's an arcade after all."
@@ -181,6 +182,7 @@ label .taiko:
     dafny "Ouch..."
     basil "I should have warned you not to pick that difficulty."
     show cutscene taiko with fade
+    play sound "sfx/fail.ogg"
     basil "I followed her on the ambulance to the hospital."
     basil "They were able to stabilise her."
     basil "Unfortunately, she wasn't able to work for the next few months."

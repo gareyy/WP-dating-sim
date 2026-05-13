@@ -36,6 +36,7 @@ label pool:
 
     scene bg pool with fade
 
+    queue music "main/varb.ogg"
     show dafny swimwear at left
     show basil swimwear at right
     with whitefade
@@ -104,6 +105,7 @@ label .second_choice:
     jump .pool_badend_B
 
 label .good_choice:
+    queue music "main/varc.ogg"
     basil "(Yeah my eyes are completely frozen on her.)"
     show basil swimwear lovestruck
     basil "..."

@@ -42,6 +42,7 @@ label casino:
     show dafny angry
     dafny "You can't just.."
     show dafny scared
+    play sound "sfx/fail.ogg"
     "Basil's kidneys are ripped from their body."
     show cutscene housealwayswins with fade
     house "I always win."

@@ -65,6 +65,7 @@ label prologue:
     show basil
     show dafny
 
+    queue music "main/varb.ogg"
     basil "Oh shit, did we remember to have some lunch?"
     show dafny sad
     "Dafny looks around uncertainly."

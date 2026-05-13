@@ -36,6 +36,7 @@ label spa:
     with fade
     show dafny at left
     show basil at right
+    queue music "main/vara.ogg"
 
     dafny "Cmon! Lets enjoy the spa together!"
     dafny "Oh, this place is so nice and relaxing! I love it here!"
@@ -105,6 +106,7 @@ label .massage:
     jump .massage_badend
 
 label .cold_plunge:
+    queue music "main/varb.ogg"
     # Dafny says they want to do the cold plunge, but they aren't prepared for how cold it is and end up getting hypothermia.
     # TODO: dafny says they want basil to stare at their body lovingly.
     basil "We can do the cold plunge."
@@ -144,6 +146,7 @@ label .cold_plunge:
     basil "Rocq! Please help!"
 
     scene bg black with fade
+    play sound "sfx/fail.ogg"
     basil "Unfortunately, Dafny succumbed to hypothermia."
     basil "I felt completely alone and guilty after that, I believed I killed her..."
 
@@ -155,6 +158,7 @@ label .spa_badend:
 label .massage_badend:
     # Dafny's wrist is broken and they have to be rushed to the emergency room.
     scene spa with fade
+    queue music "main/varb.ogg"
     rocq "Alright, the special massage is a couple's massage!"
     show dafny blushing at left
     show basil blushing at right
@@ -208,6 +212,7 @@ label .massage_badend:
     dafny "Y- Owww."
 
     scene bg black with fade
+    play sound "sfx/fail.ogg"
     basil "I think she hated me after that incident."
     basil "She came back to work the next day and didn't talk to me for a whole week."
     basil "We never even had the chance to become friends."
@@ -215,6 +220,7 @@ label .massage_badend:
     jump generalbadend
 
 label .hot_tub:
+    queue music "main/varb.ogg"
     # Dafny and Basil have an intimate time in the hot tub
     # Until Rocq interrupts them and tells them that they have to leave because the spa is closing.
     basil "Um, hot tub please..."
@@ -248,6 +254,7 @@ label .hot_tub:
     basil "(Is my crush really gonna do this to me?)"
     basil "Um, okay.."
     show basil swimwear at closeright with move
+    queue music "main/varc.ogg"
     dafny "You seem a little shy, love~."
     basil "(She called me love???)"
     dafny "Two program verification researchers, in a hot tub, together."

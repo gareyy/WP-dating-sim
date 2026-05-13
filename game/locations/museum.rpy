@@ -27,6 +27,7 @@ label museum:
     $ lake_info = True
     dafny "Only {b}ravens{\b} really. They are epic and wise."
 
+    queue music "main/varb.ogg"
     hide dafny
     show artifact enter at truecenter 
     "As you enter the art gallery, your eyes are drawn to a large yellow canvas emblaisoned with the words:"
