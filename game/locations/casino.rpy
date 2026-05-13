@@ -46,5 +46,6 @@ label casino:
     "Basil's kidneys are ripped from their body."
     show cutscene housealwayswins with fade
     house "I always win."
+    $ seen_casino = True
 
     jump generalbadend

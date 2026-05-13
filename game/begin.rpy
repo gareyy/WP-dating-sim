@@ -115,6 +115,8 @@ label start:
         good_pool = False
         good_arcade = False
         good_karaoke = False
+        seen_hartley = False
+        seen_casino = False
         # Done choices track whether the player has made the location choice
         #     *in this loop*
         done_choice1 = False
@@ -194,7 +196,8 @@ label loophead:
 
     jump restaurant
 
-
+# Determine where to send the player next.
+# Callback for all locations.
 label location_choice:
     if not done_choice1:
         jump choice1
@@ -261,7 +264,9 @@ label choice_all:
             "museum" if not good_museum else None,
             "karaoke" if not good_karaoke else None,
             "spa" if not good_spa else None,
-            "arcade" if not good_arcade else None
+            "arcade" if not good_arcade else None,
+            "hartley" if not seen_hartley else None,
+            "casino" if not seen_casino else None
         ]
         good_choices = [x for x in good_choices if x is not None]
 
@@ -272,14 +277,15 @@ label choice_all:
             "karaoke" if good_karaoke else None,
             "spa" if good_spa else None,
             "arcade" if good_arcade else None,
-            "hartley",
-            "casino"
+            "hartley" if seen_hartley else None,
+            "casino" if seen_casino else None
         ]
         bad_choices = [x for x in bad_choices if x is not None]
 
-        choices = renpy.random.sample(good_choices, min(5, len(good_choices)))
-        if len(choices) < 5:
-            choices += renpy.random.sample(bad_choices, 5-len(choices))
+        choices = renpy.random.sample(good_choices, min(4, len(good_choices)))
+        if len(choices) < 4:
+            choices += renpy.random.sample(bad_choices, 4-len(choices))
+        choices = ["house"] + choices
     
     call give_location_choice(choices)
 
@@ -290,6 +296,9 @@ label give_location_choice(choices):
 
     menu:
         "Where should we go?"
+
+        "Dafny's House" if "house" in choices:
+            jump choice3
 
         # Location choice 1
         "The Pool" if "pool" in choices and not good_pool:
@@ -310,7 +319,12 @@ label give_location_choice(choices):
         "The Museum ⭐" if "museum" in choices and good_museum:
             dafny "I love visiting museums! That sounds like a great idea!"
             jump museum
-        "Hartley Teakle" if "hartley" in choices:
+        "Hartley Teakle" if "hartley" in choices and not seen_hartley:
+            show dafny sad
+            dafny "Ew, that place looks really creepy and scary. I don't think I want to go there..."
+            basil "You sure? Could be fun though!"
+            jump hartley
+        "Hartley Teakle ⭐" if "hartley" in choices and seen_hartley:
             show dafny sad
             dafny "Ew, that place looks really creepy and scary. I don't think I want to go there..."
             basil "You sure? Could be fun though!"
@@ -335,7 +349,12 @@ label give_location_choice(choices):
         "The Arcade ⭐" if "arcade" in choices and good_arcade:
             dafny "Let's go to the arcade! I love playing games!"
             jump arcade
-        "The Casino" if "casino" in choices:
+        "The Casino" if "casino" in choices and not seen_casino:
+            dafny "Hmm, neither of us like gambling, or have much money to gamble with."
+            basil "This could be life-changing money."
+            basil "Let's go."
+            jump casino
+        "The Casino ⭐" if "casino" in choices and seen_casino:
             dafny "Hmm, neither of us like gambling, or have much money to gamble with."
             basil "This could be life-changing money."
             basil "Let's go."

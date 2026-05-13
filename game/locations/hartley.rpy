@@ -31,6 +31,7 @@ label hartley:
     play sound "sfx/fail.ogg"
     "The sound of gun fire fills the corridors as Dafny and Basil are shot in the head."
     show cutscene shot with fade
+    $ seen_hartley = True
     ""
 
     jump generalbadend

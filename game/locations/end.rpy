@@ -92,6 +92,15 @@ label ending:
         dafny "And um..."
         dafny "I think we were interrupted."
         dafny "..."
+    if seen_hartley:
+        # Insert Hartley dialogue
+        pass
+    if seen_casino:
+        # Insert casino dialogue
+        pass
+    if all([good_lake, good_museum, good_karaoke, good_arcade, good_pool, good_spa, seen_hartley, seen_casino]):
+        # Trigger for a different ending?
+        pass
     
     show dafny sad
     dafny "Be honest with me Basil, what is truly going on?"

@@ -214,6 +214,8 @@ label .trimonis:
     basil "Y-yeah.."
     dafny "Enjoy your prize."
     basil "..."
+
+    $ good_arcade = True
     jump location_choice
 
 
