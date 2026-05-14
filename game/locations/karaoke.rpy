@@ -24,7 +24,6 @@ label karaoke:
     dafny "Wow, look at all this graffiti! It's so cool and artistic!"
     basil "Yeah, it's really impressive."
     call add_lemma("Dafny would like to see art of themself one day")
-    $ museum_info = True
     dafny "I wish {b}I could be an artist's muse{\b} one day and inspire them to create amazing art like this!"
     basil "That would be really cool. You would make a great muse!"
 
@@ -38,6 +37,14 @@ label karaoke:
     dafny "What song should we sing first? I have a few in mind, but I'm open to suggestions too!"
 
     play sound "sfx/choice.ogg"
+
+label karaoke_choice:
+
+    if karaoke_info:
+        # TODO: refine dialog
+        basil "Since there are two of us, maybe we can go for a duet?"
+        dafny "That sounds like a good idea!"
+
     menu:
         "Club Song":
             call .club_choice from _call_karaoke_club_choice

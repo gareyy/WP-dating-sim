@@ -23,7 +23,6 @@ label pool:
     basil "..."
     basil "(My mind just shortcircuited.)"
     call add_lemma("Dafny would like to go in a hot tub with Basil sometime")
-    $ spa_info = True
     dafny "Ooh! Maybe in the future, we can go swimming together again sometime soon, maybe even in a {b}hot tub!{\b}"
 
     dafny "That would be so nice and intimate, don't you think?"
@@ -50,6 +49,8 @@ label pool:
     basil "..."
     basil "(I gotta say something!)"
 
+label pool_choice1:
+
     play sound "sfx/choice.ogg"
     menu:
         "Thanks!":
@@ -61,7 +62,7 @@ label pool:
             dafny "Um, okay..."
             basil "..."
             dafny "..."
-            call .pool_badend_A from _call_pool_pool_badend_A
+            call pool_choice.pool_badend_A from _call_pool_pool_badend_A
 
     # BUNCH OF BS OR WHATEVER
     dafny "Aww you love my compliments!"
@@ -83,7 +84,13 @@ label pool:
     show dafny swimwear blushing
     dafny "..."
     basil "(I should say something.)"
-    
+
+label pool_choice2:
+
+    if pool_info:
+        # TODO: refine dialog
+        basil "..."
+        basil "......"
     play sound "sfx/choice.ogg"
     menu:
         "Your one piece also looks great!":

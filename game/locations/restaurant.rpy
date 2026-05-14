@@ -27,10 +27,10 @@ label restaurant:
 
     menu:
         "Breadsticks":
-            call .breadsticks from _call_restaurant_breadsticks
+            call restaurant_choice.breadsticks from _call_restaurant_breadsticks
 
         "Crackers":
-            call .crackers from _call_restaurant_crackers
+            call restaurant_choice.crackers from _call_restaurant_crackers
 
     show dafny at left
     show basil at right
@@ -42,9 +42,9 @@ label restaurant:
 
     menu:
         "Lemonade":
-            call .lemonade from _call_restaurant_lemonade
+            call restaurant_choice.lemonade from _call_restaurant_lemonade
         "Water":
-            call .water from _call_restaurant_water
+            call restaurant_choice.water from _call_restaurant_water
 
     show dafny at left
     show basil at right
@@ -54,6 +54,13 @@ label restaurant:
     basil "Me?"
     dafny "You promised to choose for me!"
     basil "Alright, I choose..."
+
+label restaurant_choice:
+    
+    if restaurant_info:
+        basil "Oh look! That tofu on the menu looks pretty nice."
+        basil "I think you might like it."
+        dafny "It does look delectable..."
     
     play sound "sfx/choice.ogg"
     menu:
@@ -123,9 +130,6 @@ label .restaurant_badend:
     basil "Okay, um... fine... sorry."
     dafny "It's okay. I can buy my own food later."
     dafny "You know, that {b}tofu{/b} on the menu looked nice..."
-
-    python:
-        restaurant_info = True
 
     basil "You fine with just me eating tonight?"
     dafny "Yeah, I'm fine with just [entree] and [drink] tonight..."

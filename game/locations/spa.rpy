@@ -71,6 +71,11 @@ label .spa_menu:
     rocq "Which one would you like to try out today?"
 
     play sound "sfx/choice.ogg"
+label spa_choice:
+    if spa_info:
+        basil "I think something nice and warm might be nice."
+        basil "Might help our muscle relax after an entire day spent in front of a screen."
+        dafny "That's a good point!"
     menu:
         
         "Massage":
@@ -100,7 +105,7 @@ label .massage:
             dafny "I think I might just pass on the special massage for now..."
             basil "Umm, me too."
             rocq "Oh, that's too bad! Maybe next time!"
-            jump .spa_menu
+            jump spa.spa_menu
 
     # Dafny hurts their neck during the massage and has to be rushed to the emergency room.
     jump .massage_badend
@@ -132,7 +137,6 @@ label .cold_plunge:
 
     dafny "You kn-kn-know, we are pretty close now..."
     call add_lemma("Dafny is attracted to Basil's stare")
-    $ pool_info = True
     dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
     dafny "Especially in a swimsuit like this..."
     basil "..."
@@ -141,6 +145,7 @@ label .cold_plunge:
     dafny "You know Basil, you are pretty cu-cu-"
     "Dafny collapses into the water"
     hide dafny
+    # TODO: Make basil fear sprite
     basil "Oh shit!"
     "Basil rushes out of the cold water and tries to drag Dafny's body out."
     basil "Rocq! Please help!"
@@ -180,7 +185,6 @@ label .massage_badend:
     basil "....."
     dafny "..."
     call add_lemma("Dafny is attracted to Basil's stare")
-    $ pool_info = True
     dafny "{b}I like it when you stare{\b}, you know?"
     basil "Oh, um, I wasn't staring."
     dafny "Hmph, yeah right."
@@ -265,7 +269,6 @@ label .hot_tub:
     show dafny swimwear blushing
     "Dafny begins to whisper something in Basil's ear."
     call add_lemma("Dafny is attracted to Basil's stare")
-    $ pool_info = True
     dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
     basil "L-lovingly?"
     dafny "I always notice you staring at me~."

@@ -49,7 +49,6 @@ label uqlakes:
     dafny "I hope you like it! It's a really {b}romantic song{\b} that I think is perfect for a walk by the lake."
     basil "I love it!"
     call add_lemma("Dafny likes romantic songs")
-    $ karaoke_info = True
     basil "(Wait, romantic song?)"
     basil "(Is this really a date now?)"
 
@@ -75,6 +74,11 @@ label uqlakes:
 
     $ coinflip = renpy.random.choice([0, 1, 2])
 
+label uqlakes_choice:
+    if lake_info:
+        # TODO: refine dialog
+        "A murder of ravens flew above in the sky."
+        
     play sound "sfx/choice.ogg"
     queue music "main/varb.ogg"
     if not lake_info:

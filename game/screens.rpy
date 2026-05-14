@@ -1661,7 +1661,12 @@ screen lemmas(lems):
             text "{size=+10}Lemmas:{/size}" id "lem_title"
             spacing 10
             for l in lems:
-                text l id "lem_[lems.index(l)]"
+                vbox:
+                    frame:
+                        imagebutton:
+                            idle Text(l)
+                            hover Text("Apply Lemma: " + l, color="#d0ff12")
+                            action [ToggleScreen("lemmas", None, lemmas_list), Call("choice", last_label, l)]
         at topright
 
 

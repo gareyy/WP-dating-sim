@@ -50,6 +50,15 @@ label arcade:
     dafny "..."
     dafny "Possibly."
 
+label arcade_choice:
+    # TODO: Make better dialouge
+
+    if arcade_info:
+        basil "That machine over there looks pretty interesting..."
+        basil "Have you heard about Trimonis?"
+        "Under the arcade light, Dafny's smile somehow looked more mischievious than usual."
+        dafny "Oh I most certainly have."
+
     python:
         games = ["floydger", "hoareracing", "taiko"]
 
@@ -222,7 +231,6 @@ label .trimonis:
 label .arcadelearn:
     scene bg black with fade
     call add_lemma("Dafny's favourite game is Trimonis")
-    $ arcade_info = True
     basil "(I just remembered now, she was looking at that {b}Trimonis{\b} game)"
 
     basil "(She didn't tell me, I felt like I should have chosen that one too.)"

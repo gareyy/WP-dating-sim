@@ -24,7 +24,6 @@ label museum:
     dafny "Haha I just liked it because it had ravens on it."
     basil "Oh, do you like black birds?"
     call add_lemma("Dafny's favourite animal is a raven")
-    $ lake_info = True
     dafny "Only {b}ravens{\b} really. They are epic and wise."
 
     queue music "main/varb.ogg"
@@ -53,7 +52,10 @@ label museum:
     show dafny
     dafny "Which one do you like the most?"
     play sound "sfx/choice.ogg"
-    
+
+label museum_choice:
+    if museum_info:
+        basil "You know what, I think I have seen a nice painting near the entrance!"
     menu:
         "The one on the left":
             call .first_choice from _call_museum_first_choice

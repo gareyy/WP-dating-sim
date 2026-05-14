@@ -95,6 +95,27 @@ label add_lemma(lemma, notify=True):
     
     return
 
+# TODO: Make sure this works
+label untoggle_lemma(lemma):
+    "lemma = False"
+    return
+
+label choice(label, lemma):
+    $ store.last_label = label
+    if infos_map[lemmas_map[lemma]] == label:
+        $ setattr(store, lemmas_map.get(lemma), True)
+        jump expression label
+    else:
+        basil "(I don't think that would work here...)"
+        jump expression label
+
+init python:
+    def label_callback(name, abnormal):
+        store.last_label = name
+        return
+
+    config.label_callback = label_callback
+
 label start:
 
     python:
@@ -109,6 +130,24 @@ label start:
         seen_choice1 = False
         seen_choice2 = False
         lemmas_list = set()
+        lemmas_map = {
+            "Dafny's favourite game is Trimonis": "arcade_info",
+            "Dafny would like to see art of themself one day": "museum_info",
+            "Dafny's favourite animal is a raven": "lake_info",
+            "Dafny would like to go in a hot tub with Basil sometime": "spa_info",
+            "Dafny is attracted to Basil's stare": "pool_info",
+            "Dafny likes romantic songs": "karaoke_info",
+            "Dafny's favourite food is tofu": "restaurant_info"
+        }
+        infos_map = {
+            "arcade_info": "arcade_choice",
+            "museum_info": "museum_choice",
+            "lake_info": "uqlakes_choice",
+            "spa_info": "spa_choice",
+            "pool_info": "pool_choice2",
+            "karaoke_info": "karaoke_choice",
+            "restaurant_info": "restaurant_choice"
+        }
         good_museum = False
         good_lake = False
         good_spa = False
