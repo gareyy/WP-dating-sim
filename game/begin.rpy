@@ -116,8 +116,11 @@ label choice(label, lemma):
     
     if label == "give_location_choice":
         call give_location_choice(last_location_choices)
-        return
-    jump expression label
+    if label in infos_map.values():
+        jump expression label
+    $ renpy.rollback(checkpoints=2)
+    $ store.last_label = label
+    return
 
 init python:
     def label_callback(name, abnormal):
@@ -131,6 +134,10 @@ init python:
 label start:
 
     python:
+        try:
+            tutorial_loop_no
+        except:
+            tutorial_loop_no = 0
         loop_no = -1
         restaurant_info = False
         karaoke_info = False
@@ -139,17 +146,27 @@ label start:
         arcade_info = False
         museum_info = False
         lake_info = False
+        tutorial_info = False
         seen_choice1 = False
         seen_choice2 = False
         lemmas_list = set()
+        ARCADE_INFO = "Dafny's favourite game is Trimonis"
+        MUSEUM_INFO = "Dafny would like to see art of themself one day"
+        LAKE_INFO = "Dafny's favourite animal is a raven"
+        SPA_INFO = "Dafny would like to go in a hot tub with Basil sometime"
+        POOL_INFO = "Dafny is attracted to Basil's stare"
+        KARAOKE_INFO = "Dafny likes romantic songs"
+        RESTAURANT_INFO = "Dafny's favourite food is tofu"
+        TUTORIAL_INFO = "I can leave now."
         lemmas_map = {
-            "Dafny's favourite game is Trimonis": "arcade_info",
-            "Dafny would like to see art of themself one day": "museum_info",
-            "Dafny's favourite animal is a raven": "lake_info",
-            "Dafny would like to go in a hot tub with Basil sometime": "spa_info",
-            "Dafny is attracted to Basil's stare": "pool_info",
-            "Dafny likes romantic songs": "karaoke_info",
-            "Dafny's favourite food is tofu": "restaurant_info"
+            ARCADE_INFO: "arcade_info",
+            MUSEUM_INFO: "museum_info",
+            LAKE_INFO: "lake_info",
+            SPA_INFO: "spa_info",
+            POOL_INFO: "pool_info",
+            KARAOKE_INFO: "karaoke_info",
+            RESTAURANT_INFO: "restaurant_info",
+            TUTORIAL_INFO: "tutorial_info"
         }
         infos_map = {
             "arcade_info": "arcade_choice",
@@ -158,7 +175,8 @@ label start:
             "spa_info": "spa_choice",
             "pool_info": "pool_choice2",
             "karaoke_info": "karaoke_choice",
-            "restaurant_info": "restaurant_choice"
+            "restaurant_info": "restaurant_choice",
+            "tutorial_info": "tutorial_loop"
         }
         good_museum = False
         good_lake = False
@@ -237,6 +255,7 @@ label loophead:
 
             "No":
                 pass
+        hide screen lemmabutton
 
     if 2 <= loop_no <= 3:
         basil "Uh umm... no, I don't think so. I just got here."
@@ -296,7 +315,8 @@ label choice2:
 label choice3:
     dafny "Tonight has been so much fun! I don't want it to end yet!"
     dafny "Where should we go next? Or do you want to come back to my place?"
-
+    
+    show screen lemmabutton()
     menu:
         "Let's go to your place":
             jump ending
@@ -347,7 +367,8 @@ label give_location_choice(choices):
     $ last_location_choices = choices
 
     play sound "sfx/choice.ogg"
-
+    
+    show screen lemmabutton()
     menu:
         "Where should we go?"
 

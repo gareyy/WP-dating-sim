@@ -22,7 +22,7 @@ label pool:
     dafny "Perfect! I would love to see you in your swimmers soon..."
     basil "..."
     basil "(My mind just shortcircuited.)"
-    call add_lemma("Dafny would like to go in a hot tub with Basil sometime")
+    call add_lemma(SPA_INFO)
     dafny "Ooh! Maybe in the future, we can go swimming together again sometime soon, maybe even in a {b}hot tub!{\b}"
 
     dafny "That would be so nice and intimate, don't you think?"

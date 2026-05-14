@@ -230,7 +230,7 @@ label .trimonis:
 
 label .arcadelearn:
     scene bg black with fade
-    call add_lemma("Dafny's favourite game is Trimonis")
+    call add_lemma(ARCADE_INFO)
     basil "(I just remembered now, she was looking at that {b}Trimonis{\b} game)"
 
     basil "(She didn't tell me, I felt like I should have chosen that one too.)"

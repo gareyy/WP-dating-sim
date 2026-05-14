@@ -48,7 +48,7 @@ label uqlakes:
     show basil happy
     dafny "I hope you like it! It's a really {b}romantic song{\b} that I think is perfect for a walk by the lake."
     basil "I love it!"
-    call add_lemma("Dafny likes romantic songs")
+    call add_lemma(KARAOKE_INFO)
     basil "(Wait, romantic song?)"
     basil "(Is this really a date now?)"
 

@@ -145,7 +145,7 @@ label .cold_plunge:
     show basil swimwear at closeright with move
 
     dafny "You kn-kn-know, we are pretty close now..."
-    call add_lemma("Dafny is attracted to Basil's stare")
+    call add_lemma(POOL_INFO)
     dafny "I ha-ha-have to con-confess, {b}I like it when you stare at me{\b} like a deer in the he-he-headlights."
     dafny "Especially in a swimsuit like this..."
     basil "..."
@@ -193,7 +193,7 @@ label .massage_badend:
     basil "...."
     basil "....."
     dafny "..."
-    call add_lemma("Dafny is attracted to Basil's stare")
+    call add_lemma(POOL_INFO)
     dafny "{b}I like it when you stare{\b}, you know?"
     basil "Oh, um, I wasn't staring."
     dafny "Hmph, yeah right."
@@ -278,7 +278,7 @@ label .hot_tub:
     "Dafny takes Basil's head and begins to pat it"
     show dafny swimwear blushing
     "Dafny begins to whisper something in Basil's ear."
-    call add_lemma("Dafny is attracted to Basil's stare")
+    call add_lemma(POOL_INFO)
     dafny "You know, {b}I like it when you stare at me{\b} lovingly~..."
     basil "L-lovingly?"
     dafny "I always notice you staring at me~."

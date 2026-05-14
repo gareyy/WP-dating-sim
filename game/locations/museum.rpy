@@ -23,7 +23,7 @@ label museum:
     basil "Oh yeah, that one is Odin."
     dafny "Haha I just liked it because it had ravens on it."
     basil "Oh, do you like black birds?"
-    call add_lemma("Dafny's favourite animal is a raven")
+    call add_lemma(LAKE_INFO)
     dafny "Only {b}ravens{\b} really. They are epic and wise."
 
     queue music "main/varb.ogg"
