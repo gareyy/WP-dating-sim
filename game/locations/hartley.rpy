@@ -1,3 +1,4 @@
+# 67
 define child = Character("Child")
 
 image cutscene shot = Image("images/cutscene/shot.png")
@@ -27,7 +28,7 @@ label hartley:
     show basil hesitant
     basil "Uh um uhh..."
 
-    child "Six seven! I’m such a fat fucking chud."
+    child "Six seven! SIX SEVEN!!!!!"
     play sound "sfx/fail.ogg"
     "The sound of gun fire fills the corridors as Dafny and Basil are shot in the head."
     show cutscene shot with fade
