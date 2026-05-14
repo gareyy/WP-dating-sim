@@ -36,7 +36,8 @@ define gui.about = _p("""
    Gareth Guce - Writing, Programming, QA\n
 firefriedfries - Character Sprites, Cutscenes\n
   Pointer Rain - Programming\n
-     Felix Zhu - Background Artwork\n
+     Felix Zhu - Background Artwork\n\n
+Music Room modified from {a=https://feniksdev.itch.io/extended-music-room-for-renpy}Extended Music Room for Ren'Py{/a} by {a=https://feniksdev.itch.io}Feniks{/a}\n
 """)
 
 

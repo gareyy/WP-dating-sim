@@ -282,7 +282,7 @@ screen music_room2(mr):
     #use select_music_room_layout(mr, yalign=1.0, bottom_margin=100)
 
     ## To return to the main menu
-    textbutton _("Return") action Return() align (0.0, 1.0) text_size 40:
+    textbutton _("Return") action [Stop("music"), Return()] align (0.0, 1.0) text_size 40:
         left_margin 25 bottom_margin 25
 
     ## If you'd like to use a sidebar with this layout, you will need to indent
