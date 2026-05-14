@@ -17,8 +17,12 @@ Play as Basil, a shy and reclusive researcher who accidentally ends up on a date
 Available to download at https://wumeno.itch.io/wekissed-precondition 
 
 ## Credits
+
 - Hayden Brown - Music, QA, Writing
 - Gareth Guce - Writing, Programming, QA
 - firefriedfries - Character Sprites, Cutscenes
 - Pointer Rain - Programming
 - Felix Zhu - Background Artwork
+
+A modified version of [Extended Music Room for Ren'Py by Feniks](https://feniksdev.itch.io/extended-music-room-for-renpy)
+is used for the in-game soundtrack player.

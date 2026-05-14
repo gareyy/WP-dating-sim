@@ -319,8 +319,6 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
-
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
@@ -331,6 +329,12 @@ screen navigation():
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
+
+        if main_menu:
+            null height 60
+
+            textbutton _("About") action ShowMenu("about")
+            textbutton _("Music Room") action ShowMenu("music_room2", mr=music_room)
 
 
 style navigation_button is gui_button
