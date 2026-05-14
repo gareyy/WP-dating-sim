@@ -104,13 +104,18 @@ label choice(label, lemma):
     $ store.last_label = label
     if infos_map[lemmas_map[lemma]] == label:
         $ setattr(store, lemmas_map.get(lemma), True)
-        jump expression label
     else:
         basil "(I don't think that would work here...)"
-        jump expression label
+    
+    if label == "give_location_choice":
+        call give_location_choice(last_location_choices)
+        return
+    jump expression label
 
 init python:
     def label_callback(name, abnormal):
+        if name == "add_lemma":
+            return
         store.last_label = name
         return
 
@@ -160,6 +165,7 @@ label start:
         #     *in this loop*
         done_choice1 = False
         done_choice2 = False
+        last_location_choices = []
 
     default preferences.volume.music = 0.5
 
@@ -330,6 +336,8 @@ label choice_all:
 
 
 label give_location_choice(choices):
+
+    $ last_location_choices = choices
 
     play sound "sfx/choice.ogg"
 

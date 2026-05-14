@@ -62,7 +62,7 @@ label pool_choice1:
             dafny "Um, okay..."
             basil "..."
             dafny "..."
-            call pool_choice.pool_badend_A from _call_pool_pool_badend_A
+            call pool_choice2.pool_badend_A from _call_pool_pool_badend_A
 
     # BUNCH OF BS OR WHATEVER
     dafny "Aww you love my compliments!"
