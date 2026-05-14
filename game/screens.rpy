@@ -1628,14 +1628,7 @@ style slider_slider:
 
 
 transform transparency():
-    alpha 0.0
-
-    linear .2 alpha 0.75
-
-    block:
-        pause .5
-
-        repeat
+    alpha 0.75
 
 
 screen lemmas(lems):
@@ -1645,8 +1638,7 @@ screen lemmas(lems):
     modal True
 
     imagemap:
-        idle "images/verification/verify.png"
-        hover "images/verification/verify.png"
+        idle "verifying_slow"
         id "lem_overlay"
         xsize 1920
         ysize 1080
@@ -1678,7 +1670,7 @@ screen lemmabutton():
         imagebutton:
             idle Text(" ⊢ ", size=70)
             hover Text(" ⊢ ", size=70, color="#FFF")
-            action ToggleScreen("lemmas", None, lemmas_list)
+            action ToggleScreen("lemmas", Dissolve(0.2), lemmas_list)
 
 screen credits():
 
@@ -1687,8 +1679,7 @@ screen credits():
     modal False
 
     imagemap:
-        idle "images/verification/verify.png"
-        hover "images/verification/verify.png"
+        idle "verifying_slow"
         id "credits_overlay"
         xsize 1920
         ysize 1080

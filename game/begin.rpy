@@ -29,6 +29,13 @@ image verifying:
     0.35 # Wait for 0.35 seconds
     repeat # Loop forever
 
+image verifying_slow:
+    "images/verification/verify.png"
+    1.0
+    "images/verification/verify2.png"
+    1.0
+    repeat
+
 image verifying_light:
     "images/verification/verify_light.png"
     0.4 # Wait for 0.4 seconds
@@ -216,7 +223,7 @@ label loophead:
         basil "(I don't know how many times I've been here, but I won't give up!)"
     elif loop_no % 3 == 1:
         basil "(I need to remember what I know about Dafny!)"
-        show screen lemmabutton
+        show screen lemmabutton()
     else:
         basil "(I need to try something different this time!)"
 
