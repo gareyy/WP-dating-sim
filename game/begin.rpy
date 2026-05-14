@@ -337,7 +337,7 @@ label choice_all:
         choices = renpy.random.sample(good_choices, min(4, len(good_choices)))
         if len(choices) < 4:
             choices += renpy.random.sample(bad_choices, 4-len(choices))
-        choices = ["house"] + choices
+        choices.append("house")
     
     call give_location_choice(choices)
 
@@ -350,9 +350,6 @@ label give_location_choice(choices):
 
     menu:
         "Where should we go?"
-
-        "Dafny's House" if "house" in choices:
-            jump choice3
 
         # Location choice 1
         "The Pool" if "pool" in choices and not good_pool:
@@ -413,6 +410,9 @@ label give_location_choice(choices):
             basil "This could be life-changing money."
             basil "Let's go."
             jump casino
+
+        "Dafny's House" if "house" in choices:
+            jump choice3
 
     return
 
