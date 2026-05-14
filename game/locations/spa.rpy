@@ -9,7 +9,15 @@
 # Monadic Mind
 
 define rocq = Character("Rocq", color="#ffb68c")
+
 image rocq = Image("images/side_characters/rocq.png", oversample=1.2)
+
+image hot_tub = Image("images/decor/hottub.png", oversample=0.5)
+image cold_plunge = Image("images/decor/coldplunge.png", oversample=0.5)
+
+transform tubcenter:
+    xalign 0.5
+    yalign -1.5
 
 transform threeleft:
     xalign 0.10
@@ -123,6 +131,7 @@ label .cold_plunge:
     show basil swimwear at right
     dafny "You know, I have never done a cold plunge before!"
     "Dafny and Basil walk into the cold plunge pool."
+    show cold_plunge at tubcenter with dissolve
     dafny "Oooh! Brrr!"
     basil "Yeeesh!"
     "They both settle down in the tub."
@@ -238,7 +247,7 @@ label .hot_tub:
     scene bg spa
     with fade
     show dafny swimwear at left
-    show basil swimwear at right    
+    show basil swimwear at right   
 
     dafny "..."
     dafny "What's with the look Basil?"
@@ -248,6 +257,7 @@ label .hot_tub:
     basil "!!!"
     dafny "Come on in the tub Basil."
     "Dafny and Basil walk into the tub and sit down."
+    show hot_tub at tubcenter with dissolve 
     dafny "Look at us, two program verification researchers, in a hot tub together."
     dafny "Five feet apart, but are we gay?"
     basil "Um..."
@@ -289,5 +299,7 @@ label .hot_tub:
     basil "..."
 
     $ good_spa = True
+    hide hot_tub
+    hide rocq with dissolve
 
     jump location_choice
