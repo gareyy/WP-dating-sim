@@ -121,7 +121,7 @@ label .good_choice:
     basil "....."
     dafny "You staring at me?"
     basil "..."
-    "Basil dips their head into the water out of embarassment."
+    "Basil dips their head into the water out of embarrassment."
     hide basil swimwear
     basil "(AHHH!)"
     basil "(Wow I am really in the thick of it now.)"

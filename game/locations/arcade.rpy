@@ -56,7 +56,7 @@ label arcade_choice:
     if arcade_info:
         basil "That machine over there looks pretty interesting..."
         basil "Have you heard about Trimonis?"
-        "Under the arcade light, Dafny's smile somehow looked more mischievious than usual."
+        "Under the arcade light, Dafny's smile somehow looked more mischievous than usual."
         dafny "Oh I most certainly have."
 
     python:
