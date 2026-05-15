@@ -51,7 +51,7 @@ init python:
     g.image(Image("images/side_characters/rocq.png", oversample=1))
     g.unlock("rocq")
     g.image(Image("images/side_characters/coq.png", oversample=1))
-    g.unlock("coq")
+    g.condition("persistent.hundoPercent")
 
     g.button("cutscenes")
     g.image("taiko")
@@ -90,23 +90,38 @@ init python:
     g.unlock_image("bg house")
 
     g.button("concept_art")     # Finished game + below
+    g.condition("persistent.goodEnding")
     g.image(Image("gallery/dafny.jpg", oversample=2))   # Always
     g.image(Image("gallery/isabelle0.jpg", oversample=2))   # Always
     g.image(Image("gallery/isabelle1.jpg", oversample=3.4))   # Always
     g.image(Image("gallery/prototype.jpg", oversample=2))   # Always
     g.image(Image("gallery/sketch_yuri.png"))   # Always
     g.image(Image("gallery/sketch_housealwayswins.png"))   # Housealwayswins
+    g.unlock("cutscene housealwayswins")
     g.image(Image("gallery/sketch_shot.png"))   # Shot
+    g.unlock("cutscene shot")
     g.image(Image("gallery/sketch_taiko.png"))   # Taiko
+    g.unlock("cutscene taiko")
     g.image(Image("gallery/possum.png", oversample=0.35))   # Possum
+    g.unlock("possum")
     g.image(Image("gallery/boogie1.png", oversample=2))   # Boogie
+    g.unlock("boogie")
     g.image(Image("gallery/boogie0.png", oversample=0.6))   # 100%
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/sketch_sidecharacters.png", oversample=6))   # 100%
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/yuri0.jpg", oversample=2.5))   # 100%
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/alt_ergo.jpg", oversample=3.3))  # ?
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/coq_and_rocq.jpg", oversample=2))   # ?
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/lean0.jpg", oversample=3))   # ?
+    g.condition("persistent.hundoPercent")
     g.image(Image("gallery/lean1.png", oversample=3))   # ?
+    g.condition("persistent.hundoPercent")
+    g.image(Image("side_characters/phantom.png", oversample=1))   # ?
+    g.condition("persistent.hundoPercent")
 
     g.transition = dissolve
 

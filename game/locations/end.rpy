@@ -126,6 +126,7 @@ label ending:
 
     if all([good_lake, good_museum, good_karaoke, good_arcade, good_pool, good_spa, seen_hartley, seen_casino]):
         # Trigger for a different ending?
+        $ persistent.hundoPercent = True
         pass
     
     show dafny sad
@@ -222,6 +223,8 @@ label good_ending:
     dafny "M-me too."
     show green at barspot
     with moveintopslow
+
+    $ persistent.goodEnding = True
 
     basil "I love you, Dafny."
     dafny "I love you, Basil."
