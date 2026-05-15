@@ -32,6 +32,7 @@ label hartley:
     play sound "sfx/fail.ogg"
     "The sound of gun fire fills the corridors as Dafny and Basil are shot in the head."
     show cutscene shot with fade
+    $ renpy.pause(0.1, hard=True)
     $ seen_hartley = True
     ""
 

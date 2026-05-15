@@ -267,7 +267,7 @@ label .hot_tub:
     basil "(Holy cow I am going insane!)"
     basil "(Is my crush really gonna do this to me?)"
     basil "Um, okay.."
-    show basil swimwear at closeright with move
+    show basil swimwear blushing at closeright with move
     queue music "main/varc.ogg"
     dafny "You seem a little shy, love~."
     basil "(She called me love???)"

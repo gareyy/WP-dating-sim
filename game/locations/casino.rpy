@@ -45,6 +45,7 @@ label casino:
     play sound "sfx/fail.ogg"
     "Basil's kidneys are ripped from their body."
     show cutscene housealwayswins with fade
+    $ renpy.pause(0.1, hard=True)
     house "I always win."
     $ seen_casino = True
 

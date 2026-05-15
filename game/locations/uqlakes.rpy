@@ -358,6 +358,7 @@ label .pukeko_choice:
     basil "Yeah I guess..."
 
     scene cutscene pukeko with fade
+    $ renpy.pause(0.1, hard=True)
     play sound "sfx/fail.ogg"
     basil "I got Dafny stolen by a bird???"
     basil "Grr- AHH!!!"

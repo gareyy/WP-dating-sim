@@ -191,6 +191,7 @@ label .taiko:
     dafny "Ouch..."
     basil "I should have warned you not to pick that difficulty."
     show cutscene taiko with fade
+    $ renpy.pause(0.1, hard=True)
     play sound "sfx/fail.ogg"
     basil "I followed her on the ambulance to the hospital."
     basil "They were able to stabilise her."

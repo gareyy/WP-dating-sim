@@ -40,6 +40,21 @@ label ending:
     dafny "Do you think we went out on a date tonight?"
     "Basil lets out a slight gasp."
     basil ".."
+
+    if not any([good_lake, good_museum, good_karaoke, good_arcade, good_pool, good_spa, seen_hartley, seen_casino]):
+        basil "..."
+        basil "......"
+        show basil hesitant
+        basil "Wait, did we?"
+        basil "I only remember us going to the restaurant."
+        show dafny sad
+        dafny "Strange, now that you've mentioned it, I can't recall any details of our date either."
+        show dafny
+        dafny "But it seems that everything worked out in the end."
+        show basil surprised
+        queue music "sad/mainb.ogg"
+        jump good_ending
+
     basil "I- I-"
     basil "I think so..."
     basil "Like, romantic, I guess..."
@@ -138,6 +153,8 @@ label ending:
     dafny "..."
     dafny "I guess this really was a date tonight, huh?"
 
+label good_ending:
+
     dafny "..."
     basil "Uhm-"
     dafny "..."
@@ -176,6 +193,7 @@ label ending:
     show basil blushing at closeleft with move
     show dafny blushing at closeright with move
     show cutscene kiss with whitefade
+    $ renpy.pause(0.1, hard=True)
     "Their lips collide."
     "Magic is created."
     "The proof of love has been verified."

@@ -90,6 +90,7 @@ label pool_choice2:
     if pool_info:
         # TODO: refine dialog
         basil "..."
+        show basil swimwear blushing
         basil "......"
     play sound "sfx/choice.ogg"
     menu:

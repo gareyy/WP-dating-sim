@@ -78,6 +78,7 @@ image dafny swimwear happy = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear
 image dafny swimwear blushing = Crop((0, 0, 925, 925), Image("images/dafny/Swimwear_Blush.png", oversample=3))
 
 image isabelle = Crop((0, 0, 925, 925), Image("images/isabelle/Neutral.png", oversample=6))
+image isabelle sledging = Crop((0, 0, 1600, 925), Image("images/isabelle/Sledging.png", oversample=3.5))
 
 
 define whitefade = Fade(1.0, 1.0, 0.5, color='#fff')
@@ -112,7 +113,10 @@ label choice(label, lemma):
     if infos_map[lemmas_map[lemma]] == label:
         $ setattr(store, lemmas_map.get(lemma), True)
     else:
-        basil "(I don't think that would work here...)"
+        if label == "tutorial_loop":
+            isabelle "You can't persuade me with tofu, I'm not Dafny."
+        else:
+            basil "(I don't think that would work here...)"
     
     if label == "give_location_choice":
         call give_location_choice(last_location_choices)
@@ -156,7 +160,7 @@ label start:
         SPA_INFO = "Dafny would like to go in a hot tub with Basil sometime"
         POOL_INFO = "Dafny is attracted to Basil's stare"
         KARAOKE_INFO = "Dafny likes romantic songs"
-        RESTAURANT_INFO = "Dafny's favourite food is tofu"
+        RESTAURANT_INFO = "There's tofu on the restaurant menu."
         TUTORIAL_INFO = "I can leave now."
         lemmas_map = {
             ARCADE_INFO: "arcade_info",

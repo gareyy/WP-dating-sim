@@ -45,7 +45,7 @@ label tutorial:
     isabelle "I think you'll figure it out..."
     isabelle "But first, a hint."
     play sound "sfx/discovery.ogg"
-    $ lemmas_list.add("Dafny's favourite food is tofu")
+    $ lemmas_list.add(RESTAURANT_INFO)
     isabelle "You know she would have wanted to have the tofu, right?"
     basil "Yeah I guess? I might've ordered it if I knew it was on the menu."
     basil "Maybe for next time we eat together."
@@ -77,32 +77,36 @@ label tutorial:
     call add_lemma(TUTORIAL_INFO)
 
 label tutorial_loop:
-    if tutorial_loop_no > 42:
-        if renpy.random.randint(1, 10) == 1:
+    if tutorial_loop_no >= (42 - 1):
+        if renpy.random.randint(1, 5) == 1:
             isabelle "Actually, you know what? This has been going on for long enough."
+            show isabelle sledging
             "Isabelle sledges her sledgehammer towards you."
+            $ renpy.pause(0.1, hard=True)
+            hide isabelle
             show bg black with fade
             isabelle "Here's your good ending."
-            call goodend
+            call ending
             $ MainMenu(confirm=False, save=True)()
-        elif renpy.random.randint(1, 5) == 1:
-            isabelle "Okay, that's enough. Just... come back another time."
-            $ tutorial_loop_no = 0
-            $ MainMenu(confirm=False, save=True)()
+        # else:
+        #     isabelle "Okay, that's enough. Just... come back some other time."
+        #     $ MainMenu(confirm=False, save=True)()
     if tutorial_loop_no > 15:
         pass
     if tutorial_loop_no > 0:
-        isabelle "You need to apply what you've learned."
-        isabelle "Check out that button on top left."
+        if not tutorial_info:
+            isabelle "You need to apply what you've learned."
+            isabelle "Check out that button on top left."
     $ tutorial_loop_no += 1
     menu:
         "Go back":
-            call tutorial_loop
-        "Go back":
+            if tutorial_info:
+                isabelle "..."
             call tutorial_loop
         "Leave" if tutorial_info:
             python:
                 lemmas_list.remove(TUTORIAL_INFO)
+            isabelle "Now that you've got the gist of it, have fun on your date!"
 
     scene bg restaurant with fade
     jump restaurant
