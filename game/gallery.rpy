@@ -144,18 +144,18 @@ screen gallery:
         xfill True
         yfill True
 
-        add g.make_button("basil", "#00ff00", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("dafny", "#ffff00", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("animals", "#ff0000", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("basil", "buttons/gallery_basil.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("dafny", "buttons/gallery_dafny.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("animals", "buttons/gallery_animals.png", xalign=0.5, yalign=0.5, style="button")
 
-        add g.make_button("boogie", "#ff0000", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("isabelle", "#ff0000", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("rocq", "#ff0000", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("boogie", "buttons/gallery_boogie.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("isabelle", "buttons/gallery_isabelle.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("rocq", "buttons/gallery_rocq.png", xalign=0.5, yalign=0.5, style="button")
 
-        add g.make_button("cutscenes", "#ff0000", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("artifacts", "#ff0000", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("backgrounds", "#ff0000", xalign=0.5, yalign=0.5, style="button")
-        add g.make_button("concept_art", "#ff0000", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("cutscenes", "buttons/gallery_cutscene.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("artifacts", "buttons/gallery_artifacts.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("backgrounds", "buttons/gallery_backgrounds.png", xalign=0.5, yalign=0.5, style="button")
+        add g.make_button("concept_art", "buttons/gallery_concept_art.png", xalign=0.5, yalign=0.5, style="button")
 
     null height 60
     
