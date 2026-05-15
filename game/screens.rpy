@@ -309,33 +309,36 @@ screen navigation():
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
-
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
+        if not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
 
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        if main_menu:
+            null height 30
+        
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+        if main_menu:
 
+            textbutton _("Credits") action ShowMenu("about")
+            textbutton _("Gallery") action ShowMenu("gallery")
+            textbutton _("Music Room") action ShowMenu("music_room2", mr=music_room)
+        
+            null height 30
+
+        if renpy.variant("pc"):
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
             textbutton _("Quit") action Quit(confirm=not main_menu)
-
-        if main_menu:
-            null height 60
-
-            textbutton _("About") action ShowMenu("about")
-            textbutton _("Music Room") action ShowMenu("music_room2", mr=music_room)
-
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -427,6 +430,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
         add gui.main_menu_background
     else:
         add gui.game_menu_background
+    
 
     frame:
         style "game_menu_outer_frame"

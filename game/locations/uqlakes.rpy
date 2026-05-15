@@ -19,7 +19,7 @@ image ibis = Image("images/animals/ibis.png", oversample=1)
 image pukeko = Image("images/animals/pukeko.png", oversample=2)
 image dragon = Image("images/animals/water_dragon.png", oversample=2)
 image possum = Image("images/animals/possum.png", oversample=0.5)
-image possum fork = Image("images/animals/possum_fork.png", oversample=0.5)
+image possum fork = Image("images/animals/possum_fork.png", oversample=0.6)
 image raven = Crop((0, 0, 768, 700), Image("images/animals/raven.png", oversample=1))
 
 label uqlakes:
@@ -77,7 +77,7 @@ label uqlakes:
 label uqlakes_choice:
     if lake_info:
         # TODO: refine dialog
-        "A murder of ravens flew above in the sky."
+        "A flock of black birds flew above in the sky."
         
     play sound "sfx/choice.ogg"
     queue music "main/varb.ogg"
@@ -360,7 +360,7 @@ label .pukeko_choice:
     scene cutscene pukeko with fade
     $ renpy.pause(0.1, hard=True)
     play sound "sfx/fail.ogg"
-    basil "I got Dafny stolen by a bird???"
+    basil "I got Dafny stolen from me by a bird???"
     basil "Grr- AHH!!!"
     basil "And now, fast forward a few years later, Dafny asked me to be the officiant at their wedding."
     basil "The night after the wedding, I cried and cried at how the eye of my apple got stolen by a bird!"
