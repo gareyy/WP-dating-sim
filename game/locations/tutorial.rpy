@@ -78,7 +78,7 @@ label tutorial:
 
 label tutorial_loop:
     if tutorial_loop_no >= (42 - 1):
-        if renpy.random.randint(1, 5) == 1:
+        if renpy.random.randint(1, 100) == 51:
             isabelle "Actually, you know what? This has been going on for long enough."
             show isabelle sledging
             "Isabelle sledges her sledgehammer towards you."
@@ -88,9 +88,9 @@ label tutorial_loop:
             isabelle "Here's your good ending."
             call ending
             $ MainMenu(confirm=False, save=True)()
-        # else:
-        #     isabelle "Okay, that's enough. Just... come back some other time."
-        #     $ MainMenu(confirm=False, save=True)()
+        elif renpy.random.randint(1, 5) == 1:
+            isabelle "Okay, that's enough. Just... come back some other time."
+            $ MainMenu(confirm=False, save=True)()
     if tutorial_loop_no > 15:
         pass
     if tutorial_loop_no > 0:

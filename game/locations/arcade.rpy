@@ -51,13 +51,15 @@ label arcade:
     dafny "Possibly."
 
 label arcade_choice:
-    # TODO: Make better dialouge
 
     if arcade_info:
         basil "That machine over there looks pretty interesting..."
         basil "Have you heard about Trimonis?"
         "Under the arcade light, Dafny's smile somehow looked more mischievous than usual."
         dafny "Oh I most certainly have."
+    
+    elif loops_num[ARCADE_INFO] >= 3 and ARCADE_INFO in lemmas_map:
+        basil "(I might be able to apply a lemma from the lemma book here...)"
 
     python:
         games = ["floydger", "hoareracing", "taiko"]

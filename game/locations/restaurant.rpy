@@ -56,11 +56,13 @@ label restaurant:
     basil "Alright, I choose..."
 
 label restaurant_choice:
-    
+    $ loops_num[RESTAURANT_INFO] += 1
     if restaurant_info:
         basil "Oh look! That tofu on the menu looks pretty nice."
         basil "I think you might like it."
         dafny "It does look delectable..."
+    elif loops_num[RESTAURANT_INFO] >= 5 and RESTAURANT_INFO in lemmas_map:
+        basil "(I might be able to apply a lemma from the lemma book here...)"
     
     play sound "sfx/choice.ogg"
     menu:
@@ -71,6 +73,7 @@ label restaurant_choice:
             jump .chicken
 
         "Tofu" if restaurant_info == True:
+            $ good_restaurant = True
             jump .tofu
 
 label .breadsticks:

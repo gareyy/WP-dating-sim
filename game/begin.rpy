@@ -162,6 +162,8 @@ label start:
         KARAOKE_INFO = "Dafny likes romantic songs"
         RESTAURANT_INFO = "There's tofu on the restaurant menu."
         TUTORIAL_INFO = "I can leave now."
+        INFO_LIST = [ARCADE_INFO, MUSEUM_INFO, LAKE_INFO, SPA_INFO, POOL_INFO, KARAOKE_INFO, RESTAURANT_INFO, TUTORIAL_INFO]
+        loops_num = {i: 0 for i in INFO_LIST}
         lemmas_map = {
             ARCADE_INFO: "arcade_info",
             MUSEUM_INFO: "museum_info",
@@ -190,6 +192,7 @@ label start:
         good_karaoke = False
         seen_hartley = False
         seen_casino = False
+        good_restaurant = False
         # Done choices track whether the player has made the location choice
         #     *in this loop*
         done_choice1 = False
@@ -249,7 +252,7 @@ label loophead:
     else:
         basil "(I need to try something different this time!)"
 
-    if loop_no >= 5:
+    if loop_no >= 5 and good_restaurant:
         menu:
             "Would you like to skip ahead to the location choice?"
 

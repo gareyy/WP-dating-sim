@@ -10,7 +10,9 @@ label ending:
     basil "(!!!)"
     basil "Uhm..."
     dafny "I would love to have you over."
-    dafny "Like please, Basil."
+    show basil blushing
+    basil "...!"
+    dafny "Please, Basil."
     dafny "I think tonight has been great."
     dafny "I just want to talk about a few things..."
     # show da house
@@ -60,7 +62,7 @@ label ending:
     basil "Like, romantic, I guess..."
 
     dafny "Y-yeah, I agree."
-    dafny "You know, despite us going to the restaurant and two places tonight, I feel like we may have gone to more places than I remember..."
+    dafny "You know, despite us going to the restaurant and some places tonight, I feel like we may have gone to more places than I remember..."
     dafny "Like it's some kind of amnesia thing."
     dafny "Or déjà vu, or whatever it's called."
 
@@ -89,7 +91,7 @@ label ending:
     if good_karaoke:
         dafny "I had this favourite song."
         dafny "And somehow you knew what it was."
-        dafny "Like, I swear I showed it to you today."
+        dafny "I swear I showed it to you today."
         dafny "But at the same time, my memory is a bit fuzzy."
         dafny "And then we went to karaoke, and you chose it as the song to sing."
         dafny "I felt like when we were singing it, I was bonded to you somehow."
@@ -98,9 +100,9 @@ label ending:
     if good_arcade:
         dafny "When we went to the arcade, there was this one arcade machine I forgot to tell you about."
         dafny "And then you suggested we play that one."
-        dafny "The Trimonis one."
-        dafny "But like, I never told you about it explicitly."
-        dafny "We had a fun time on it, and I won."
+        dafny "The Trimonis game."
+        dafny "But I never told you about it explicitly."
+        dafny "We had a fun time playing it, and I won."
         dafny "..."
 
     if good_pool:
@@ -118,16 +120,19 @@ label ending:
 
     if seen_hartley:
         # Insert Hartley dialogue
-        pass
+        dafny "I don't particularly want to talk about this but..."
+        dafny "I remember us being shot when we went to that haunted building?"
+        dafny "But we are alive now somehow."
+        dafny "..."
 
     if seen_casino:
-        # Insert casino dialogue
-        pass
+        dafny "And then at some point your kidneys were ripped from you?"
+        dafny "What kind of day have we been having???"
 
     if all([good_lake, good_museum, good_karaoke, good_arcade, good_pool, good_spa, seen_hartley, seen_casino]):
-        # Trigger for a different ending?
         $ persistent.hundoPercent = True
-        pass
+        dafny "It was certainly one hell of a day."
+        dafny "I am glad that everything is settled now."
     
     show dafny sad
 
